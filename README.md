@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="banner.PNG" alt="ROM Consolidator Banner" width="100%">
-</p>
+
 
 # 🎮 Retro Library Builder
 
