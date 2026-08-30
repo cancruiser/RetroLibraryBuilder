@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Retro Library Builder Device Readiness evaluates canonical identity, deployable targets, firmware evidence, confidence and blocking deployment risks.">
+  <title>Device Readiness — Retro Library Builder</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav-wrap" aria-label="Primary navigation"><a class="brand" href="./"><span class="brand-mark">R</span><span>Retro Library Builder <small>Beta</small></span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">Menu</button><div class="nav-links"><a href="./">Home</a><a href="getting-started.html">Getting Started</a><a href="preservation.html">Preservation</a><a href="guides.html">Guides</a><a href="about.html">About</a></div></nav></header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="./">Home</a> / Device Readiness</div>
+      <span class="eyebrow"><span class="dot"></span> Deployment safety</span>
+      <h1>Knowing the device is not the same as being ready to deploy.</h1>
+      <p class="lead">Device Readiness evaluates canonical identity, deployable targets, firmware evidence, confidence and blocking risks before RLB allows knowledge to become a deployment decision.</p>
+    </div>
+  </section>
+
+  <section class="section device-tour">
+    <div class="container">
+      <div class="app-panel screenshot-panel">
+        <span class="panel-title">DEVICE READINESS — ACTUAL RLB INTERFACE</span>
+        <figure class="app-screenshot">
+          <img src="assets/images/device-readiness.jpg" alt="Retro Library Builder Device Readiness showing an R36 Max with canonical identity, zero deployable targets, 77 percent knowledge confidence and a STOP deployment verdict.">
+          <figcaption>The selected R36 Max has strong clone/fingerprint evidence but missing panel and recovery evidence. RLB therefore reports <strong>STOP — not safe to deploy</strong> rather than turning partial knowledge into a deployment target.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="container article-layout">
+      <article class="article readiness-article">
+
+        <div class="callout warning"><strong>Safety gate:</strong> Device Readiness is allowed to say “not enough evidence.” A device can be recognized with reasonable confidence and still have zero safe deployment targets.</div>
+
+        <h2 id="purpose">1. What Device Readiness is for</h2>
+        <p>Device Readiness is the knowledge-side safety gate between device identification and Deployment.</p>
+        <p>It inspects the canonical device identity together with runtime knowledge about firmware, panels, DTBs, storage, recovery and other required evidence, then decides whether any deployment target can be considered safe.</p>
+
+        <h2 id="search">2. Search the canonical device catalog</h2>
+        <p>The workspace can search canonical devices, aliases, providers, DTBs and panels. The left-hand device list shows the matching canonical devices and gives each one a compact readiness summary.</p>
+        <div class="readiness-list-anatomy">
+          <div><span>DEVICE</span><strong>Canonical device name</strong><small>The device entry being evaluated.</small></div>
+          <div><span>TARGETS</span><strong>Deployable target count</strong><small>How many validated deployment variants are currently available.</small></div>
+          <div><span>CONFIDENCE</span><strong>Knowledge confidence</strong><small>How complete and convincing the current runtime knowledge is for the selected device.</small></div>
+        </div>
+
+        <h2 id="identity">3. Canonical identity anchors the evaluation</h2>
+        <p>The selected-device summary shows the canonical identity RLB is evaluating. In the example, the R36 Max resolves to the canonical key <strong>r36-max</strong>.</p>
+        <div class="identity-readiness-grid">
+          <div><span>IDENTITY</span><strong>r36-max</strong><small>Canonical key used by Runtime Knowledge.</small></div>
+          <div><span>TARGETS</span><strong>0</strong><small>No deployable variants are currently validated.</small></div>
+          <div><span>SOURCES</span><strong>1</strong><small>Current provider count contributing to the runtime result.</small></div>
+          <div><span>CONFIDENCE</span><strong>77%</strong><small>Overall knowledge confidence for the selected device.</small></div>
+        </div>
+
+        <h2 id="verdict">4. The verdict is more important than the percentage</h2>
+        <p>The Deployment Readiness panel gives an explicit verdict. In this example:</p>
+        <div class="stop-verdict">
+          <span>STOP</span>
+          <div><strong>Not safe to deploy</strong><small>Blocking evidence is missing. RLB should not convert the current device knowledge into a deployable target yet.</small></div>
+        </div>
+        <p>A 77% knowledge-confidence score therefore does <strong>not</strong> mean “77% safe.” Deployment safety depends on whether required evidence is present, not just on an average score.</p>
+
+        <h2 id="overall">5. Overall Readiness combines several evidence areas</h2>
+        <p>The selected device can have different levels of evidence completeness across several categories.</p>
+        <div class="readiness-evidence-grid">
+          <div class="good"><span>86%</span><strong>Hardware</strong><small>Substantial hardware evidence is already available.</small></div>
+          <div class="blocked"><span>0%</span><strong>Panel</strong><small>The display panel remains unknown in the shown example.</small></div>
+          <div class="partial"><span>70%</span><strong>Firmware</strong><small>Firmware knowledge exists but cannot be considered safe without the missing panel evidence.</small></div>
+          <div class="partial"><span>25%</span><strong>Storage</strong><small>Boot/storage-layout knowledge remains incomplete.</small></div>
+          <div class="blocked"><span>0%</span><strong>Recovery</strong><small>Recovery evidence/procedure is incomplete.</small></div>
+          <div class="good"><span>100%</span><strong>Clone / Fingerprint</strong><small>Strong clone/fingerprint evidence is already satisfied.</small></div>
+        </div>
+
+        <h2 id="blocking">6. Blocking Risks explain why deployment is stopped</h2>
+        <p>Device Readiness does not only show a failed verdict; it explains the specific evidence that prevents deployment.</p>
+        <div class="blocking-risk-card">
+          <span>!</span>
+          <div><strong>Panel evidence is missing</strong><small>Firmware cannot be considered safe while the panel remains unknown. A wrong panel/DTB relationship can make otherwise plausible firmware unsuitable for the actual hardware.</small></div>
+        </div>
+        <p>The shown screen also warns that recovery is incomplete. These risks remain visible instead of being averaged away by stronger evidence in other categories.</p>
+
+        <h2 id="satisfied">7. Satisfied Evidence shows what RLB already trusts</h2>
+        <p>Readiness also lists the evidence that has already been satisfied. In the R36 Max example this includes:</p>
+        <div class="satisfied-grid">
+          <div><span>✓</span><strong>Clone fingerprint</strong></div>
+          <div><span>✓</span><strong>Display / resolution evidence</strong></div>
+          <div><span>✓</span><strong>Firmware recommendation</strong></div>
+          <div><span>✓</span><strong>GPU evidence</strong></div>
+          <div><span>✓</span><strong>SoC evidence</strong></div>
+        </div>
+        <p>This is useful because a STOP verdict does not mean RLB knows nothing. It means the remaining missing evidence is important enough to block deployment.</p>
+
+        <h2 id="improve">8. Improve Confidence By tells you what evidence is still needed</h2>
+        <p>The workspace provides concrete guidance for improving the readiness result rather than leaving the user with an unexplained failure.</p>
+        <div class="improve-grid">
+          <div><span>1</span><strong>Collect boot/storage layout</strong><small>Establish how the device expects its storage and boot content to be structured.</small></div>
+          <div><span>2</span><strong>Establish firmware panel support</strong><small>Prove that the recommended firmware supports the actual display panel.</small></div>
+          <div><span>3</span><strong>Match DTB panel ID</strong><small>Connect the device's DTB/panel evidence to a known compatible hardware relationship.</small></div>
+          <div><span>4</span><strong>Add preservation / recovery evidence</strong><small>Ensure a recovery path exists before treating deployment as safe.</small></div>
+        </div>
+
+        <h2 id="targets">9. Zero targets is a valid result</h2>
+        <p>The example device shows <strong>0 deployable targets</strong>. That is not a UI failure. It means the Knowledge Engine has not yet validated a deployment variant that satisfies the current safety policy.</p>
+        <div class="zero-target-flow">
+          <div><span>KNOWN DEVICE</span><strong>Canonical identity exists</strong><small>RLB knows which device entry is being evaluated.</small></div>
+          <b>≠</b>
+          <div><span>SAFE TARGET</span><strong>Deployable variant validated</strong><small>Enough firmware, panel, storage and recovery evidence must exist before a target becomes deployable.</small></div>
+        </div>
+
+        <h2 id="firmware">10. Recommended firmware is not automatic permission to deploy</h2>
+        <p>The screen can show a recommended firmware family while still blocking deployment. In the example, the firmware recommendation is <strong>Linux</strong>, but panel evidence is insufficient to call that recommendation safe.</p>
+        <p>This distinction prevents a recommendation from being mistaken for a validated deployment recipe.</p>
+
+        <h2 id="policy">11. Knowledge decides safety; Deployment executes validated targets</h2>
+        <p>The policy statement in the workspace is explicit:</p>
+        <div class="policy-flow">
+          <div><span>KNOWLEDGE ENGINE</span><strong>Decides deployment safety</strong><small>Evaluates canonical identity, evidence completeness, confidence and blocking risks.</small></div>
+          <b>→</b>
+          <div><span>VALIDATED TARGET</span><strong>Only safe variants pass</strong><small>A deployable target exists only after the required evidence satisfies policy.</small></div>
+          <b>→</b>
+          <div><span>DEPLOYMENT ARCHITECT</span><strong>Executes validated targets</strong><small>Deployment does not invent its own compatibility decision.</small></div>
+        </div>
+
+        <h2 id="runtime">12. Reload Runtime Knowledge refreshes the decision layer</h2>
+        <p>The <strong>Reload Runtime Knowledge</strong> action reloads the knowledge used by Device Readiness. This is useful after the managed knowledge repository has changed and the readiness evaluation needs to consume the updated evidence.</p>
+
+        <h2 id="relationship">13. Device Readiness connects Knowledge to Deployment</h2>
+        <div class="readiness-relationship-flow">
+          <div><span>SOURCES</span><strong>Knowledge Sources</strong><small>Provide credited device, firmware, DTB and hardware evidence.</small></div>
+          <b>→</b>
+          <div><span>KNOWLEDGE</span><strong>Canonical repository</strong><small>Normalizes identity and connected technical evidence.</small></div>
+          <b>→</b>
+          <div><span>READINESS</span><strong>Safety evaluation</strong><small>Determines whether the evidence is sufficient for any deployable target.</small></div>
+          <b>→</b>
+          <div><span>DEPLOYMENT</span><strong>Validated execution</strong><small>Only targets accepted by the readiness policy should move into deployment.</small></div>
+        </div>
+
+        <h2 id="principles">Device Readiness principles</h2>
+        <div class="completion-checks">
+          <div><span>✓</span><strong>Recognized device does not automatically mean deployable device</strong></div>
+          <div><span>✓</span><strong>Blocking evidence must stay visible even when other confidence is high</strong></div>
+          <div><span>✓</span><strong>Zero deployable targets is preferable to an unsafe guess</strong></div>
+          <div><span>✓</span><strong>Recommended firmware and validated deployment target are different states</strong></div>
+          <div><span>✓</span><strong>Deployment should execute only targets already validated by the knowledge policy</strong></div>
+        </div>
+
+        <div class="actions">
+          <a class="btn primary" href="knowledge-explorer.html">Open Knowledge Explorer →</a>
+          <a class="btn" href="knowledge-sources.html">Knowledge Sources</a>
+        </div>
+      </article>
+
+      <aside class="toc" aria-label="On this page">
+        <strong>On this page</strong>
+        <a href="#purpose">What Readiness is</a>
+        <a href="#search">Canonical catalog</a>
+        <a href="#identity">Canonical identity</a>
+        <a href="#verdict">Deployment verdict</a>
+        <a href="#overall">Evidence areas</a>
+        <a href="#blocking">Blocking risks</a>
+        <a href="#satisfied">Satisfied evidence</a>
+        <a href="#improve">Improve confidence</a>
+        <a href="#targets">Zero targets</a>
+        <a href="#firmware">Firmware recommendation</a>
+        <a href="#policy">Knowledge vs Deployment</a>
+        <a href="#relationship">Knowledge → Deployment</a>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><strong>Retro Library Builder</strong><div>Preserve Once. Build Many.</div></div><div class="footer-links"><a href="https://github.com/cancruiser/RetroLibraryBuilder">GitHub</a><a href="https://discord.gg/zCDA8evmyE">Discord</a><a href="about.html">About</a></div></div><div class="footer-note">RLB does not provide or distribute commercial ROM collections. © <span data-year></span> Retro Library Builder.</div></div></footer>
+<script src="assets/site.js"></script>
+</body></html>
