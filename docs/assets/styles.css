@@ -1017,3 +1017,174 @@ h1 {
   .app-panel { padding: 36px 10px 10px; }
   h1 { font-size: clamp(2.35rem, 11vw, 3.25rem); }
 }
+
+/* Getting Started — Device Inspector walkthrough */
+.device-tour {
+  padding-top: 28px;
+  padding-bottom: 30px;
+}
+
+.screenshot-panel {
+  padding-top: 40px;
+}
+
+.app-screenshot {
+  margin: 0;
+}
+
+.app-screenshot img {
+  width: 100%;
+  border: 1px solid #8d979e;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.7), 0 2px 6px rgba(28,35,40,.2);
+  background: #d5d9db;
+}
+
+.app-screenshot figcaption {
+  padding: 10px 4px 0;
+  color: #58636b;
+  font-size: .82rem;
+  line-height: 1.45;
+}
+
+.getting-started-article {
+  max-width: 880px;
+}
+
+.ui-callout {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 14px;
+  margin: 16px 0;
+  border: 1px solid #98a6af;
+  border-radius: 5px;
+  background: linear-gradient(#eef1f2, #d8dcde);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.9);
+}
+
+.ui-number {
+  width: 31px;
+  height: 31px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: linear-gradient(#1673aa, #07558a);
+  border: 1px solid #064873;
+  border-radius: 4px;
+  font-weight: 800;
+}
+
+.ui-callout strong,
+.ui-callout span {
+  display: block;
+}
+
+.ui-callout strong {
+  color: var(--blue-deep);
+  margin-bottom: 2px;
+}
+
+.ui-callout span {
+  color: #556169;
+  font-size: .88rem;
+}
+
+.stage-explainer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 7px;
+  margin: 17px 0 13px;
+}
+
+.stage-item {
+  min-height: 116px;
+  padding: 11px 9px 10px;
+  border: 1px solid #a0aab1;
+  border-radius: 4px;
+  background: linear-gradient(#eceeef, #d7dbdd);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.92);
+}
+
+.stage-item > span {
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 8px;
+  border-radius: 3px;
+  background: linear-gradient(#e9f2f7, #c9dce7);
+  border: 1px solid #94abb7;
+  color: var(--blue);
+  font-weight: 800;
+  font-size: .8rem;
+}
+
+.stage-item strong,
+.stage-item small {
+  display: block;
+}
+
+.stage-item strong {
+  color: #222b31;
+  font-size: .82rem;
+  line-height: 1.25;
+  margin-bottom: 5px;
+}
+
+.stage-item small {
+  color: #667179;
+  font-size: .72rem;
+  line-height: 1.35;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 17px 0;
+}
+
+.status-card {
+  position: relative;
+  min-height: 118px;
+  padding: 13px 12px;
+  border: 1px solid #9ca7ae;
+  border-top-width: 3px;
+  border-radius: 5px;
+  background: linear-gradient(#eef0f1, #d8dcde);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.9);
+}
+
+.status-card.blue { border-top-color: #176b9f; }
+.status-card.purple { border-top-color: #7766a5; }
+.status-card.green { border-top-color: #4c9858; }
+.status-card.amber { border-top-color: #bd7d21; }
+
+.status-card strong,
+.status-card span {
+  display: block;
+}
+
+.status-card strong {
+  color: #252d32;
+  margin-bottom: 6px;
+  font-size: .9rem;
+}
+
+.status-card span {
+  color: #5a656d;
+  font-size: .78rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .stage-explainer { grid-template-columns: repeat(2, 1fr); }
+  .status-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .stage-explainer,
+  .status-grid { grid-template-columns: 1fr; }
+}
