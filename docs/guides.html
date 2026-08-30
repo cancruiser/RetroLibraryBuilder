@@ -2,41 +2,107 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Task-oriented Retro Library Builder user guides.">
+  <meta name="description" content="Task-oriented Retro Library Builder guides for preserving, understanding and rebuilding retro gaming devices.">
   <title>Guides — Retro Library Builder</title>
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><nav class="nav-wrap" aria-label="Primary navigation"><a class="brand" href="./"><span class="brand-mark">R</span><span>Retro Library Builder <small>Beta</small></span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">Menu</button><div class="nav-links"><a href="./">Home</a><a href="getting-started.html">Getting Started</a><a href="preservation.html">Preservation</a><a href="guides.html" aria-current="page">Guides</a><a href="about.html">About</a></div></nav></header>
+
 <main id="main">
-<section class="page-hero"><div class="container"><div class="breadcrumb"><a href="./">Home</a> / Guides</div><span class="eyebrow"><span class="dot"></span> Task oriented</span><h1>Guides</h1><p class="lead">Start with the job you are trying to accomplish. The deeper technical pages explain why RLB behaves the way it does.</p></div></section>
-<section class="section"><div class="container">
-  <div class="section-head"><h2>Protect an original handheld SD card</h2><p>A conservative first workflow for a device whose original storage may be unreliable or difficult to replace.</p></div>
-  <div class="workflow">
-    <div class="step"><div><strong>Keep the original media unchanged</strong><span>Do not delete or reorganize files on the original card just to make it easier for RLB to scan.</span></div></div>
-    <div class="step"><div><strong>Open Device Inspector</strong><span>Allow RLB to examine the connected media and build an evidence-based Device Report.</span></div></div>
-    <div class="step"><div><strong>Confirm the device result makes sense</strong><span>Review the identification and evidence before relying on device-specific knowledge.</span></div></div>
-    <div class="step"><div><strong>Select the protection workflow</strong><span>Choose the intended preservation level and a stable destination with enough free space.</span></div></div>
-    <div class="step"><div><strong>Run Analyze first</strong><span>Review the preview and reconciliation counts before approving work that establishes content.</span></div></div>
-    <div class="step"><div><strong>Run the preservation operation</strong><span>Leave the source and destination connected while RLB performs the work and verification.</span></div></div>
-    <div class="step"><div><strong>Check the terminal preservation result</strong><span>Verify that the preservation actually completed. A saved Device Report by itself is not proof of preservation.</span></div></div>
-    <div class="step"><div><strong>Keep the original card until you trust the result</strong><span>Especially during Beta, retain the original media until you have confirmed the protection you intended to create.</span></div></div>
-  </div>
-
-  <div class="section" style="padding-bottom:0">
-    <div class="section-head"><h2>More guides as Beta stabilizes</h2><p>The next guides will be added when their workflows are sufficiently stable to document without teaching users an obsolete procedure.</p></div>
-    <div class="grid three">
-      <div class="card"><div class="card-icon">R</div><h3>R36 Max preservation</h3><p>A device-specific walkthrough covering identification evidence, original-card protection and later replacement-media preparation.</p></div>
-      <div class="card"><div class="card-icon">↻</div><h3>Recover from interruption</h3><p>How to interpret a preservation that stopped because a source or destination disappeared, and what can safely be reused.</p></div>
-      <div class="card"><div class="card-icon">↗</div><h3>Replacement media / Deployment</h3><p>How preserved device intelligence and Library content feed into a new card once the Deployment workflow is Beta-ready.</p></div>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="./">Home</a> / Guides</div>
+      <span class="eyebrow"><span class="dot"></span> Task oriented</span>
+      <h1>Start with the job you need to do.</h1>
+      <p class="lead">Guides focus on the practical workflow. When you want to understand why RLB makes a particular decision, the Getting Started and Preservation pages explain the underlying model.</p>
     </div>
-    <div class="beta-strip">These three guides are intentionally marked as upcoming. RLB's Beta behaviour is still being hardened in these areas, and the documentation should describe the validated application—not a planned workflow.</div>
-  </div>
+  </section>
 
-  <div class="section tight"><div class="cta"><div><h2>Not sure what a term means?</h2><p>Preservation uses specific language such as represented, retained, verified, Analyze and Apply.</p></div><a class="btn primary" href="preservation.html#terms">Open terminology →</a></div></div>
-</div></section>
+  <section class="section">
+    <div class="container">
+      <div class="guide-feature">
+        <div class="guide-feature-copy">
+          <span class="guide-status available">Available now</span>
+          <h2>Protect the original SD card from a new retro handheld</h2>
+          <p>Your original card may contain the only copy of device-specific boot files, firmware configuration, saves, artwork and other content. This guide walks through the conservative first-use RLB workflow before you experiment with replacement media.</p>
+          <div class="guide-meta">
+            <span><strong>Best for:</strong> New or newly acquired devices</span>
+            <span><strong>Starts in:</strong> Device Inspector</span>
+            <span><strong>Risk:</strong> Read-only until protection is approved</span>
+          </div>
+          <div class="actions">
+            <a class="btn primary" href="protect-original-sd.html">Open the guide →</a>
+            <a class="btn" href="getting-started.html">Review Device Inspector</a>
+          </div>
+        </div>
+        <div class="guide-feature-visual">
+          <div class="guide-device-card">
+            <span class="guide-device-label">ORIGINAL MEDIA</span>
+            <div class="sd-card-illustration"><span>SD</span></div>
+            <strong>Protect it before changing it.</strong>
+            <small>Identify → Analyze → Preserve → Verify</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-head guide-library-head">
+        <h2>Guide library</h2>
+        <p>Only workflows that are stable enough to document are marked available. Planned guides stay visibly separate so the website does not teach a workflow that has not yet been validated.</p>
+      </div>
+
+      <div class="guide-grid">
+        <a class="guide-tile ready" href="protect-original-sd.html">
+          <span class="guide-tile-state">Available</span>
+          <span class="guide-tile-icon">▣</span>
+          <strong>Protect an original SD card</strong>
+          <small>First-use workflow for a handheld or SBC whose original storage must be protected before experimentation.</small>
+          <b>Open guide →</b>
+        </a>
+
+        <div class="guide-tile upcoming">
+          <span class="guide-tile-state">Upcoming</span>
+          <span class="guide-tile-icon">↻</span>
+          <strong>Resume interrupted protection</strong>
+          <small>How to interpret persisted preservation state and decide whether Resume is appropriate.</small>
+        </div>
+
+        <div class="guide-tile upcoming">
+          <span class="guide-tile-state">Upcoming</span>
+          <span class="guide-tile-icon">◆</span>
+          <strong>Reconcile retained content</strong>
+          <small>Analyze verified retained content, review the preview and confirm Library reconciliation without accessing the original device.</small>
+        </div>
+
+        <div class="guide-tile upcoming">
+          <span class="guide-tile-state">Upcoming</span>
+          <span class="guide-tile-icon">R</span>
+          <strong>R36 Max walkthrough</strong>
+          <small>A device-specific preservation guide using actual R36 Max identity and protection evidence.</small>
+        </div>
+
+        <div class="guide-tile upcoming">
+          <span class="guide-tile-state">Upcoming</span>
+          <span class="guide-tile-icon">↗</span>
+          <strong>Build replacement media</strong>
+          <small>Use preserved device intelligence and verified Library content when Deployment is ready for public Beta guidance.</small>
+        </div>
+
+        <div class="guide-tile reference">
+          <span class="guide-tile-state">Reference</span>
+          <span class="guide-tile-icon">?</span>
+          <strong>Understand preservation terms</strong>
+          <small>Analyze, Preview, Apply, represented, retained, verified and Conflict / Review.</small>
+          <a href="preservation.html#terms">Open terminology →</a>
+        </div>
+      </div>
+
+      <div class="beta-strip guide-beta">RLB is still in Beta. Guides will follow the validated application, not planned behaviour. If the UI and a guide ever disagree, stop before a write-oriented action and verify the current workflow.</div>
+    </div>
+  </section>
 </main>
-<footer class="site-footer"><div class="container"><div class="footer-grid"><div><strong>Retro Library Builder</strong><div>Understand. Preserve. Rebuild.</div></div><div class="footer-links"><a href="https://github.com/cancruiser/RetroLibraryBuilder">GitHub</a><a href="https://discord.gg/zCDA8evmyE">Discord</a><a href="about.html">About</a></div></div><div class="footer-note">RLB does not provide or distribute commercial ROM collections. © <span data-year></span> Retro Library Builder.</div></div></footer>
+
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><strong>Retro Library Builder</strong><div>Preserve Once. Build Many.</div></div><div class="footer-links"><a href="https://github.com/cancruiser/RetroLibraryBuilder">GitHub</a><a href="https://discord.gg/zCDA8evmyE">Discord</a><a href="about.html">About</a></div></div><div class="footer-note">RLB does not provide or distribute commercial ROM collections. © <span data-year></span> Retro Library Builder.</div></div></footer>
 <script src="assets/site.js"></script>
 </body></html>

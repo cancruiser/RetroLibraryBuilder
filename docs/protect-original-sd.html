@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Step-by-step guide to protecting the original SD card from a retro handheld with Retro Library Builder.">
+  <title>Protect an Original SD Card — Retro Library Builder</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav-wrap" aria-label="Primary navigation"><a class="brand" href="./"><span class="brand-mark">R</span><span>Retro Library Builder <small>Beta</small></span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">Menu</button><div class="nav-links"><a href="./">Home</a><a href="getting-started.html">Getting Started</a><a href="preservation.html">Preservation</a><a href="guides.html" aria-current="page">Guides</a><a href="about.html">About</a></div></nav></header>
+
+<main id="main">
+  <section class="page-hero guide-page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="./">Home</a> / <a href="guides.html">Guides</a> / Protect an original SD card</div>
+      <span class="eyebrow"><span class="dot"></span> First device guide</span>
+      <h1>Protect the original SD card before you experiment.</h1>
+      <p class="lead">Use this workflow when you have a new or newly acquired retro handheld and want RLB to understand and protect its original media before you install firmware, reorganize files or prepare a replacement card.</p>
+    </div>
+  </section>
+
+  <section class="section guide-intro-section">
+    <div class="container">
+      <div class="guide-prereq-grid">
+        <div class="guide-prereq">
+          <span class="prereq-icon">▣</span>
+          <div><strong>Original media</strong><small>The card or source you want to protect. Do not modify it just to make the scan easier.</small></div>
+        </div>
+        <div class="guide-prereq">
+          <span class="prereq-icon">◫</span>
+          <div><strong>Stable destination</strong><small>Enough reliable storage for the protection work RLB determines is required.</small></div>
+        </div>
+        <div class="guide-prereq">
+          <span class="prereq-icon">✓</span>
+          <div><strong>Time to finish</strong><small>Large devices can take hours. Keep source and destination connected while work is running.</small></div>
+        </div>
+      </div>
+
+      <div class="callout warning guide-critical">
+        <strong>Before you start:</strong> If Windows or another operating system offers to initialize, repair or format a partition it does not understand, cancel that prompt. The original device media is the authority until RLB has completed and verified the protection you intended to create.
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="container article-layout">
+      <article class="article guide-article">
+
+        <h2 id="step1">1. Connect the original media</h2>
+        <p>Insert the original SD card or connect the source media to the computer. Do not rename, reorganize, delete or “clean up” files on the original first.</p>
+        <div class="guide-do-dont">
+          <div class="do"><span>✓</span><div><strong>Do</strong><small>Leave the original layout intact so RLB can examine the device as it actually exists.</small></div></div>
+          <div class="dont"><span>×</span><div><strong>Do not</strong><small>Format unknown partitions, move ROM folders around, or remove files you think are unnecessary.</small></div></div>
+        </div>
+
+        <h2 id="step2">2. Open Device Inspector</h2>
+        <p>In RLB, select <strong>Device Inspector</strong>. This workspace brings together source selection, device identity, protection state, recommended actions and deployment readiness.</p>
+
+        <figure class="guide-screenshot">
+          <img src="assets/images/device-inspector-start.jpg" alt="RLB Device Inspector showing source selection, workflow stages, identity assessment, protection summary and actions.">
+          <figcaption>The example shown contains prior preservation state, so <strong>Resume Protection</strong> appears in the Actions pane. A brand-new device can show a simpler first-use state.</figcaption>
+        </figure>
+
+        <h2 id="step3">3. Choose the source RLB should inspect</h2>
+        <p>Use the <strong>Device source</strong> field at the top of Device Inspector and select the source that represents the device media you want RLB to examine.</p>
+        <p>The Device Inspector interface supports sources such as an SD card, mounted image or boot folder. Select the source that corresponds to the original media you are protecting.</p>
+        <div class="guide-state-note">
+          <span class="state-num">1</span>
+          <div><strong>Choose</strong><small>This establishes the input for analysis. Choosing the source does not itself preserve, reconcile or deploy anything.</small></div>
+        </div>
+
+        <h2 id="step4">4. Run Analyze</h2>
+        <p>Run <strong>Analyze</strong> once the correct source is selected. This is the evidence-gathering stage. RLB examines the source so it can reason about device identity, partitions, content and the protection that may be required.</p>
+        <div class="callout success"><strong>Read-only first:</strong> Analysis is deliberately separated from write-oriented protection work. You should be able to understand what RLB found before approving operations that establish destination content.</div>
+
+        <h2 id="step5">5. Review the device result before relying on it</h2>
+        <p>After analysis, review the Device, Firmware, Hardware and Knowledge areas as well as the <strong>Hardware Identity Assessment</strong>.</p>
+        <p>Ask a simple question: <strong>Does this result make sense for the device in front of you?</strong></p>
+        <div class="identity-check-grid">
+          <div><span>✓</span><strong>Good signs</strong><small>Device-specific hardware evidence, sensible firmware relationship, and no obvious contradiction with the actual device.</small></div>
+          <div><span>!</span><strong>Stop and review</strong><small>A generic or clearly wrong identity, unexpected hardware result, or evidence that does not fit the device you connected.</small></div>
+        </div>
+        <p>If the identity looks wrong or unexpectedly generic, do not treat device-specific recommendations as authoritative simply because Analyze completed.</p>
+
+        <h2 id="step6">6. Review the Protection Summary</h2>
+        <p>The <strong>Protection Summary</strong> shows the protection state of major areas such as system/recovery material and user content. Before a new preservation is established, incomplete or not-ready states are expected.</p>
+        <p>A Device Report, an identified device, or an available action is not the same thing as a completed preservation.</p>
+
+        <h2 id="step7">7. Follow RLB's protection recommendation</h2>
+        <p>When the required prerequisites are satisfied, Device Inspector will make the appropriate protection action available. For the original device workflow, that is the point at which <strong>Essential Protection</strong> becomes relevant.</p>
+        <p>If RLB needs destination information or other prerequisites, complete those through the current UI rather than trying to work around a locked stage.</p>
+        <div class="callout"><strong>Locked is meaningful:</strong> A disabled or locked protection step means RLB does not yet consider its prerequisites satisfied. Do not interpret a locked button as something that should be bypassed.</div>
+
+        <h2 id="step8">8. Review Analyze / Preview before confirmed reconciliation work</h2>
+        <p>When a workflow includes reconciliation, RLB separates the process into <strong>Analyze → Preview → Confirm → Apply</strong>. Review what RLB predicts before approving the Apply stage.</p>
+        <p>The preview can classify content into outcomes such as <strong>Copy New</strong>, <strong>Existing</strong>, <strong>Conflict / Review</strong> and <strong>Duplicate playable</strong>.</p>
+        <div class="preview-placeholder compact" role="note">
+          <div class="preview-placeholder-icon">▧</div>
+          <div><strong>Real Analyze / Preview image pending</strong><span>This guide will use the actual Beta preview the next time a normal test run reaches it. No extra multi-hour Analyze is needed for documentation.</span></div>
+        </div>
+
+        <h2 id="step9">9. Run Essential Protection and leave the media connected</h2>
+        <p>Once you have reviewed the protection plan and RLB has made the protection operation available, start the operation and allow it to run.</p>
+        <p>Large devices can contain many thousands of files. Keep both the original source and the protection destination connected and stable while the task is active.</p>
+        <div class="guide-task-panel">
+          <span class="task-symbol">↻</span>
+          <div><strong>Watch Background Tasks</strong><small>Long-running work should remain visible through RLB's background task system. Avoid disconnecting the source or destination while the operation is active.</small></div>
+        </div>
+
+        <h2 id="step10">10. Verify the terminal result</h2>
+        <p>Do not call the original device safely preserved just because the progress UI disappeared or a Device Report exists. Confirm the actual preservation state.</p>
+        <div class="completion-checks guide-completion">
+          <div><span>✓</span><strong>Required content is accounted for</strong></div>
+          <div><span>✓</span><strong>System / recovery protection is established where required</strong></div>
+          <div><span>✓</span><strong>User content protection is established where required</strong></div>
+          <div><span>✓</span><strong>Verification completed successfully</strong></div>
+          <div><span>✓</span><strong>No unresolved condition is being mistaken for success</strong></div>
+        </div>
+
+        <h2 id="step11">11. Keep the original card</h2>
+        <p>Especially during Beta, keep the original card intact after the preservation finishes. It remains your last-resort physical reference while you validate future recovery or deployment workflows.</p>
+        <div class="callout warning"><strong>Do not repurpose the original yet:</strong> A successful preservation is intended to protect you from losing the original content, but there is no advantage in immediately erasing the only factory/original media while you are still validating the workflow.</div>
+
+        <h2 id="next">What comes next?</h2>
+        <p>Once the device is protected, RLB can use the preserved device identity and verified content as the foundation for later decisions. That includes retained-content reconciliation and, as Deployment matures, preparing replacement media.</p>
+        <div class="actions">
+          <a class="btn primary" href="preservation.html">Understand preservation →</a>
+          <a class="btn" href="guides.html">Back to all guides</a>
+        </div>
+      </article>
+
+      <aside class="toc" aria-label="On this page">
+        <strong>On this page</strong>
+        <a href="#step1">Connect original media</a>
+        <a href="#step2">Open Device Inspector</a>
+        <a href="#step3">Choose source</a>
+        <a href="#step4">Analyze</a>
+        <a href="#step5">Review identity</a>
+        <a href="#step6">Protection Summary</a>
+        <a href="#step7">Protection recommendation</a>
+        <a href="#step8">Analyze / Preview</a>
+        <a href="#step9">Essential Protection</a>
+        <a href="#step10">Verify result</a>
+        <a href="#step11">Keep original card</a>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><strong>Retro Library Builder</strong><div>Preserve Once. Build Many.</div></div><div class="footer-links"><a href="https://github.com/cancruiser/RetroLibraryBuilder">GitHub</a><a href="https://discord.gg/zCDA8evmyE">Discord</a><a href="about.html">About</a></div></div><div class="footer-note">RLB does not provide or distribute commercial ROM collections. © <span data-year></span> Retro Library Builder.</div></div></footer>
+<script src="assets/site.js"></script>
+</body></html>
