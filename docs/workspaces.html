@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore the Retro Library Builder workspaces for Library, Media, Import, Review, Device Inspector, Device Readiness and Deployment.">
+  <title>Workspaces — Retro Library Builder</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="nav-wrap" aria-label="Primary navigation">
+    <a class="brand" href="./"><span class="brand-mark">R</span><span>Retro Library Builder <small>Beta</small></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">Menu</button>
+    <div class="nav-links">
+      <a href="./">Home</a>
+      <a href="getting-started.html">Getting Started</a>
+      <a href="workspaces.html" aria-current="page">Workspaces</a>
+      <a href="preservation.html">Preservation</a>
+      <a href="knowledge.html">Knowledge</a>
+      <a href="guides.html">Guides</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+</header>
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="./">Home</a> / Workspaces</div>
+      <span class="eyebrow"><span class="dot"></span> RLB workspaces</span>
+      <h1>The application, one workspace at a time.</h1>
+      <p class="lead">RLB separates content management, device protection, readiness and deployment so each screen can answer a specific question without turning the application into one giant workflow.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="workspace-map">
+        <div class="workspace-map-group">
+          <span class="workspace-map-label">MANAGED CONTENT</span>
+          <div class="workspace-map-row">
+            <a href="import.html"><strong>Import Studio</strong><small>Analyze sources and approve what enters the managed Library.</small></a>
+            <b>→</b>
+            <a href="review.html"><strong>Review Center</strong><small>Resolve only the exceptions that need an explicit decision.</small></a>
+            <b>→</b>
+            <a href="library.html"><strong>Library Explorer</strong><small>Browse the canonical games and managed content RLB established.</small></a>
+            <b>↔</b>
+            <a href="media.html"><strong>Media Explorer</strong><small>Manage preferred covers and linked media assets.</small></a>
+          </div>
+        </div>
+
+        <div class="workspace-map-group">
+          <span class="workspace-map-label">DEVICE SAFETY</span>
+          <div class="workspace-map-row device-row">
+            <a href="getting-started.html#device-inspector"><strong>Device Inspector</strong><small>Understand the actual device and its preservation state.</small></a>
+            <b>→</b>
+            <a href="device-readiness.html"><strong>Device Readiness</strong><small>Decide whether knowledge is strong enough for any deployable target.</small></a>
+            <b>→</b>
+            <div class="workspace-map-pending"><strong>Deployment</strong><small>Executes validated targets. Public documentation follows Beta hardening.</small><span>DOCUMENTATION UPCOMING</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-head workspace-section-head">
+        <h2>Content workspaces</h2>
+        <p>These four screens form the managed-content lifecycle.</p>
+      </div>
+
+      <div class="workspace-card-grid">
+        <a class="workspace-doc-card available" href="library.html">
+          <span class="workspace-card-kicker">LIBRARY</span>
+          <div class="workspace-card-icon">▦</div>
+          <strong>Library Explorer</strong>
+          <small>Systems, canonical games, ROM variants, media, BIOS, saves, configs, Library health and safe paging.</small>
+          <b>Explore Library →</b>
+        </a>
+
+        <a class="workspace-doc-card available" href="media.html">
+          <span class="workspace-card-kicker">MEDIA</span>
+          <div class="workspace-card-icon">▰</div>
+          <strong>Media Explorer</strong>
+          <small>Preferred covers, linked media assets, missing-artwork workflows and configurable artwork sources.</small>
+          <b>Explore Media →</b>
+        </a>
+
+        <a class="workspace-doc-card available" href="import.html">
+          <span class="workspace-card-kicker">IMPORT</span>
+          <div class="workspace-card-icon">↓</div>
+          <strong>Import Studio</strong>
+          <small>Source-safe Analyze → Review → Import → Verify workflow for managed Library content.</small>
+          <b>Explore Import →</b>
+        </a>
+
+        <a class="workspace-doc-card available" href="review.html">
+          <span class="workspace-card-kicker">REVIEW</span>
+          <div class="workspace-card-icon">✓</div>
+          <strong>Review Center</strong>
+          <small>Decision Groups, individual items and incoming-vs-Library comparison for unresolved import exceptions.</small>
+          <b>Explore Review →</b>
+        </a>
+      </div>
+
+      <div class="section-head workspace-section-head">
+        <h2>Device workspaces</h2>
+        <p>These screens decide what the device is, whether it is protected, and whether known deployment targets are actually safe.</p>
+      </div>
+
+      <div class="workspace-card-grid device-workspace-grid">
+        <a class="workspace-doc-card available" href="getting-started.html#device-inspector">
+          <span class="workspace-card-kicker">DEVICE</span>
+          <div class="workspace-card-icon">◎</div>
+          <strong>Device Inspector</strong>
+          <small>Source selection, evidence-based device identity, Protection Summary, recommended actions and deployment readiness.</small>
+          <b>Explore Device Inspector →</b>
+        </a>
+
+        <a class="workspace-doc-card available" href="device-readiness.html">
+          <span class="workspace-card-kicker">READINESS</span>
+          <div class="workspace-card-icon">⚒</div>
+          <strong>Device Readiness</strong>
+          <small>Canonical identity, targets, confidence, blocking risks and the STOP/not-safe-to-deploy safety gate.</small>
+          <b>Explore Device Readiness →</b>
+        </a>
+
+        <div class="workspace-doc-card upcoming">
+          <span class="workspace-card-kicker">DEPLOYMENT</span>
+          <div class="workspace-card-icon">⌂</div>
+          <strong>Deployment</strong>
+          <small>The application workspace exists, but public workflow documentation will follow the validated Beta deployment path rather than describe unfinished behaviour.</small>
+          <span class="workspace-coming">Documentation upcoming</span>
+        </div>
+      </div>
+
+      <div class="workspace-crosslink">
+        <div>
+          <span>CORE PROTECTION MODEL</span>
+          <strong>Preservation crosses workspace boundaries.</strong>
+          <small>Preservation is kept as a major site section because it explains the protection model used by Device Inspector, Library representation and later recovery/deployment decisions.</small>
+        </div>
+        <a class="btn primary" href="preservation.html">Understand preservation →</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><strong>Retro Library Builder</strong><div>Preserve Once. Build Many.</div></div><div class="footer-links"><a href="https://github.com/cancruiser/RetroLibraryBuilder">GitHub</a><a href="https://discord.gg/zCDA8evmyE">Discord</a><a href="about.html">About</a></div></div><div class="footer-note">RLB does not provide or distribute commercial ROM collections. © <span data-year></span> Retro Library Builder.</div></div></footer>
+<script src="assets/site.js"></script>
+</body></html>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore Retro Library Builder Knowledge Explorer, Knowledge Sources and the evidence path from community sources to device readiness.">
+  <title>Knowledge — Retro Library Builder</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="nav-wrap" aria-label="Primary navigation">
+    <a class="brand" href="./"><span class="brand-mark">R</span><span>Retro Library Builder <small>Beta</small></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">Menu</button>
+    <div class="nav-links">
+      <a href="./">Home</a>
+      <a href="getting-started.html">Getting Started</a>
+      <a href="workspaces.html">Workspaces</a>
+      <a href="preservation.html">Preservation</a>
+      <a href="knowledge.html" aria-current="page">Knowledge</a>
+      <a href="guides.html">Guides</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+</header>
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="./">Home</a> / Knowledge</div>
+      <span class="eyebrow"><span class="dot"></span> Evidence and provenance</span>
+      <h1>Knowledge should be useful — and traceable.</h1>
+      <p class="lead">RLB combines credited source material with its own canonical knowledge layer so device, firmware and hardware evidence can be reused without hiding where that evidence came from.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="knowledge-landing-flow">
+        <a href="knowledge-sources.html">
+          <span>SOURCES</span>
+          <strong>Knowledge Sources</strong>
+          <small>Where device, firmware, DTB, hardware and historical evidence originates.</small>
+        </a>
+        <b>→</b>
+        <div>
+          <span>RLB</span>
+          <strong>Managed canonical knowledge</strong>
+          <small>Aliases, identity, classification and connected evidence normalized without erasing provenance.</small>
+        </div>
+        <b>→</b>
+        <a href="knowledge-explorer.html">
+          <span>EXPLORE</span>
+          <strong>Knowledge Explorer</strong>
+          <small>The devices, firmware, boards, panels, DTBs, recipes, media and issues RLB can browse.</small>
+        </a>
+        <b>→</b>
+        <a href="device-readiness.html">
+          <span>APPLY</span>
+          <strong>Device Readiness</strong>
+          <small>Use that knowledge to decide whether any deployment target is actually safe.</small>
+        </a>
+      </div>
+
+      <div class="knowledge-landing-grid">
+        <a class="knowledge-landing-card primary-card" href="knowledge-explorer.html">
+          <span class="knowledge-card-status">BROWSE</span>
+          <div class="workspace-card-icon">◎</div>
+          <strong>Knowledge Explorer</strong>
+          <small>Search the repository, choose a knowledge domain, browse device families, inspect Details and follow Connected Knowledge.</small>
+          <b>Open Knowledge Explorer →</b>
+        </a>
+
+        <a class="knowledge-landing-card source-card" href="knowledge-sources.html">
+          <span class="knowledge-card-status">PROVENANCE</span>
+          <div class="workspace-card-icon">◉</div>
+          <strong>Knowledge Sources</strong>
+          <small>See internal vs community providers, enabled/sync-capable state, what each source contributes and where to visit the original project.</small>
+          <b>Open Knowledge Sources →</b>
+        </a>
+
+        <a class="knowledge-landing-card readiness-card" href="device-readiness.html">
+          <span class="knowledge-card-status">SAFETY GATE</span>
+          <div class="workspace-card-icon">⚒</div>
+          <strong>Device Readiness</strong>
+          <small>See how canonical knowledge becomes confidence, blocking risks, validated targets — or a deliberate STOP result.</small>
+          <b>Open Device Readiness →</b>
+        </a>
+      </div>
+
+      <div class="section-head knowledge-domain-head">
+        <h2>What can the repository know about?</h2>
+        <p>Knowledge is separated into domains so a device is not reduced to one flat record.</p>
+      </div>
+
+      <div class="knowledge-domain-summary">
+        <div><strong>Devices</strong><small>Canonical devices, aliases, manufacturers and families.</small></div>
+        <div><strong>Firmware</strong><small>Known firmware families and compatibility relationships.</small></div>
+        <div><strong>Boards &amp; Hardware</strong><small>SoCs, hardware profiles and board relationships.</small></div>
+        <div><strong>Panels</strong><small>Display evidence that can be critical to safe firmware selection.</small></div>
+        <div><strong>DTBs</strong><small>Device-tree fingerprints, associations and boot evidence.</small></div>
+        <div><strong>Recipes</strong><small>Reusable handling/deployment knowledge where validated.</small></div>
+        <div><strong>Media</strong><small>Device recognition imagery and related knowledge media.</small></div>
+        <div><strong>Known Issues</strong><small>Risks and incompatibilities that should remain visible.</small></div>
+      </div>
+
+      <div class="workspace-crosslink knowledge-crosslink">
+        <div>
+          <span>EVIDENCE-BASED DEVICE IDENTITY</span>
+          <strong>Knowledge informs Device Inspector; it does not replace evidence from the device.</strong>
+          <small>A known product name or firmware mention is not enough by itself. Device Inspector compares real source evidence with known relationships and should preserve ambiguity when the evidence is insufficient.</small>
+        </div>
+        <a class="btn primary" href="getting-started.html#device-inspector">See Device Inspector →</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><strong>Retro Library Builder</strong><div>Preserve Once. Build Many.</div></div><div class="footer-links"><a href="https://github.com/cancruiser/RetroLibraryBuilder">GitHub</a><a href="https://discord.gg/zCDA8evmyE">Discord</a><a href="about.html">About</a></div></div><div class="footer-note">RLB does not provide or distribute commercial ROM collections. © <span data-year></span> Retro Library Builder.</div></div></footer>
+<script src="assets/site.js"></script>
+</body></html>
