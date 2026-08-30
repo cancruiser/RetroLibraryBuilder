@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Retro Library Builder reconciles verified retained preservation content into the reusable Library without accessing the original device.">
+  <title>Reconcile Retained Content — Retro Library Builder</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="nav-wrap" aria-label="Primary navigation">
+    <a class="brand" href="./"><span class="brand-mark">R</span><span>Retro Library Builder <small>Beta</small></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">Menu</button>
+    <div class="nav-links">
+      <a href="./">Home</a>
+      <a href="getting-started.html">Getting Started</a>
+      <a href="workspaces.html">Workspaces</a>
+      <a href="preservation.html">Preservation</a>
+      <a href="knowledge.html">Knowledge</a>
+      <a href="guides.html" class="section-active">Guides</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="./">Home</a> / <a href="guides.html">Guides</a> / Reconcile retained content</div>
+      <span class="eyebrow"><span class="dot"></span> Preservation reconciliation</span>
+      <h1>Move reusable content forward without going back to the original device.</h1>
+      <p class="lead">Retained-content reconciliation examines content already captured and verified with a preservation, determines whether it can now be represented in the reusable Library, shows a Preview, and changes Library state only after explicit confirmation.</p>
+    </div>
+  </section>
+
+  <section class="section device-tour">
+    <div class="container">
+      <div class="app-panel reconcile-workflow-panel">
+        <span class="panel-title">RECONCILIATION WORKFLOW — DOCUMENTED FLOW, NOT A SCREENSHOT</span>
+        <div class="reconcile-guide-flow">
+          <div><span>1</span><strong>Preserved Device</strong><small>Start from an existing preservation with verified retained content.</small></div>
+          <b>→</b>
+          <div><span>2</span><strong>Analyze</strong><small>Read retained preservation evidence and current Library state. No original-device access.</small></div>
+          <b>→</b>
+          <div><span>3</span><strong>Preview</strong><small>Review eligible items and predicted Copy New / Existing / Conflict / Duplicate outcomes.</small></div>
+          <b>→</b>
+          <div><span>4</span><strong>Confirm</strong><small>Nothing is applied until the user approves the reviewed plan.</small></div>
+          <b>→</b>
+          <div><span>5</span><strong>Apply</strong><small>Establish valid Library representations and record the actual outcomes encountered.</small></div>
+        </div>
+        <p class="reconcile-screenshot-note"><strong>Screenshot pending:</strong> the next normal reconciliation run can supply the real Analyze/Preview confirmation image. This guide does not run a multi-hour analysis just to create documentation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="container article-layout">
+      <article class="article reconcile-article">
+
+        <div class="callout success"><strong>The original device is not required.</strong> Reconciliation works from the verified retained content already stored with the preservation and the persisted preservation evidence associated with it.</div>
+
+        <h2 id="what">1. What retained-content reconciliation is</h2>
+        <p>Essential Protection can retain content with a specific preservation when RLB cannot establish an acceptable reusable Library representation at preservation time.</p>
+        <p>Later, the Library may contain better canonical content, new representation rules may exist, or previously retained content may now be eligible for safe Library representation. Reconciliation is the separate workflow that evaluates that preserved retained content again.</p>
+
+        <div class="retained-meaning-grid">
+          <div><span>PRESERVATION</span><strong>Retained content</strong><small>Verified content kept with a particular preservation because a reusable Library representation was not established.</small></div>
+          <b>→</b>
+          <div><span>RECONCILIATION</span><strong>Re-evaluate representation</strong><small>Determine whether that already-preserved content can now be represented safely in the managed Library.</small></div>
+          <b>→</b>
+          <div><span>LIBRARY</span><strong>Reusable representation</strong><small>Establish reusable Library content only when the required identity/representation rules are satisfied.</small></div>
+        </div>
+
+        <h2 id="start">2. Start from the preserved device, not the original media</h2>
+        <p>Open <strong>Device Inspector</strong> and locate the preserved-device entry that owns the retained content. The reconciliation action belongs to that preservation context.</p>
+        <p>When you choose <strong>Reconcile Retained Content</strong>, RLB should make the safety boundary clear: it is analyzing <strong>verified retained content</strong>, and the original device is not being accessed.</p>
+
+        <div class="callout"><strong>Different from Essential Protection:</strong> Essential Protection works to protect the original source device. Retained-content reconciliation is post-preservation Library work performed from the preservation itself.</div>
+
+        <h2 id="analyze">3. Analyze is read-only planning</h2>
+        <p>Analyze examines the eligible retained-content set and the relevant current Library/destination state. It predicts what reconciliation would do without establishing new Library content yet.</p>
+        <p>The expected sequence is:</p>
+        <div class="analyze-preview-sequence">
+          <div><span>ANALYZE</span><strong>Inspect evidence</strong><small>Determine which retained items are eligible and what destination/representation each item would require.</small></div>
+          <b>→</b>
+          <div><span>PREVIEW</span><strong>Show the proposed result</strong><small>Present counts and outcomes before the user authorizes Apply.</small></div>
+          <b>→</b>
+          <div><span>CONFIRM</span><strong>Explicit approval</strong><small>The user decides whether the proposed reconciliation should proceed.</small></div>
+        </div>
+
+        <h2 id="preview">4. Read the Preview before approving Apply</h2>
+        <p>The Preview is the user-reviewable plan. It should make the size and shape of the proposed reconciliation visible before any new Library representation is established.</p>
+
+        <div class="preview-outcome-grid">
+          <div class="copy"><span>COPY NEW</span><strong>New Library content expected</strong><small>Analyze predicts that an acceptable destination representation does not yet exist and new content will need to be established.</small></div>
+          <div class="existing"><span>EXISTING</span><strong>Representation already exists</strong><small>RLB expects an acceptable verified representation to be present already.</small></div>
+          <div class="conflict"><span>CONFLICT / REVIEW</span><strong>Do not silently accept</strong><small>A destination or identity condition needs explicit review rather than being treated as established.</small></div>
+          <div class="duplicate"><span>DUPLICATE PLAYABLE</span><strong>Intentionally skipped</strong><small>A playable duplicate can be skipped according to the applicable reconciliation rule.</small></div>
+        </div>
+
+        <p>The Preview may also show the overall eligible item count. The outcome buckets should explain how RLB expects those eligible items to be handled.</p>
+
+        <h2 id="confirm">5. Confirm is the boundary between planning and work</h2>
+        <p>Reconciliation should not jump directly from analysis into Apply. The Preview exists so the user has a chance to decide whether the proposed result makes sense.</p>
+        <div class="confirm-boundary">
+          <div><span>READ ONLY</span><strong>Analyze + Preview</strong><small>Inspect preserved retained content and predict the Library work.</small></div>
+          <b>│</b>
+          <div class="approval"><span>USER APPROVAL</span><strong>Confirm</strong><small>Explicitly authorize the reviewed plan.</small></div>
+          <b>│</b>
+          <div><span>WRITE ORIENTED</span><strong>Apply</strong><small>Establish approved Library representations and persist actual reconciliation results.</small></div>
+        </div>
+
+        <h2 id="apply">6. Apply validates the destination it actually encounters</h2>
+        <p>Preview counts are predictions based on evidence available during Analyze. Apply must still validate the destination conditions it encounters when the work actually runs.</p>
+        <p>That means the actual Apply result is authoritative for what was established, skipped or left unresolved.</p>
+
+        <div class="prediction-vs-actual">
+          <div><span>PREVIEW</span><strong>Predicted outcome</strong><small>What Analyze believes should happen before the work begins.</small></div>
+          <b>≠</b>
+          <div><span>APPLY RESULT</span><strong>Actual outcome</strong><small>What RLB was able to establish after validating the real destination state during Apply.</small></div>
+        </div>
+
+        <div class="callout warning"><strong>Do not dismiss a large unexpected difference.</strong> Some divergence can be legitimate when destination state or Apply-time validation changes the result. A substantial unexplained divergence between Preview and Apply should be investigated rather than treated as normal.</div>
+
+        <h2 id="conflicts">7. A destination conflict is not a successful representation</h2>
+        <p>If Apply finds destination content that prevents the required representation from being established safely, that item belongs in a conflict/review result rather than being silently overwritten or counted as represented.</p>
+
+        <div class="conflict-explain-grid">
+          <div><span>!</span><div><strong>Existing destination is not enough</strong><small>A matching filename or occupied path does not prove that the destination safely represents the retained source content.</small></div></div>
+          <div><span>!</span><div><strong>Same size is not enough</strong><small>Container length or byte length alone is not a sufficient content-identity rule where cryptographic or canonical verification is required.</small></div></div>
+          <div><span>!</span><div><strong>Unresolved stays unresolved</strong><small>If RLB cannot establish representation, the result must remain visible for review instead of being converted into false success.</small></div></div>
+        </div>
+
+        <h2 id="canonical">8. Canonical content does not always look byte-for-byte identical</h2>
+        <p>For content types that support canonical representation, RLB distinguishes <strong>content identity</strong> from the identity of the outer container.</p>
+        <p>A canonical ZIP can legitimately represent a source game payload even if ZIP metadata, compression or total container length differs. The representation rule must verify the required payload relationship rather than relying on outer-file size alone.</p>
+
+        <div class="canonical-reconcile-flow">
+          <div><span>SOURCE PAYLOAD</span><strong>What needs representation</strong><small>The game/content identity established for the retained item.</small></div>
+          <b>→</b>
+          <div><span>VERIFY</span><strong>Canonical relationship</strong><small>Prove that the Library representation satisfies the applicable representation rule.</small></div>
+          <b>→</b>
+          <div><span>REPRESENTED</span><strong>Safe Library reuse</strong><small>The Library can represent that source content without requiring a byte-identical outer container.</small></div>
+        </div>
+
+        <h2 id="duplicate">9. Duplicate playable is a deliberate skip, not an error</h2>
+        <p>A duplicate-playable outcome means the applicable rule intentionally avoids establishing another playable representation. It should remain distinguishable from both conflicts and import errors.</p>
+
+        <div class="result-class-grid">
+          <div><span>✓</span><strong>Established / represented</strong><small>The required Library representation was successfully established or verified.</small></div>
+          <div><span>↷</span><strong>Duplicate playable skip</strong><small>Intentionally skipped by a defined duplicate-playable rule.</small></div>
+          <div><span>!</span><strong>Conflict / review</strong><small>Representation was not safely established and requires review or a defined rule.</small></div>
+          <div><span>×</span><strong>Import error</strong><small>The attempted operation failed for an execution/error condition rather than a deliberate review rule.</small></div>
+        </div>
+
+        <h2 id="result">10. Read the actual Apply summary after the run</h2>
+        <p>When Apply completes, review the persisted result rather than relying on the Preview you approved earlier.</p>
+        <p>The result should make it possible to account for the attempted items across successful representation, review/conflict skips, duplicate-playable skips and any true import errors.</p>
+
+        <div class="apply-accounting">
+          <div><strong>Attempted</strong><small>Items Apply tried to reconcile.</small></div>
+          <span>=</span>
+          <div><strong>Established</strong><small>Valid Library representations established/verified.</small></div>
+          <span>+</span>
+          <div><strong>Review / conflict</strong><small>Items intentionally left unresolved.</small></div>
+          <span>+</span>
+          <div><strong>Duplicate skips</strong><small>Playable duplicates skipped by rule.</small></div>
+          <span>+</span>
+          <div><strong>Errors</strong><small>True execution/import failures.</small></div>
+        </div>
+
+        <h2 id="preservation">11. Reconciliation does not make the original preservation disposable</h2>
+        <p>Reconciliation is about whether preserved retained content can now be represented by the reusable Library. It is not an instruction to manually delete preservation content or alter historical preservation manifests.</p>
+        <p>Leave preservation data and persisted evidence under RLB's control. A conflict in reconciliation means the Library representation was not established for that item by that Apply; it is not permission to discard the retained preservation copy.</p>
+
+        <h2 id="source">12. Do not reconnect the original device just to reconcile</h2>
+        <p>The workflow is deliberately designed so the original device does not need to be accessed. If a preserved-device reconciliation unexpectedly asks you to browse or reconnect the original source merely to analyze retained content, stop and verify that you are in the correct workflow.</p>
+
+        <div class="guide-do-dont">
+          <div class="do"><span>✓</span><div><strong>Use preserved retained content</strong><small>Analyze from the preservation and its persisted evidence.</small></div></div>
+          <div class="dont"><span>×</span><div><strong>Do not touch the original device</strong><small>Retained reconciliation should not require returning to the original media.</small></div></div>
+        </div>
+
+        <h2 id="safe-sequence">The safe reconciliation sequence</h2>
+        <div class="reconcile-sequence">
+          <div><span>1</span><strong>Open preserved device</strong><small>Choose the preservation that owns the retained content.</small></div>
+          <div><span>2</span><strong>Analyze</strong><small>Inventory eligible verified retained content without accessing the original device.</small></div>
+          <div><span>3</span><strong>Preview</strong><small>Read Copy New, Existing, Conflict/Review and Duplicate outcomes.</small></div>
+          <div><span>4</span><strong>Confirm</strong><small>Approve only after the proposed result makes sense.</small></div>
+          <div><span>5</span><strong>Apply</strong><small>Let RLB validate destination state and establish valid Library representations.</small></div>
+          <div><span>6</span><strong>Review actual result</strong><small>Account for established, skipped, conflicted and error outcomes from persisted Apply metadata.</small></div>
+        </div>
+
+        <div class="actions">
+          <a class="btn primary" href="preservation.html#reconciliation">Review the preservation model →</a>
+          <a class="btn" href="review.html">Understand Review Center</a>
+        </div>
+      </article>
+
+      <aside class="toc" aria-label="On this page">
+        <strong>On this page</strong>
+        <a href="#what">What reconciliation is</a>
+        <a href="#start">Start from preservation</a>
+        <a href="#analyze">Analyze</a>
+        <a href="#preview">Preview outcomes</a>
+        <a href="#confirm">Confirm</a>
+        <a href="#apply">Apply-time validation</a>
+        <a href="#conflicts">Destination conflicts</a>
+        <a href="#canonical">Canonical content</a>
+        <a href="#duplicate">Duplicate playable</a>
+        <a href="#result">Apply summary</a>
+        <a href="#preservation">Preservation remains authoritative</a>
+        <a href="#source">No original-device access</a>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><strong>Retro Library Builder</strong><div>Preserve Once. Build Many.</div></div><div class="footer-links"><a href="https://github.com/cancruiser/RetroLibraryBuilder">GitHub</a><a href="https://discord.gg/zCDA8evmyE">Discord</a><a href="about.html">About</a></div></div><div class="footer-note">RLB does not provide or distribute commercial ROM collections. © <span data-year></span> Retro Library Builder.</div></div></footer>
+<script src="assets/site.js"></script>
+</body></html>
