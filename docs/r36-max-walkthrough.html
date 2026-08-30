@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A real-world Retro Library Builder walkthrough using an R36 Max to show evidence-based identity, preservation, retained content and deployment readiness.">
+  <title>R36 Max Walkthrough — Retro Library Builder</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="nav-wrap" aria-label="Primary navigation">
+    <a class="brand" href="./"><span class="brand-mark">R</span><span>Retro Library Builder <small>Beta</small></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">Menu</button>
+    <div class="nav-links">
+      <a href="./">Home</a>
+      <a href="getting-started.html">Getting Started</a>
+      <a href="workspaces.html">Workspaces</a>
+      <a href="preservation.html">Preservation</a>
+      <a href="knowledge.html">Knowledge</a>
+      <a href="guides.html" class="section-active">Guides</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="page-hero r36-hero">
+    <div class="container r36-hero-grid">
+      <div>
+        <div class="breadcrumb"><a href="./">Home</a> / <a href="guides.html">Guides</a> / R36 Max walkthrough</div>
+        <span class="eyebrow"><span class="dot"></span> Real RLB example</span>
+        <h1>One label. Several questions RLB should answer before you rebuild anything.</h1>
+        <p class="lead">The R36 Max is a useful example of why RLB is more than an SD-card copier. The name on the handheld is only the beginning: device identity, boot evidence, firmware relationships, display-panel compatibility, preserved content and deployment readiness are separate questions.</p>
+      </div>
+      <div class="r36-record-card">
+        <span>RLB DEVICE RECORD</span>
+        <img src="assets/images/r36-max-device-record.jpg" alt="R36 Max device record from Retro Library Builder showing the R36 Max identity and ArkOS for Clones relationship.">
+        <small>This historical card is shown only as a device-record example. Preservation success is verified from current preservation state, not from an old Home-card label.</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="section r36-case-intro">
+    <div class="container">
+      <div class="r36-case-strip">
+        <div><span>DEVICE</span><strong>R36 Max</strong><small>Retro handheld / clone-family hardware</small></div>
+        <div><span>CANONICAL KEY</span><strong>r36-max</strong><small>Current Runtime Knowledge identity</small></div>
+        <div><span>KNOWLEDGE</span><strong>77%</strong><small>Current overall knowledge confidence</small></div>
+        <div class="stop"><span>DEPLOYMENT</span><strong>STOP</strong><small>0 validated targets in the captured readiness state</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="container article-layout">
+      <article class="article r36-article">
+
+        <div class="callout success"><strong>This is the point of the walkthrough:</strong> RLB can have a canonical R36 Max identity and strong hardware/fingerprint evidence while still refusing to create a deployment target because critical panel or recovery evidence is missing.</div>
+
+        <h2 id="why-hard">1. Why an R36 Max is not just “an R36 Max”</h2>
+        <p>Low-cost retro handheld families can contain revisions, clones and loosely related hardware sold under similar names. Two units with the same printed product name can require different boot files, panels, DTBs or firmware handling.</p>
+        <p>For that reason, RLB should not treat a retail label, volume name or generic operating-system file as proof of exact hardware identity.</p>
+
+        <div class="r36-risk-grid">
+          <div><span>LABEL</span><strong>Product name</strong><small>Useful context, but not enough to prove the board or display variant.</small></div>
+          <div><span>BOOT</span><strong>DTB / boot evidence</strong><small>Can provide much stronger device-specific hardware relationships.</small></div>
+          <div><span>PANEL</span><strong>Display variant</strong><small>Can determine whether otherwise plausible firmware is safe for the actual device.</small></div>
+          <div><span>FIRMWARE</span><strong>Compatibility</strong><small>A known firmware family is not automatically a validated target for every clone or panel.</small></div>
+        </div>
+
+        <h2 id="first-rule">2. First rule: protect the original media before experimenting</h2>
+        <p>The factory card can contain far more than ROM folders: boot assets, firmware configuration, DTBs, BIOS files, frontend metadata, artwork, saves, configuration and device-specific files may exist across several partitions.</p>
+        <p>The safe starting point is therefore the same as RLB's general original-media workflow:</p>
+
+        <div class="r36-protect-flow">
+          <div><span>1</span><strong>Connect original media</strong><small>Do not alter it just to make the card easier to inspect.</small></div>
+          <b>→</b>
+          <div><span>2</span><strong>Analyze read-only</strong><small>Gather device, partition, boot and content evidence before approving protection work.</small></div>
+          <b>→</b>
+          <div><span>3</span><strong>Review identity</strong><small>Ask whether the hardware and firmware result actually make sense for the device.</small></div>
+          <b>→</b>
+          <div><span>4</span><strong>Run protection</strong><small>Establish required Library representation and retained preservation content.</small></div>
+          <b>→</b>
+          <div><span>5</span><strong>Verify</strong><small>Trust the verified preservation state, not the fact that a copy operation ended.</small></div>
+        </div>
+
+        <div class="actions inline-guide-actions">
+          <a class="btn" href="protect-original-sd.html">Open the original-SD guide →</a>
+          <a class="btn" href="preservation.html">Understand preservation</a>
+        </div>
+
+        <h2 id="identity">3. RLB should identify from evidence, not convenience</h2>
+        <p>In this real R36 Max case, Runtime Knowledge resolves the canonical key as <strong>r36-max</strong>. The readiness model also shows very strong <strong>Clone / Fingerprint</strong> evidence.</p>
+        <p>That is more meaningful than simply seeing “R36 Max” printed on a shell because the identity is being connected to reusable knowledge about the device family.</p>
+
+        <div class="identity-evidence-flow">
+          <div><span>OBSERVED DEVICE</span><strong>R36 Max</strong><small>The physical product and source media being inspected.</small></div>
+          <b>+</b>
+          <div><span>DEVICE EVIDENCE</span><strong>Boot / fingerprint / hardware clues</strong><small>Device-specific evidence gathered from the source and known relationships.</small></div>
+          <b>→</b>
+          <div><span>CANONICAL IDENTITY</span><strong>r36-max</strong><small>The normalized device identity used by RLB knowledge and readiness.</small></div>
+        </div>
+
+        <h2 id="preserve-vs-library">4. Preservation separates reusable content from device-specific content</h2>
+        <p>RLB does not need to create a full second copy of every reusable item just because it came from this handheld. If content can be safely represented by the verified Library, that Library representation can account for it.</p>
+        <p>Content that cannot be safely represented elsewhere remains <strong>retained with the preservation</strong>.</p>
+
+        <div class="r36-preservation-split">
+          <div class="library-side">
+            <span>REUSABLE LIBRARY</span>
+            <strong>Content that can safely represent the source</strong>
+            <small>Verified reusable game, BIOS, media or other managed content when the applicable representation rule is satisfied.</small>
+          </div>
+          <div class="retained-side">
+            <span>R36 MAX PRESERVATION</span>
+            <strong>What remains device-specific or unresolved</strong>
+            <small>Boot assets, configuration, saves and other verified content that cannot yet be represented safely by the reusable Library.</small>
+          </div>
+        </div>
+
+        <h2 id="retained">5. Retained today does not have to mean retained forever</h2>
+        <p>Once the R36 Max preservation exists, its verified retained content can later be re-evaluated without returning to the original SD card.</p>
+        <p>That is the purpose of <strong>Reconcile Retained Content</strong>: Analyze the retained set, Preview what can now move into reusable Library representation, Confirm, then Apply only the approved reconciliation.</p>
+
+        <div class="r36-reconcile-mini">
+          <div><strong>Preserved retained content</strong><small>Already captured with the R36 Max preservation.</small></div>
+          <b>→</b>
+          <div><strong>Analyze / Preview</strong><small>Ask what the current Library can now represent.</small></div>
+          <b>→</b>
+          <div><strong>Confirmed Apply</strong><small>Establish valid reusable representations and leave unresolved items visible.</small></div>
+        </div>
+
+        <div class="actions inline-guide-actions">
+          <a class="btn" href="reconcile-retained-content.html">Open reconciliation guide →</a>
+        </div>
+
+        <h2 id="readiness">6. Preservation success and deployment readiness are different questions</h2>
+        <p>This is where the R36 Max example becomes especially useful. Device Readiness knows the canonical device, but the captured readiness state still refuses deployment.</p>
+
+        <div class="r36-readiness-facts">
+          <div class="good"><span>86%</span><strong>Hardware</strong><small>Strong hardware knowledge</small></div>
+          <div class="blocked"><span>0%</span><strong>Panel</strong><small>Panel remains unknown</small></div>
+          <div class="partial"><span>70%</span><strong>Firmware</strong><small>Useful but not safe without panel evidence</small></div>
+          <div class="partial"><span>25%</span><strong>Storage</strong><small>Boot/storage knowledge incomplete</small></div>
+          <div class="blocked"><span>0%</span><strong>Recovery</strong><small>Recovery evidence incomplete</small></div>
+          <div class="good"><span>100%</span><strong>Clone / Fingerprint</strong><small>Strong identification evidence</small></div>
+        </div>
+
+        <h2 id="real-screen">7. The real R36 Max readiness result</h2>
+        <div class="app-panel screenshot-panel r36-ready-shot">
+          <span class="panel-title">R36 MAX — ACTUAL DEVICE READINESS</span>
+          <figure class="app-screenshot">
+            <img src="assets/images/r36-max-device-readiness.jpg" alt="Retro Library Builder Device Readiness showing R36 MAX, canonical identity r36-max, 77 percent confidence, zero deployable targets and STOP not safe to deploy.">
+            <figcaption>The captured R36 Max state: canonical identity <strong>r36-max</strong>, overall knowledge confidence <strong>77%</strong>, but <strong>0 deployable targets</strong>. The verdict is <strong>STOP — not safe to deploy</strong> because required evidence is still missing.</figcaption>
+          </figure>
+        </div>
+
+        <h2 id="stop">8. Why RLB says STOP even with strong identification evidence</h2>
+        <p>The readiness result identifies the blocking reason directly: <strong>panel evidence is missing</strong>, so firmware cannot yet be considered safe for deployment. Recovery is also incomplete.</p>
+        <p>This is a feature, not a failure. A strong clone fingerprint does not prove that the exact display panel is compatible with a proposed firmware/DTB combination.</p>
+
+        <div class="r36-stop-logic">
+          <div><span>✓</span><strong>Device identity evidence</strong><small>Strong enough to connect the unit to the R36 Max canonical knowledge.</small></div>
+          <div><span>✓</span><strong>Firmware knowledge exists</strong><small>There is useful firmware recommendation evidence.</small></div>
+          <div class="missing"><span>!</span><strong>Panel evidence missing</strong><small>Critical compatibility evidence is not yet established.</small></div>
+          <div class="missing"><span>!</span><strong>Recovery incomplete</strong><small>A safe recovery path is not yet sufficiently established.</small></div>
+          <div class="verdict"><span>STOP</span><strong>0 validated targets</strong><small>Do not turn partial knowledge into a deployment guess.</small></div>
+        </div>
+
+        <h2 id="confidence">9. 77% confidence does not mean “77% safe”</h2>
+        <p>Overall knowledge confidence is a summary of the available knowledge. Deployment safety is a gate.</p>
+        <p>A single missing requirement can block deployment even when several other evidence categories are strong. In this case, the panel requirement is important enough that the correct target count is zero.</p>
+
+        <div class="confidence-vs-safety">
+          <div><span>KNOWLEDGE CONFIDENCE</span><strong>77%</strong><small>RLB knows a meaningful amount about this R36 Max.</small></div>
+          <b>≠</b>
+          <div><span>DEPLOYMENT SAFETY</span><strong>STOP</strong><small>The evidence required for a validated target is not complete.</small></div>
+        </div>
+
+        <h2 id="improve">10. What would move this R36 Max closer to deployment?</h2>
+        <p>The Readiness view gives concrete evidence goals rather than an unexplained red light.</p>
+
+        <div class="r36-improve-grid">
+          <div><span>1</span><strong>Boot / storage layout</strong><small>Strengthen knowledge of how the actual device expects its media to boot and partition.</small></div>
+          <div><span>2</span><strong>Firmware panel support</strong><small>Establish that the proposed firmware supports the exact display-panel relationship.</small></div>
+          <div><span>3</span><strong>DTB panel identification</strong><small>Match device-tree/panel evidence to a known compatible hardware variant.</small></div>
+          <div><span>4</span><strong>Recovery evidence</strong><small>Establish sufficient preservation/recovery knowledge before deployment becomes an acceptable risk.</small></div>
+        </div>
+
+        <h2 id="why-rlb">11. What RLB adds that a simple SD-card image does not</h2>
+        <div class="without-with-r36">
+          <div class="without">
+            <span>JUST COPY THE CARD</span>
+            <strong>“I have a backup.”</strong>
+            <small>You may have copied bytes, but you still do not necessarily know which hardware variant you own, which content is reusable, which content is unique, or whether a replacement build is compatible.</small>
+          </div>
+          <b>→</b>
+          <div class="with">
+            <span>WITH RLB</span>
+            <strong>“I know what evidence I have.”</strong>
+            <small>Identity, preserved content, reusable Library representation, retained device-specific material, knowledge provenance and deployment blockers remain separate and visible.</small>
+          </div>
+        </div>
+
+        <h2 id="do-not">12. What this walkthrough deliberately does not do</h2>
+        <p>This page does <strong>not</strong> tell you to flash a specific firmware image to the R36 Max shown here. The captured Readiness state has no validated deployment target, so a deployment recipe would contradict the evidence.</p>
+
+        <div class="r36-not-yet-grid">
+          <div><span>×</span><strong>No guessed firmware target</strong><small>A recommendation is not the same as a validated target.</small></div>
+          <div><span>×</span><strong>No guessed panel / DTB</strong><small>Missing panel evidence is exactly why deployment is blocked.</small></div>
+          <div><span>×</span><strong>No instruction to erase the original card</strong><small>Original media remains valuable until actual preservation and recovery requirements are satisfied.</small></div>
+          <div><span>×</span><strong>No unfinished Deployment documentation</strong><small>The public guide will follow the validated Beta deployment workflow, not planned behavior.</small></div>
+        </div>
+
+        <h2 id="sequence">The R36 Max RLB sequence</h2>
+        <div class="r36-sequence">
+          <div><span>1</span><strong>Understand</strong><small>Analyze the original media and gather device-specific evidence.</small></div>
+          <div><span>2</span><strong>Preserve</strong><small>Protect required content and retain what cannot yet be represented safely.</small></div>
+          <div><span>3</span><strong>Verify</strong><small>Use persisted verification state rather than assuming copying equals preservation.</small></div>
+          <div><span>4</span><strong>Learn</strong><small>Carry device, DTB, firmware and hardware relationships into reusable knowledge.</small></div>
+          <div><span>5</span><strong>Check readiness</strong><small>Require critical compatibility and recovery evidence before deployment.</small></div>
+          <div><span>6</span><strong>Build only when safe</strong><small>Deployment waits until the Knowledge Engine exposes a validated target.</small></div>
+        </div>
+
+        <div class="callout warning"><strong>Current captured result:</strong> this R36 Max stops at Step 5. That is the correct outcome until the missing panel/recovery evidence is resolved.</div>
+
+        <div class="actions">
+          <a class="btn primary" href="device-readiness.html">Understand Device Readiness →</a>
+          <a class="btn" href="knowledge-sources.html">See where device knowledge comes from</a>
+        </div>
+      </article>
+
+      <aside class="toc" aria-label="On this page">
+        <strong>On this page</strong>
+        <a href="#why-hard">Why R36 Max is difficult</a>
+        <a href="#first-rule">Protect original media</a>
+        <a href="#identity">Evidence-based identity</a>
+        <a href="#preserve-vs-library">Library vs retained</a>
+        <a href="#retained">Reconcile later</a>
+        <a href="#readiness">Readiness evidence</a>
+        <a href="#real-screen">Real readiness screen</a>
+        <a href="#stop">Why STOP</a>
+        <a href="#confidence">Confidence vs safety</a>
+        <a href="#improve">Improve readiness</a>
+        <a href="#why-rlb">Why RLB matters</a>
+        <a href="#do-not">What is not documented</a>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><strong>Retro Library Builder</strong><div>Preserve Once. Build Many.</div></div><div class="footer-links"><a href="https://github.com/cancruiser/RetroLibraryBuilder">GitHub</a><a href="https://discord.gg/zCDA8evmyE">Discord</a><a href="about.html">About</a></div></div><div class="footer-note">RLB does not provide or distribute commercial ROM collections. © <span data-year></span> Retro Library Builder.</div></div></footer>
+<script src="assets/site.js"></script>
+</body></html>
