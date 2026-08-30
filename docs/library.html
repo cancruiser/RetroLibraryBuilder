@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Retro Library Builder Library Explorer browses the managed Library by system and canonical game, reports Library health, and connects games, ROM variants and media.">
+  <title>Library Explorer — Retro Library Builder</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav-wrap" aria-label="Primary navigation"><a class="brand" href="./"><span class="brand-mark">R</span><span>Retro Library Builder <small>Beta</small></span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">Menu</button><div class="nav-links"><a href="./">Home</a><a href="getting-started.html">Getting Started</a><a href="preservation.html">Preservation</a><a href="guides.html">Guides</a><a href="about.html">About</a></div></nav></header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="./">Home</a> / Library Explorer</div>
+      <span class="eyebrow"><span class="dot"></span> Managed Library</span>
+      <h1>Browse the Library RLB actually manages.</h1>
+      <p class="lead">Library Explorer presents the managed systems, canonical games, ROM variants, media, BIOS, saves and configurations that RLB has established through its Library workflows.</p>
+    </div>
+  </section>
+
+  <section class="section device-tour">
+    <div class="container">
+      <div class="app-panel screenshot-panel">
+        <span class="panel-title">LIBRARY EXPLORER — ACTUAL RLB INTERFACE</span>
+        <figure class="app-screenshot">
+          <img src="assets/images/library-explorer.jpg" alt="Retro Library Builder Library Explorer showing Library statistics, Library health, platform browsing and canonical game artwork.">
+          <figcaption>Library Explorer shown on Atari 5200. The selected platform reports canonical games, ROM variants, media, saves and configurations separately.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="container article-layout">
+      <article class="article library-article">
+
+        <div class="callout success"><strong>Managed Library, not source folders:</strong> Library Explorer shows the content RLB manages after import and verification workflows. It is not simply a file browser pointed at the original source.</div>
+
+        <h2 id="purpose">1. What Library Explorer is for</h2>
+        <p>Library Explorer is the main browsing view for the RLB managed Library. It brings together systems, canonical games and linked managed content in one place while still exposing platform-level folders when filesystem inspection is needed.</p>
+        <p>The workspace is designed to browse the <strong>real managed Library</strong> with safely paged artwork rather than loading the entire collection into the UI at once.</p>
+
+        <h2 id="snapshot">2. The Library snapshot separates content lanes</h2>
+        <p>The summary row across the top reports the major managed Library lanes independently.</p>
+        <div class="library-stat-grid">
+          <div><span>SYSTEMS</span><strong>Systems</strong><small>Platforms currently represented in the managed Library.</small></div>
+          <div><span>GAMES</span><strong>Games</strong><small>Managed game records across Library platforms.</small></div>
+          <div><span>MEDIA</span><strong>Media</strong><small>Artwork and support media linked to Library content.</small></div>
+          <div><span>BIOS</span><strong>BIOS</strong><small>Managed BIOS/support files tracked separately from games.</small></div>
+          <div><span>SAVES</span><strong>Saves</strong><small>Managed save content known to the Library.</small></div>
+          <div><span>CONFIGS</span><strong>Configs</strong><small>Managed configuration content.</small></div>
+          <div><span>SIZE</span><strong>Library Size</strong><small>Total size of the managed Library across its lanes.</small></div>
+        </div>
+
+        <h2 id="health">3. Library health summarizes the collection</h2>
+        <p>The <strong>Library health</strong> strip gives a quick collection-level summary rather than requiring the user to inspect each platform separately.</p>
+        <div class="library-health-flow">
+          <div><span>TITLES</span><strong>Canonical title count</strong><small>The number of managed titles represented across the Library.</small></div>
+          <div><span>ARTWORK</span><strong>Artwork coverage</strong><small>The percentage of titles currently represented by managed artwork.</small></div>
+          <div><span>MISSING</span><strong>Missing artwork</strong><small>The number of titles still lacking the required artwork coverage.</small></div>
+        </div>
+        <p>The <strong>Details</strong> button provides a path into more information when the high-level health summary needs investigation.</p>
+
+        <h2 id="platforms">4. Browse the Library by platform</h2>
+        <p>The left-hand <strong>Platforms</strong> pane is the primary navigation for Library Explorer. It supports sorting and platform search, and each platform entry reports the amount of managed game and media content associated with that system.</p>
+        <div class="platform-example library-platform-example">
+          <div><span>PLATFORM</span><strong>Atari 5200</strong><small>Selected in the example Library.</small></div>
+          <div><span>LIBRARY CONTENTS</span><strong>73 canonical games</strong><small>The selected platform opens its managed game records and linked artwork.</small></div>
+        </div>
+
+        <h2 id="canonical">5. Canonical games and ROM variants are different counts</h2>
+        <p>The selected-platform summary explicitly reports <strong>canonical games</strong> and <strong>ROM variants</strong> separately.</p>
+        <div class="canonical-variant-flow">
+          <div><span>CANONICAL GAME</span><strong>The Library title</strong><small>The game identity RLB uses as the main managed record for browsing and linked content.</small></div>
+          <b>↔</b>
+          <div><span>ROM VARIANT</span><strong>Playable representation</strong><small>One or more ROM representations can be associated with a canonical title without turning each variant into a separate browsing identity.</small></div>
+        </div>
+        <p>This distinction is what allows RLB to present a clean game library while still retaining the underlying playable-content relationships.</p>
+
+        <h2 id="platform-summary">6. A selected platform shows more than games</h2>
+        <p>The platform header also reports the linked content that belongs to the selected system.</p>
+        <div class="platform-content-grid">
+          <div><span>▣</span><strong>Canonical games</strong><small>The main title records used by the Library Explorer.</small></div>
+          <div><span>◇</span><strong>ROM variants</strong><small>Playable ROM representations linked to those titles.</small></div>
+          <div><span>▰</span><strong>Media</strong><small>Artwork and support media associated with the platform's games.</small></div>
+          <div><span>↓</span><strong>Saves</strong><small>Managed save content associated with the selected platform.</small></div>
+          <div><span>⚙</span><strong>Configs</strong><small>Managed configuration content associated with the selected platform.</small></div>
+        </div>
+
+        <h2 id="search">7. Search, sort and filter without leaving the platform</h2>
+        <p>Library Explorer provides a platform-local game search along with sort and filter controls. This allows the user to narrow a large platform without losing the current system context.</p>
+        <p>The <strong>View</strong> control determines how the game records are presented. In the screenshot, the view is set to <strong>Box Art</strong>.</p>
+
+        <h2 id="paging">8. Artwork is safely paged</h2>
+        <p>The Library Explorer subtitle calls out <strong>safely paged artwork</strong>, and the content area shows explicit <strong>Previous</strong> and <strong>Next</strong> controls.</p>
+        <p>The status line also notes that thumbnails <strong>load one at a time</strong>. This matters for very large libraries because browsing should not require loading tens of thousands of images into memory at once.</p>
+        <div class="paging-flow">
+          <div><span>1</span><strong>Page the game records</strong><small>Only a manageable set of titles is shown at one time.</small></div>
+          <b>→</b>
+          <div><span>2</span><strong>Load thumbnails progressively</strong><small>Artwork is loaded incrementally rather than all at once.</small></div>
+          <b>→</b>
+          <div><span>3</span><strong>Keep the UI responsive</strong><small>Large Libraries remain practical to browse.</small></div>
+        </div>
+
+        <h2 id="cards">9. Game cards combine identity and managed media</h2>
+        <p>Each visible game card represents the canonical title and shows the preferred artwork for browsing. The card also reports media information associated with that game.</p>
+        <p>This is the same canonical-media relationship exposed in greater detail by <strong>Media Explorer</strong>.</p>
+
+        <h2 id="folders">10. Platform and Library folders remain accessible</h2>
+        <p><strong>Open Platform Folder</strong> provides filesystem access to the selected platform when direct inspection is needed.</p>
+        <p><strong>Open Library Folder</strong> does the same at the managed-Library level. These are inspection conveniences; the Library Explorer remains the structured view that explains how RLB understands the content.</p>
+
+        <h2 id="refresh">11. Refresh updates the current Library view</h2>
+        <p>The <strong>Refresh</strong> action reloads the workspace after Library content, artwork or related managed data has changed. The page also reports when the Library Explorer view was last updated.</p>
+
+        <h2 id="relationship">12. Import, Review, Library and Media form one workflow</h2>
+        <p>These workspaces are different views of the same managed-content lifecycle rather than separate utilities.</p>
+        <div class="library-relationship-flow">
+          <div><span>IMPORT</span><strong>Discover and approve</strong><small>Analyze sources and copy approved content into managed Library lanes.</small></div>
+          <b>→</b>
+          <div><span>REVIEW</span><strong>Resolve exceptions</strong><small>Keep conflicting or ambiguous destination conditions visible for explicit decisions.</small></div>
+          <b>→</b>
+          <div><span>LIBRARY</span><strong>Browse managed content</strong><small>Explore systems, canonical games and linked content after import.</small></div>
+          <b>→</b>
+          <div><span>MEDIA</span><strong>Manage artwork</strong><small>Work with preferred covers and every media asset linked to canonical titles.</small></div>
+        </div>
+
+        <h2 id="principles">Library principles</h2>
+        <div class="completion-checks">
+          <div><span>✓</span><strong>Keep games, media, BIOS, saves and configs as distinct managed lanes</strong></div>
+          <div><span>✓</span><strong>Browse by canonical game while retaining ROM-variant relationships</strong></div>
+          <div><span>✓</span><strong>Expose Library health instead of hiding incomplete artwork coverage</strong></div>
+          <div><span>✓</span><strong>Page large collections and load artwork progressively</strong></div>
+          <div><span>✓</span><strong>Keep filesystem access available without reducing the Library to a folder browser</strong></div>
+        </div>
+
+        <h2 id="next">What comes next?</h2>
+        <p>The managed Library is one half of RLB’s reusable foundation. The other is <strong>Knowledge</strong>: the device, firmware, DTB and compatibility information that helps RLB understand what it is preserving and what can later be deployed.</p>
+        <div class="actions">
+          <a class="btn primary" href="media.html">Open Media Explorer →</a>
+          <a class="btn" href="import.html">Review Import Studio</a>
+        </div>
+      </article>
+
+      <aside class="toc" aria-label="On this page">
+        <strong>On this page</strong>
+        <a href="#purpose">What Library Explorer is</a>
+        <a href="#snapshot">Library snapshot</a>
+        <a href="#health">Library health</a>
+        <a href="#platforms">Browse by platform</a>
+        <a href="#canonical">Canonical vs ROM variant</a>
+        <a href="#platform-summary">Platform contents</a>
+        <a href="#search">Search / sort / filter</a>
+        <a href="#paging">Safe paging</a>
+        <a href="#cards">Game cards</a>
+        <a href="#folders">Open folders</a>
+        <a href="#relationship">Workspace relationship</a>
+        <a href="#principles">Library principles</a>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><strong>Retro Library Builder</strong><div>Preserve Once. Build Many.</div></div><div class="footer-links"><a href="https://github.com/cancruiser/RetroLibraryBuilder">GitHub</a><a href="https://discord.gg/zCDA8evmyE">Discord</a><a href="about.html">About</a></div></div><div class="footer-note">RLB does not provide or distribute commercial ROM collections. © <span data-year></span> Retro Library Builder.</div></div></footer>
+<script src="assets/site.js"></script>
+</body></html>
