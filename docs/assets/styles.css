@@ -3533,3 +3533,305 @@ a.guide-tile:hover {
     transform: rotate(90deg);
   }
 }
+
+/* Library Explorer page */
+.library-article {
+  max-width: 900px;
+}
+
+.library-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+  margin: 16px 0;
+}
+
+.library-stat-grid > div {
+  min-height: 116px;
+  padding: 11px;
+  border: 1px solid #9fa9af;
+  border-radius: 5px;
+  background: linear-gradient(#edf0f1, #d8dcde);
+}
+
+.library-stat-grid span,
+.library-health-flow span,
+.canonical-variant-flow span,
+.library-relationship-flow span {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--blue-deep);
+  font-size: .66rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+
+.library-stat-grid strong,
+.library-stat-grid small {
+  display: block;
+}
+
+.library-stat-grid strong {
+  color: #273138;
+  margin-bottom: 4px;
+  font-size: .88rem;
+}
+
+.library-stat-grid small {
+  color: #5b666e;
+  font-size: .75rem;
+  line-height: 1.4;
+}
+
+.library-health-flow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.library-health-flow > div {
+  min-height: 120px;
+  padding: 12px;
+  border: 1px solid #9fa9af;
+  border-radius: 5px;
+  background: linear-gradient(#edf0f1, #d8dcde);
+}
+
+.library-health-flow > div:nth-child(1) { border-top: 3px solid #176b9f; }
+.library-health-flow > div:nth-child(2) { border-top: 3px solid #3f9551; }
+.library-health-flow > div:nth-child(3) { border-top: 3px solid #bd7d21; }
+
+.library-health-flow strong,
+.library-health-flow small {
+  display: block;
+}
+
+.library-health-flow strong {
+  color: #273138;
+  margin-bottom: 4px;
+}
+
+.library-health-flow small {
+  color: #5b666e;
+  font-size: .78rem;
+  line-height: 1.42;
+}
+
+.library-platform-example {
+  margin-top: 16px;
+}
+
+.canonical-variant-flow {
+  display: grid;
+  grid-template-columns: 1fr 48px 1fr;
+  gap: 10px;
+  align-items: center;
+  margin: 17px 0;
+}
+
+.canonical-variant-flow > div {
+  min-height: 130px;
+  padding: 13px;
+  border: 1px solid #9fa9af;
+  border-radius: 5px;
+  background: linear-gradient(#edf0f1, #d8dcde);
+}
+
+.canonical-variant-flow > div:first-child { border-top: 3px solid #176b9f; }
+.canonical-variant-flow > div:last-child { border-top: 3px solid #7564a1; }
+
+.canonical-variant-flow strong,
+.canonical-variant-flow small {
+  display: block;
+}
+
+.canonical-variant-flow strong {
+  color: #273138;
+  margin-bottom: 4px;
+}
+
+.canonical-variant-flow small {
+  color: #5b666e;
+  font-size: .78rem;
+  line-height: 1.42;
+}
+
+.canonical-variant-flow > b {
+  text-align: center;
+  color: #557587;
+  font-size: 1.25rem;
+}
+
+.platform-content-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 7px;
+  margin: 16px 0;
+}
+
+.platform-content-grid > div {
+  min-height: 125px;
+  padding: 11px;
+  border: 1px solid #9fa9af;
+  border-top: 3px solid #176b9f;
+  border-radius: 5px;
+  background: linear-gradient(#edf0f1, #d8dcde);
+}
+
+.platform-content-grid > div > span {
+  width: 31px;
+  height: 31px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 8px;
+  border: 1px solid #92a8b4;
+  border-radius: 4px;
+  background: linear-gradient(#eff5f8, #c9dce7);
+  color: var(--blue);
+  font-weight: 800;
+}
+
+.platform-content-grid strong,
+.platform-content-grid small {
+  display: block;
+}
+
+.platform-content-grid strong {
+  color: #273138;
+  margin-bottom: 4px;
+  font-size: .82rem;
+}
+
+.platform-content-grid small {
+  color: #5b666e;
+  font-size: .74rem;
+  line-height: 1.4;
+}
+
+.paging-flow {
+  display: grid;
+  grid-template-columns: 1fr 30px 1fr 30px 1fr;
+  gap: 8px;
+  align-items: center;
+  margin: 17px 0;
+}
+
+.paging-flow > div {
+  min-height: 130px;
+  padding: 12px;
+  border: 1px solid #9fa9af;
+  border-radius: 5px;
+  background: linear-gradient(#edf0f1, #d8dcde);
+}
+
+.paging-flow > div > span {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  background: linear-gradient(#176fa5, #07568a);
+  border: 1px solid #064874;
+  color: #fff;
+  font-size: .74rem;
+  font-weight: 800;
+}
+
+.paging-flow strong,
+.paging-flow small {
+  display: block;
+}
+
+.paging-flow strong {
+  color: #273138;
+  margin-bottom: 4px;
+  font-size: .84rem;
+}
+
+.paging-flow small {
+  color: #5b666e;
+  font-size: .76rem;
+  line-height: 1.4;
+}
+
+.paging-flow > b {
+  text-align: center;
+  color: #477083;
+  font-size: 1.15rem;
+}
+
+.library-relationship-flow {
+  display: grid;
+  grid-template-columns: 1fr 26px 1fr 26px 1fr 26px 1fr;
+  gap: 7px;
+  align-items: center;
+  margin: 17px 0;
+}
+
+.library-relationship-flow > div {
+  min-height: 130px;
+  padding: 11px;
+  border: 1px solid #9fa9af;
+  border-radius: 5px;
+  background: linear-gradient(#edf0f1, #d8dcde);
+}
+
+.library-relationship-flow > div:nth-of-type(1) { border-top: 3px solid #176b9f; }
+.library-relationship-flow > div:nth-of-type(2) { border-top: 3px solid #bd7d21; }
+.library-relationship-flow > div:nth-of-type(3) { border-top: 3px solid #3f9551; }
+.library-relationship-flow > div:nth-of-type(4) { border-top: 3px solid #7564a1; }
+
+.library-relationship-flow strong,
+.library-relationship-flow small {
+  display: block;
+}
+
+.library-relationship-flow strong {
+  color: #273138;
+  margin-bottom: 4px;
+  font-size: .82rem;
+}
+
+.library-relationship-flow small {
+  color: #5b666e;
+  font-size: .73rem;
+  line-height: 1.38;
+}
+
+.library-relationship-flow > b {
+  text-align: center;
+  color: #477083;
+  font-size: 1rem;
+}
+
+@media (max-width: 1000px) {
+  .library-stat-grid,
+  .platform-content-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .paging-flow,
+  .library-relationship-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .paging-flow > b,
+  .library-relationship-flow > b {
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 650px) {
+  .library-stat-grid,
+  .library-health-flow,
+  .platform-content-grid,
+  .canonical-variant-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .canonical-variant-flow > b {
+    transform: rotate(90deg);
+  }
+}
