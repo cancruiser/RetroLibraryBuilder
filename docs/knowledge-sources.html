@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Retro Library Builder Knowledge Sources credits, classifies and manages the internal and community projects that contribute device, firmware and hardware knowledge.">
+  <title>Knowledge Sources — Retro Library Builder</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav-wrap" aria-label="Primary navigation"><a class="brand" href="./"><span class="brand-mark">R</span><span>Retro Library Builder <small>Beta</small></span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">Menu</button><div class="nav-links"><a href="./">Home</a><a href="getting-started.html">Getting Started</a><a href="preservation.html">Preservation</a><a href="guides.html">Guides</a><a href="about.html">About</a></div></nav></header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="./">Home</a> / Knowledge Sources</div>
+      <span class="eyebrow"><span class="dot"></span> Knowledge provenance</span>
+      <h1>RLB should know where its knowledge came from.</h1>
+      <p class="lead">Knowledge Sources shows the projects, communities and internal catalogs that contribute to RLB's managed knowledge repository, what each source is used for, and whether that source is currently enabled or refresh-capable.</p>
+    </div>
+  </section>
+
+  <section class="section device-tour">
+    <div class="container">
+      <div class="app-panel screenshot-panel">
+        <span class="panel-title">KNOWLEDGE SOURCES — ACTUAL RLB INTERFACE</span>
+        <figure class="app-screenshot">
+          <img src="assets/images/knowledge-sources.jpg" alt="Retro Library Builder Knowledge Sources showing registered source counts, the internal canonical catalog and community device-knowledge providers.">
+          <figcaption>Knowledge Sources separates RLB-maintained knowledge from credited community providers. Each source card explains what the project contributes and links back to the original project where applicable.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="container article-layout">
+      <article class="article sources-article">
+
+        <div class="callout success"><strong>Credit the source:</strong> RLB is designed to bring together trusted knowledge rather than erase its provenance. Community projects remain identified and credited as the original source of the knowledge they contribute.</div>
+
+        <h2 id="purpose">1. What Knowledge Sources is for</h2>
+        <p>Knowledge Explorer answers <strong>“What does RLB know?”</strong> Knowledge Sources answers <strong>“Where did that knowledge come from?”</strong></p>
+        <p>This workspace lists the providers that feed device, firmware, hardware, compatibility and related knowledge into the managed RLB repository.</p>
+
+        <h2 id="status">2. The source summary shows repository status</h2>
+        <p>The summary cards across the top separate four useful source states.</p>
+        <div class="source-status-grid">
+          <div><span>REGISTERED</span><strong>Registered Sources</strong><small>Every internal or community provider currently known to the source registry.</small></div>
+          <div><span>ENABLED</span><strong>Enabled</strong><small>Sources currently available for RLB to use.</small></div>
+          <div><span>SYNC</span><strong>Sync Capable</strong><small>Providers that support a refresh/synchronization workflow rather than only static reference use.</small></div>
+          <div><span>COMMUNITY</span><strong>Community Sources</strong><small>External projects and communities credited as knowledge providers.</small></div>
+        </div>
+        <p>The exact counts can change as sources are added, disabled or gain refresh support. The important part is that these are distinct states rather than one undifferentiated list.</p>
+
+        <h2 id="internal">3. Internal knowledge is identified separately</h2>
+        <p>The <strong>Internal</strong> section contains knowledge curated and maintained directly by Retro Library Builder.</p>
+        <div class="canonical-source-card">
+          <div class="canonical-source-head"><span>RLB</span><div><strong>RLB Canonical Catalog</strong><small>Internal managed knowledge</small></div><b>Enabled</b></div>
+          <p>Canonical identities, aliases, classification and deployment intelligence maintained by RLB.</p>
+          <div class="source-tags">
+            <span>Canonical identity</span>
+            <span>Classification</span>
+            <span>Alias resolution</span>
+            <span>Deployment intelligence</span>
+          </div>
+        </div>
+        <p>The Canonical Catalog is not presented as a replacement for community knowledge. It is the RLB-maintained layer that resolves and organizes knowledge gathered from community sources, user corrections and RLB curation.</p>
+
+        <h2 id="community">4. Community sources remain first-class knowledge providers</h2>
+        <p>The <strong>Device Knowledge</strong> section shows registered community and public-reference providers that contribute to RLB's understanding of devices and hardware.</p>
+        <p>Visible examples in the current Beta include AeolusUX R36S-DTB, approved console-history sources, a community handheld spreadsheet and Handhelds Wiki.</p>
+
+        <div class="source-example-grid">
+          <div class="source-example">
+            <span class="source-abbr">ARD</span>
+            <strong>AeolusUX R36S-DTB</strong>
+            <small>Community DTB and boot-file knowledge for R36-family devices, related clones and panel variants.</small>
+          </div>
+          <div class="source-example">
+            <span class="source-abbr">ACH</span>
+            <strong>Approved Console History Sources</strong>
+            <small>Curated chronology, release-generation and artwork evidence from approved public console-history references.</small>
+          </div>
+          <div class="source-example">
+            <span class="source-abbr">CHS</span>
+            <strong>Community Handheld Spreadsheet</strong>
+            <small>Community-maintained handheld specifications used to enrich canonical devices with hardware and firmware facts.</small>
+          </div>
+          <div class="source-example">
+            <span class="source-abbr">HW</span>
+            <strong>Handhelds Wiki</strong>
+            <small>Structured handheld identity evidence such as aliases, hardware specifications, screen/storage clues and firmware mentions.</small>
+          </div>
+        </div>
+
+        <h2 id="contributions">5. Every source card explains what it contributes</h2>
+        <p>Source cards include short capability tags instead of requiring the user to infer why a project is registered.</p>
+        <div class="contribution-grid">
+          <div><span>DTB</span><strong>DTB files &amp; panel variants</strong><small>Useful for device-family differentiation and boot compatibility.</small></div>
+          <div><span>IDENTITY</span><strong>Canonical identity</strong><small>Names, aliases, manufacturers and device-family relationships.</small></div>
+          <div><span>HARDWARE</span><strong>Hardware profiles</strong><small>SoC, CPU/GPU, display, storage, battery and related hardware facts.</small></div>
+          <div><span>FIRMWARE</span><strong>Firmware mentions</strong><small>Known supported firmware, release relationships and compatibility clues.</small></div>
+          <div><span>HISTORY</span><strong>Chronology &amp; generations</strong><small>Release timeline and family-evolution evidence for console knowledge.</small></div>
+          <div><span>ARTWORK</span><strong>Artwork evidence</strong><small>Recognition imagery and historical visual references where permitted.</small></div>
+        </div>
+
+        <h2 id="enabled">6. Enabled does not mean “equally authoritative”</h2>
+        <p>An enabled source is available to RLB. That does not mean every claim from every source automatically becomes a canonical fact.</p>
+        <p>Different sources contribute different kinds of evidence, and RLB's canonical layer is responsible for reconciling aliases, contradictions, classifications and device relationships.</p>
+        <div class="source-reconcile-flow">
+          <div><span>SOURCE</span><strong>Contributed evidence</strong><small>A project supplies device, hardware, firmware or historical information.</small></div>
+          <b>→</b>
+          <div><span>RLB</span><strong>Normalize &amp; correlate</strong><small>Aliases, classifications and connected evidence are organized into the managed knowledge model.</small></div>
+          <b>→</b>
+          <div><span>CANONICAL</span><strong>Reusable knowledge</strong><small>Knowledge Explorer and Device Inspector consume the managed result.</small></div>
+        </div>
+
+        <h2 id="sync">7. Sync-capable sources can be refreshed</h2>
+        <p>The <strong>Sync Capable</strong> status identifies providers designed for refresh. This lets RLB distinguish refreshable sources from references that may require manual curation or a different ingestion path.</p>
+        <p>Refresh capability is a property of the source integration, not a guarantee that upstream data is complete or error-free.</p>
+
+        <h2 id="credit">8. Visit Project preserves attribution</h2>
+        <p>Community-source cards provide a <strong>Visit Project</strong> action so the original project remains visible to the user.</p>
+        <p>This matters for two reasons: the source receives credit, and users can inspect the upstream project for context, documentation or updates that RLB should not pretend to own.</p>
+        <div class="callout"><strong>RLB is an integrator, not the origin of every fact.</strong> The project benefits from preservation projects, firmware developers, hardware communities and open-source contributors whose work should remain recognizable.</div>
+
+        <h2 id="provenance">9. Provenance makes conflicts easier to reason about</h2>
+        <p>When two sources disagree, source identity provides the context needed to investigate the discrepancy. Without provenance, RLB would only know that two values differ; with provenance, it can preserve which project supplied each piece of evidence.</p>
+        <div class="provenance-grid">
+          <div><span>1</span><strong>Keep the provider</strong><small>Know which source contributed the evidence.</small></div>
+          <div><span>2</span><strong>Keep the evidence type</strong><small>Know whether it was a DTB, hardware specification, alias, firmware claim or historical reference.</small></div>
+          <div><span>3</span><strong>Resolve canonically</strong><small>Use RLB's managed knowledge layer to normalize without erasing provenance.</small></div>
+          <div><span>4</span><strong>Stay revisable</strong><small>New or better evidence can improve the canonical result later.</small></div>
+        </div>
+
+        <h2 id="explorer">10. Sources feed Knowledge Explorer</h2>
+        <p>Knowledge Sources and Knowledge Explorer are the two visible sides of the same repository.</p>
+        <div class="sources-explorer-flow">
+          <div><span>KNOWLEDGE SOURCES</span><strong>Where evidence originates</strong><small>Internal catalogs, community projects and approved public references.</small></div>
+          <b>→</b>
+          <div><span>MANAGED REPOSITORY</span><strong>RLB canonical knowledge</strong><small>Normalized identities, relationships and connected technical evidence.</small></div>
+          <b>→</b>
+          <div><span>KNOWLEDGE EXPLORER</span><strong>What the user can browse</strong><small>Devices, firmware, DTBs, boards, panels, recipes, media and known issues.</small></div>
+        </div>
+
+        <h2 id="device-inspector">11. The same knowledge ultimately supports Device Inspector</h2>
+        <p>The long-term value of the source system is not simply building a large catalog. Managed knowledge gives Device Inspector more trusted relationships against which it can compare evidence from a real device.</p>
+        <p>A known DTB fingerprint, firmware relationship, board profile or device alias becomes useful when it helps RLB make a more accurate identification or compatibility decision.</p>
+
+        <h2 id="principles">Knowledge-source principles</h2>
+        <div class="completion-checks">
+          <div><span>✓</span><strong>Credit the original projects and communities</strong></div>
+          <div><span>✓</span><strong>Keep internal RLB curation distinguishable from community evidence</strong></div>
+          <div><span>✓</span><strong>Explain what each source contributes</strong></div>
+          <div><span>✓</span><strong>Track enabled and refresh-capable states separately</strong></div>
+          <div><span>✓</span><strong>Normalize knowledge without erasing provenance</strong></div>
+        </div>
+
+        <div class="actions">
+          <a class="btn primary" href="knowledge-explorer.html">Open Knowledge Explorer →</a>
+          <a class="btn" href="about.html#knowledge">Why knowledge matters</a>
+        </div>
+      </article>
+
+      <aside class="toc" aria-label="On this page">
+        <strong>On this page</strong>
+        <a href="#purpose">What Sources is</a>
+        <a href="#status">Source status</a>
+        <a href="#internal">Internal knowledge</a>
+        <a href="#community">Community sources</a>
+        <a href="#contributions">Source contributions</a>
+        <a href="#enabled">Enabled sources</a>
+        <a href="#sync">Sync capability</a>
+        <a href="#credit">Visit Project / credit</a>
+        <a href="#provenance">Provenance</a>
+        <a href="#explorer">Sources → Explorer</a>
+        <a href="#device-inspector">Device Inspector</a>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><strong>Retro Library Builder</strong><div>Preserve Once. Build Many.</div></div><div class="footer-links"><a href="https://github.com/cancruiser/RetroLibraryBuilder">GitHub</a><a href="https://discord.gg/zCDA8evmyE">Discord</a><a href="about.html">About</a></div></div><div class="footer-note">RLB does not provide or distribute commercial ROM collections. © <span data-year></span> Retro Library Builder.</div></div></footer>
+<script src="assets/site.js"></script>
+</body></html>
