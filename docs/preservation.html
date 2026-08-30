@@ -2,57 +2,205 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="How preservation, Library representation and retained content work in Retro Library Builder.">
+  <meta name="description" content="How preservation, verification, Library representation and retained content work in Retro Library Builder.">
   <title>Preservation — Retro Library Builder</title>
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><nav class="nav-wrap" aria-label="Primary navigation"><a class="brand" href="./"><span class="brand-mark">R</span><span>Retro Library Builder <small>Beta</small></span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">Menu</button><div class="nav-links"><a href="./">Home</a><a href="getting-started.html">Getting Started</a><a href="preservation.html" aria-current="page">Preservation</a><a href="guides.html">Guides</a><a href="about.html">About</a></div></nav></header>
+
 <main id="main">
-<section class="page-hero"><div class="container"><div class="breadcrumb"><a href="./">Home</a> / Preservation</div><span class="eyebrow"><span class="dot"></span> Core concept</span><h1>Preservation</h1><p class="lead">RLB preservation is not just “copy the SD card.” Its goal is to establish verified protection for the content and evidence that make a device reproducible and understandable.</p></div></section>
-<section class="section"><div class="container article-layout"><article class="article">
-  <h2 id="meaning">What “preserved” should mean</h2>
-  <p>A preservation is meaningful only when RLB can account for the content it intended to protect. That means knowing whether content has an established verified representation in the reusable Library or whether a verified copy must remain associated with the individual preservation.</p>
-  <p>RLB therefore separates <strong>content discovery</strong>, <strong>analysis</strong>, <strong>representation</strong>, <strong>retention</strong> and <strong>verification</strong> rather than treating the existence of a destination file as sufficient evidence.</p>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="./">Home</a> / Preservation</div>
+      <span class="eyebrow"><span class="dot"></span> Core protection model</span>
+      <h1>Preserve the device, not just the files.</h1>
+      <p class="lead">RLB preservation is designed to establish verified protection for the content and evidence that make a retro device understandable and recoverable. It is deliberately more rigorous than copying an SD card into a folder.</p>
+    </div>
+  </section>
 
-  <h2 id="library">Library content vs retained content</h2>
-  <div class="grid two">
-    <div class="card"><div class="card-icon">▦</div><h3>Library content</h3><p>Verified reusable content maintained independently of a particular preserved device. When the correct representation is proven, it can stand for the source content without another unnecessary device-specific copy.</p></div>
-    <div class="card"><div class="card-icon">◆</div><h3>Retained content</h3><p>Verified content that remains associated with a particular preservation because an appropriate Library representation could not be established.</p></div>
-  </div>
+  <section class="section preservation-overview">
+    <div class="container">
+      <div class="app-panel preservation-panel">
+        <span class="panel-title">PRESERVATION MODEL</span>
+        <div class="preserve-map" aria-label="Preservation model">
+          <div class="preserve-node source">
+            <span class="node-kicker">SOURCE DEVICE</span>
+            <strong>Original media</strong>
+            <small>Boot files, firmware evidence, games, BIOS, media, saves, configuration and device-specific content.</small>
+          </div>
+          <div class="preserve-arrow" aria-hidden="true">→</div>
+          <div class="preserve-node assess">
+            <span class="node-kicker">RLB VERIFIES</span>
+            <strong>What protects each item?</strong>
+            <small>Identity and representation are proven rather than inferred from a matching filename or size.</small>
+          </div>
+          <div class="preserve-arrow" aria-hidden="true">→</div>
+          <div class="preserve-destinations">
+            <div class="preserve-node library">
+              <span class="node-kicker">LIBRARY</span>
+              <strong>Reusable representation</strong>
+              <small>Verified content that can safely represent the source for this and other devices.</small>
+            </div>
+            <div class="preserve-node retained">
+              <span class="node-kicker">PRESERVATION</span>
+              <strong>Retained content</strong>
+              <small>Verified content kept with this preservation when Library representation cannot be established.</small>
+            </div>
+            <div class="preserve-node review">
+              <span class="node-kicker">REVIEW</span>
+              <strong>Do not assume</strong>
+              <small>Conflicts or unresolved conditions remain visible instead of being silently treated as protected.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <h2 id="verify">Why verification matters</h2>
-  <p>Two files can have the same name and the same length while containing different bytes. RLB's preservation model therefore uses cryptographic content identity where equality matters instead of relying on path, existence or file length alone.</p>
-  <div class="callout success"><strong>Preservation principle:</strong> Do not claim that source content is protected simply because something with a matching filename or size exists at the destination.</div>
+  <section class="section tight">
+    <div class="container article-layout">
+      <article class="article preservation-article">
 
-  <h2 id="canonical">Canonical Library representations</h2>
-  <p>A reusable Library representation does not always need to be byte-for-byte identical as a container file to the original source. For example, a canonical ZIP can validly represent content when its payload identity has been verified even though the ZIP container itself differs in length or metadata.</p>
-  <p>RLB's representation logic is intended to prove the content relationship rather than apply a weaker container-size shortcut.</p>
+        <div class="callout success"><strong>Core principle:</strong> An original device is not considered protected merely because files were copied somewhere. RLB must be able to account for the content it intended to protect and the evidence used to establish that protection.</div>
 
-  <h2 id="analyze-apply">Analyze vs Apply</h2>
-  <dl class="term-list">
-    <div class="term"><dt>Analyze</dt><dd>Determines what reconciliation work would be required and presents the preview. Analysis itself does not establish new content.</dd></div>
-    <div class="term"><dt>Apply</dt><dd>Performs the approved reconciliation work required to establish verified representations or retained protection.</dd></div>
-  </dl>
+        <h2 id="meaning">1. What preservation means in RLB</h2>
+        <p>A retro handheld can depend on much more than its ROM folders. The original media may contain boot assets, firmware configuration, DTBs, BIOS files, frontend metadata, artwork, saves and device-specific files that are difficult or impossible to reconstruct later.</p>
+        <p>RLB preservation therefore asks two questions for the content it discovers:</p>
+        <div class="question-grid">
+          <div class="question-card"><span>01</span><strong>Is this already safely represented?</strong><small>If RLB can prove an appropriate verified Library representation, another device-specific copy may not be necessary.</small></div>
+          <div class="question-card"><span>02</span><strong>If not, what must be retained?</strong><small>Content that cannot be safely represented elsewhere stays associated with the preservation.</small></div>
+        </div>
 
-  <h2 id="interruption">Long-running operations and interruption</h2>
-  <p>Large devices can contain many thousands of files, so preservation work may be long-running. RLB uses background execution and durable preservation evidence so the application can distinguish completed work from an operation that was interrupted or could not persist its terminal state.</p>
-  <div class="callout warning"><strong>Do not infer completion from the UI label alone.</strong> During Beta, rely on the actual preservation result and verification state when deciding whether an original device is safely protected.</div>
+        <h2 id="workflow">2. The protection workflow</h2>
+        <p>The exact buttons available depend on the device state, but the normal protection path follows this logic:</p>
+        <div class="preservation-steps">
+          <div class="pres-step"><span>1</span><div><strong>Inspect and Analyze</strong><small>RLB examines the selected source and gathers device, partition and content evidence. Analysis is the evidence-gathering stage.</small></div></div>
+          <div class="pres-step"><span>2</span><div><strong>Review what protection requires</strong><small>RLB determines what is already represented, what needs protection, and what cannot safely be assumed.</small></div></div>
+          <div class="pres-step"><span>3</span><div><strong>Run Essential Protection</strong><small>When prerequisites are satisfied, RLB performs the protection work required for the selected device.</small></div></div>
+          <div class="pres-step"><span>4</span><div><strong>Verify the result</strong><small>Completion is based on preservation evidence and verification state, not simply the fact that a copy operation ended.</small></div></div>
+          <div class="pres-step"><span>5</span><div><strong>Keep the preservation as device history</strong><small>The preservation and Device Report carry forward the identity and evidence needed for later recovery and deployment decisions.</small></div></div>
+        </div>
 
-  <h2 id="terms">Preservation terminology</h2>
-  <dl class="term-list">
-    <div class="term"><dt>Represented</dt><dd>RLB has established a verified representation of the source content in the appropriate destination context.</dd></div>
-    <div class="term"><dt>Retained</dt><dd>The content is kept with the specific preservation rather than represented by reusable Library content.</dd></div>
-    <div class="term"><dt>Verified</dt><dd>The required evidence has been checked rather than assumed from a weak signal such as filename or length.</dd></div>
-    <div class="term"><dt>Conflict / Review</dt><dd>RLB found a condition that should not be silently treated as established and requires a defined reconciliation outcome or review.</dd></div>
-  </dl>
+        <h2 id="preview">3. Analyze and Preview come before Apply</h2>
+        <p>RLB separates analysis from work that establishes new destination content. Where a reconciliation operation is involved, the expected pattern is <strong>Analyze → Preview → Confirm → Apply</strong>.</p>
+        <p>The preview is important because it lets the user see what RLB believes will happen before any reconciliation work is approved.</p>
 
-  <div class="actions"><a class="btn primary" href="guides.html">Use a practical guide →</a><a class="btn" href="getting-started.html">Back to Getting Started</a></div>
-</article>
-<aside class="toc" aria-label="On this page"><strong>On this page</strong><a href="#meaning">Meaning of preserved</a><a href="#library">Library vs retained</a><a href="#verify">Verification</a><a href="#canonical">Canonical content</a><a href="#analyze-apply">Analyze vs Apply</a><a href="#interruption">Interruption</a><a href="#terms">Terminology</a></aside>
-</div></section>
+        <div class="preview-placeholder" role="note" aria-label="Future Analyze Preview screenshot">
+          <div class="preview-placeholder-icon">▧</div>
+          <div>
+            <strong>Analyze / Preview screenshot will be added here</strong>
+            <span>We are intentionally waiting until the next normal RLB test run rather than running a multi-hour Analyze solely to capture documentation.</span>
+          </div>
+        </div>
+
+        <h3>Typical preview outcomes</h3>
+        <div class="outcome-grid">
+          <div class="outcome-card copy"><strong>Copy New</strong><span>RLB expects new destination content to be established.</span></div>
+          <div class="outcome-card existing"><strong>Existing</strong><span>An acceptable verified representation already exists.</span></div>
+          <div class="outcome-card conflict"><strong>Conflict / Review</strong><span>RLB found a destination or identity condition that must not be silently accepted.</span></div>
+          <div class="outcome-card duplicate"><strong>Duplicate playable</strong><span>A playable duplicate may be intentionally skipped according to the applicable reconciliation rule.</span></div>
+        </div>
+        <p>Preview counts are a prediction made from the evidence available during Analyze. Apply must still validate the destination state it encounters when the work actually runs.</p>
+
+        <h2 id="library-retained">4. Library content and Retained content are different</h2>
+        <div class="library-retained-grid">
+          <div class="lr-card library">
+            <div class="lr-heading"><span>▦</span><strong>Library content</strong></div>
+            <p>Verified reusable content maintained independently of a particular preserved device.</p>
+            <ul>
+              <li>Can represent content from more than one device.</li>
+              <li>Avoids unnecessary repeated device-specific copies.</li>
+              <li>Must establish the correct content identity, not just a similar path or size.</li>
+            </ul>
+          </div>
+          <div class="lr-card retained">
+            <div class="lr-heading"><span>◆</span><strong>Retained content</strong></div>
+            <p>Verified content kept with a specific preservation because an appropriate reusable Library representation was not established.</p>
+            <ul>
+              <li>Preserves unique or unresolved device content.</li>
+              <li>Remains associated with the preservation.</li>
+              <li>Can later be reconciled if a valid Library representation becomes possible.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 id="canonical">5. A canonical representation may not look identical</h2>
+        <p>RLB distinguishes <strong>content identity</strong> from <strong>container identity</strong>. A canonical Library ZIP, for example, may legitimately represent a source item even if the ZIP container has different metadata or a different total file length.</p>
+        <p>What matters is whether RLB can verify the payload relationship required by the representation rule. A container-size comparison alone is not enough.</p>
+        <div class="callout"><strong>Example:</strong> Repacking the same verified game payload into a canonical ZIP can change ZIP metadata and compressed length without changing the content RLB is trying to represent.</div>
+
+        <h2 id="verification">6. Why cryptographic verification matters</h2>
+        <p>Two files can share the same filename and byte length while containing different data. For content identity that matters to preservation, RLB uses cryptographic evidence rather than relying on weak signals alone.</p>
+        <div class="verification-row">
+          <div class="verify-bad"><span>×</span><div><strong>Weak evidence</strong><small>Same path<br>Same filename<br>Same size</small></div></div>
+          <div class="verify-arrow">→</div>
+          <div class="verify-good"><span>✓</span><div><strong>Verified identity</strong><small>Cryptographic equality or an explicitly verified canonical representation.</small></div></div>
+        </div>
+
+        <h2 id="essential">7. Essential Protection is about the original device</h2>
+        <p><strong>Essential Protection</strong> is the protection operation for the selected source device. Its purpose is to establish the protection RLB requires before the original media is treated as safely preserved.</p>
+        <p>The Protection Summary in Device Inspector separates major protection areas such as system/recovery material and user content so an incomplete area remains visible.</p>
+        <div class="callout warning"><strong>Important:</strong> Do not remove, erase, repurpose or discard original media merely because a Device Report exists or a previous operation was started. Confirm the actual preservation and verification state first.</div>
+
+        <h2 id="reconciliation">8. Retained-content reconciliation does not require the original device</h2>
+        <p>After a preservation exists, RLB can later examine verified retained content and determine whether some of it can now be represented in the reusable Library.</p>
+        <p>This is a separate reconciliation workflow. It works from the <strong>preserved retained content and persisted preservation evidence</strong>; the original device does not need to be accessed for that reconciliation.</p>
+        <div class="reconcile-flow">
+          <div><strong>Preserved retained content</strong><span>Already captured and verified with the preservation.</span></div>
+          <b>→</b>
+          <div><strong>Analyze / Preview</strong><span>Determine proposed Library reconciliation without changing the original device.</span></div>
+          <b>→</b>
+          <div><strong>Confirmed Apply</strong><span>Establish valid Library representations and leave unresolved items visible.</span></div>
+        </div>
+
+        <h2 id="interruption">9. Long-running work can be interrupted</h2>
+        <p>Preservation can involve many thousands of files and may take hours. RLB runs long work through background operations and maintains durable preservation state so that completed work can be distinguished from an interrupted run.</p>
+        <p>An interrupted operation is not automatically equivalent to a failed preservation, and a stale UI label is not automatically proof of completion. The authoritative question is what the persisted preservation evidence says was actually established and verified.</p>
+
+        <h2 id="completion">10. When is it safe to call a device preserved?</h2>
+        <p>For practical use, look for a completed preservation state in which the required protection areas are established and verification has completed successfully.</p>
+        <div class="completion-checks">
+          <div><span>✓</span><strong>Required content accounted for</strong></div>
+          <div><span>✓</span><strong>System / recovery protection established where required</strong></div>
+          <div><span>✓</span><strong>User content protection established where required</strong></div>
+          <div><span>✓</span><strong>Verification completed</strong></div>
+          <div><span>✓</span><strong>No unresolved result is being mistaken for success</strong></div>
+        </div>
+
+        <h2 id="terms">Preservation terminology</h2>
+        <dl class="term-list">
+          <div class="term"><dt>Analyze</dt><dd>Examines evidence and predicts required work. Analysis itself is not the same as establishing new destination content.</dd></div>
+          <div class="term"><dt>Preview</dt><dd>The user-reviewable plan produced from analysis before a confirmed reconciliation Apply.</dd></div>
+          <div class="term"><dt>Apply</dt><dd>Performs approved reconciliation work and validates the destination conditions encountered while doing so.</dd></div>
+          <div class="term"><dt>Represented</dt><dd>RLB has established an acceptable verified representation of the source content in the appropriate destination context.</dd></div>
+          <div class="term"><dt>Retained</dt><dd>The content remains with the specific preservation rather than being represented solely by reusable Library content.</dd></div>
+          <div class="term"><dt>Verified</dt><dd>The required identity or protection evidence has been checked rather than assumed from filename, path or size alone.</dd></div>
+          <div class="term"><dt>Conflict / Review</dt><dd>A condition that should not be silently treated as established. RLB preserves the distinction so it can be reviewed or resolved by a defined rule.</dd></div>
+        </dl>
+
+        <div class="actions"><a class="btn primary" href="guides.html">Use a practical guide →</a><a class="btn" href="getting-started.html">Back to Getting Started</a></div>
+      </article>
+
+      <aside class="toc" aria-label="On this page">
+        <strong>On this page</strong>
+        <a href="#meaning">What preservation means</a>
+        <a href="#workflow">Protection workflow</a>
+        <a href="#preview">Analyze & Preview</a>
+        <a href="#library-retained">Library vs Retained</a>
+        <a href="#canonical">Canonical content</a>
+        <a href="#verification">Verification</a>
+        <a href="#essential">Essential Protection</a>
+        <a href="#reconciliation">Retained reconciliation</a>
+        <a href="#interruption">Interruption</a>
+        <a href="#completion">When it is preserved</a>
+        <a href="#terms">Terminology</a>
+      </aside>
+    </div>
+  </section>
 </main>
-<footer class="site-footer"><div class="container"><div class="footer-grid"><div><strong>Retro Library Builder</strong><div>Understand. Preserve. Rebuild.</div></div><div class="footer-links"><a href="https://github.com/cancruiser/RetroLibraryBuilder">GitHub</a><a href="https://discord.gg/zCDA8evmyE">Discord</a><a href="about.html">About</a></div></div><div class="footer-note">RLB does not provide or distribute commercial ROM collections. © <span data-year></span> Retro Library Builder.</div></div></footer>
+
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><strong>Retro Library Builder</strong><div>Preserve Once. Build Many.</div></div><div class="footer-links"><a href="https://github.com/cancruiser/RetroLibraryBuilder">GitHub</a><a href="https://discord.gg/zCDA8evmyE">Discord</a><a href="about.html">About</a></div></div><div class="footer-note">RLB does not provide or distribute commercial ROM collections. © <span data-year></span> Retro Library Builder.</div></div></footer>
 <script src="assets/site.js"></script>
 </body></html>
