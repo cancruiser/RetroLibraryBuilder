@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Retro Library Builder Knowledge Explorer browses devices, firmware, hardware profiles, DTBs, panels, recipes, media, downloads and known issues.">
+  <title>Knowledge Explorer — Retro Library Builder</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav-wrap" aria-label="Primary navigation"><a class="brand" href="./"><span class="brand-mark">R</span><span>Retro Library Builder <small>Beta</small></span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">Menu</button><div class="nav-links"><a href="./">Home</a><a href="getting-started.html">Getting Started</a><a href="preservation.html">Preservation</a><a href="guides.html">Guides</a><a href="about.html">About</a></div></nav></header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="./">Home</a> / Knowledge Explorer</div>
+      <span class="eyebrow"><span class="dot"></span> Reusable device knowledge</span>
+      <h1>Browse what RLB already knows.</h1>
+      <p class="lead">Knowledge Explorer is the browsing layer for RLB's accumulated device, firmware, hardware, DTB, panel, recipe, media and issue knowledge. It exists so each investigation can make the next one better.</p>
+    </div>
+  </section>
+
+  <section class="section device-tour">
+    <div class="container">
+      <div class="app-panel screenshot-panel">
+        <span class="panel-title">KNOWLEDGE EXPLORER — ACTUAL RLB INTERFACE</span>
+        <figure class="app-screenshot">
+          <img src="assets/images/knowledge-explorer.jpg" alt="Retro Library Builder Knowledge Explorer showing knowledge domains, device cards, category filters and the selected-entry details pane.">
+          <figcaption>The public-facing Knowledge Explorer workflow: choose a domain, search or filter the catalog, select an entry, then inspect its details and connected knowledge. Maintenance controls are intentionally not shown here.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="container article-layout">
+      <article class="article knowledge-article">
+
+        <div class="callout success"><strong>Knowledge is reusable:</strong> Device identification, firmware relationships, DTBs, hardware profiles and compatibility evidence are more valuable when RLB can carry them forward into future analysis instead of rediscovering them device by device.</div>
+
+        <h2 id="purpose">1. What Knowledge Explorer is for</h2>
+        <p>Knowledge Explorer is the human-browsable view of the knowledge RLB has accumulated about retro handhelds, consoles and single-board-computer gaming systems.</p>
+        <p>It lets you explore known devices and related technical information independently of a live Device Inspector session.</p>
+
+        <h2 id="domains">2. Start with a knowledge domain</h2>
+        <p>The left side of the workspace separates the repository into knowledge domains.</p>
+        <div class="knowledge-domain-grid">
+          <div><span>DEVICES</span><strong>Devices</strong><small>Known handhelds, consoles and related device families.</small></div>
+          <div><span>FIRMWARE</span><strong>Firmware</strong><small>Known firmware families and relationships.</small></div>
+          <div><span>BOARDS</span><strong>Boards</strong><small>Board and hardware-profile information.</small></div>
+          <div><span>PANELS</span><strong>Panels</strong><small>Known display/panel information used in device differentiation.</small></div>
+          <div><span>DTBs</span><strong>DTBs</strong><small>Device-tree blob evidence and known hardware associations.</small></div>
+          <div><span>HARDWARE</span><strong>Hardware</strong><small>Broader hardware profiles and characteristics.</small></div>
+          <div><span>RECIPES</span><strong>Recipes</strong><small>Reusable deployment or device-handling knowledge.</small></div>
+          <div><span>RECOVERY</span><strong>Recovery</strong><small>Known recovery-related information where available.</small></div>
+          <div><span>MEDIA</span><strong>Media</strong><small>Device imagery and associated recognition media.</small></div>
+          <div><span>DOWNLOADS</span><strong>Downloads</strong><small>Known downloadable resources referenced by the repository.</small></div>
+          <div><span>ISSUES</span><strong>Known Issues</strong><small>Known device or firmware issues that should stay visible to users and analysis.</small></div>
+        </div>
+
+        <h2 id="search">3. Search across device and hardware knowledge</h2>
+        <p>The main search field accepts device, firmware, hardware-profile, DTB, panel and recipe terms. This gives users one place to find the knowledge they need even when they do not yet know which domain contains it.</p>
+
+        <h2 id="categories">4. Filter the device catalog by class</h2>
+        <p>When browsing Devices, Knowledge Explorer can narrow the catalog by broad device category.</p>
+        <div class="knowledge-category-grid">
+          <div><strong>All</strong><small>Browse every known device entry.</small></div>
+          <div><strong>Handhelds</strong><small>Retro handheld gaming systems.</small></div>
+          <div><strong>Classic Handheld Consoles</strong><small>Earlier handheld-console families.</small></div>
+          <div><strong>Single Board Computers</strong><small>SBC-based gaming systems and related hardware.</small></div>
+          <div><strong>Home Consoles</strong><small>Console systems represented in the knowledge repository.</small></div>
+          <div><strong>Mini Consoles</strong><small>Mini/plug-and-play style console hardware.</small></div>
+        </div>
+
+        <h2 id="families">5. Device cards are grouped into recognizable families</h2>
+        <p>The main device area groups entries by manufacturer or family, making large catalogs easier to browse than a single alphabetical wall of devices.</p>
+        <p>Each card provides the device name, category, manufacturer/family context, firmware hints and a knowledge-completeness indicator.</p>
+        <div class="device-card-anatomy">
+          <div><span>IMAGE</span><strong>Recognition artwork</strong><small>A visual reference helps distinguish devices that may have similar names.</small></div>
+          <div><span>IDENTITY</span><strong>Device and family</strong><small>The canonical device identity RLB uses in its knowledge model.</small></div>
+          <div><span>FIRMWARE</span><strong>Firmware hints</strong><small>Known supported or related firmware information.</small></div>
+          <div><span>KNOWLEDGE</span><strong>Coverage indicator</strong><small>A quick indication of how complete the available knowledge is for the entry.</small></div>
+        </div>
+
+        <h2 id="details">6. Select an entry to inspect its Details pane</h2>
+        <p>The right-hand <strong>Details</strong> pane shows the selected knowledge entry rather than forcing users to open a separate page for every device.</p>
+        <p>For a device, the details can include overview, manufacturer/family identification, hardware facts, firmware relationships and other connected evidence.</p>
+
+        <h2 id="connected">7. Connected Knowledge is the important part</h2>
+        <p>A device entry is useful because it can connect to the other knowledge RLB has about that device.</p>
+        <div class="connected-knowledge-flow">
+          <div><span>DEVICE</span><strong>Canonical identity</strong><small>The device or hardware family being examined.</small></div>
+          <b>→</b>
+          <div><span>CONNECTED</span><strong>Firmware / DTBs / hardware / panels</strong><small>Related technical evidence rather than isolated text fields.</small></div>
+          <b>→</b>
+          <div><span>USE</span><strong>Device Inspector &amp; Deployment</strong><small>Knowledge can support later identification and compatibility decisions.</small></div>
+        </div>
+
+        <h2 id="evidence">8. Knowledge supports evidence-based identification</h2>
+        <p>Knowledge Explorer is not meant to turn a product name into an automatic match. Its real value is giving Device Inspector more known relationships to compare against actual evidence from the source device.</p>
+        <p>For example, DTB fingerprints, board relationships, firmware compatibility and panel evidence can help differentiate devices that share similar retail names.</p>
+        <div class="callout"><strong>Unknown is valid:</strong> if the repository does not contain enough evidence to distinguish two devices, RLB should preserve that uncertainty rather than inventing a confident answer.</div>
+
+        <h2 id="coverage">9. Knowledge coverage can be incomplete</h2>
+        <p>Device cards can show a knowledge-percentage indicator. This is useful because not every device entry has complete firmware, hardware, media or compatibility information.</p>
+        <p>The goal is to make incompleteness visible and improvable, not to imply that every catalog entry is equally well understood.</p>
+
+        <h2 id="maintenance">10. Repository maintenance tools are separate from browsing</h2>
+        <p>The current Beta also exposes several repository-maintenance actions from Knowledge Explorer, including rebuild, audit and artwork-normalization operations.</p>
+        <p>Those controls support development and repository hygiene, but they are <strong>not the primary Knowledge Explorer workflow</strong>. For normal use, the important experience is browsing domains, selecting entries and understanding connected knowledge.</p>
+        <div class="maintenance-note-grid">
+          <div><strong>Rebuild repository</strong><small>Regenerates the managed knowledge snapshot/repository from its configured source material.</small></div>
+          <div><strong>Audit knowledge</strong><small>Checks repository consistency and completeness.</small></div>
+          <div><strong>Audit / Normalize artwork</strong><small>Maintenance operations for device-recognition media.</small></div>
+        </div>
+        <div class="callout warning"><strong>UI note:</strong> these maintenance controls are currently more visually prominent than they need to be. They are documented here as maintenance tools rather than core browsing actions.</div>
+
+        <h2 id="relationship">11. Knowledge Explorer and Knowledge Sources are different</h2>
+        <p><strong>Knowledge Explorer</strong> shows what RLB knows. <strong>Knowledge Sources</strong> explains where that knowledge came from and how source material feeds the managed repository.</p>
+        <div class="knowledge-source-split">
+          <div><span>EXPLORER</span><strong>Browse the result</strong><small>Devices, firmware, boards, DTBs, panels, recipes, media and issues already represented in the repository.</small></div>
+          <b>↔</b>
+          <div><span>SOURCES</span><strong>Understand provenance</strong><small>The source repositories, sites and curated inputs that contribute knowledge to RLB.</small></div>
+        </div>
+
+        <h2 id="principles">Knowledge principles</h2>
+        <div class="completion-checks">
+          <div><span>✓</span><strong>Make each investigation reusable</strong></div>
+          <div><span>✓</span><strong>Separate domains so devices, DTBs, firmware and hardware remain understandable</strong></div>
+          <div><span>✓</span><strong>Connect related knowledge instead of storing isolated facts</strong></div>
+          <div><span>✓</span><strong>Show incomplete knowledge honestly</strong></div>
+          <div><span>✓</span><strong>Keep repository maintenance separate from normal browsing</strong></div>
+        </div>
+
+        <h2 id="next">What comes next?</h2>
+        <p>The next page is <strong>Knowledge Sources</strong>, which explains the other side of this system: how external and curated source material becomes managed RLB knowledge.</p>
+        <div class="actions">
+          <a class="btn primary" href="about.html#knowledge">Why device knowledge matters →</a>
+          <a class="btn" href="getting-started.html">Device Inspector</a>
+        </div>
+      </article>
+
+      <aside class="toc" aria-label="On this page">
+        <strong>On this page</strong>
+        <a href="#purpose">What Explorer is</a>
+        <a href="#domains">Knowledge domains</a>
+        <a href="#search">Search</a>
+        <a href="#categories">Device categories</a>
+        <a href="#families">Device cards</a>
+        <a href="#details">Details pane</a>
+        <a href="#connected">Connected Knowledge</a>
+        <a href="#evidence">Evidence-based identity</a>
+        <a href="#coverage">Knowledge coverage</a>
+        <a href="#maintenance">Maintenance tools</a>
+        <a href="#relationship">Explorer vs Sources</a>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><strong>Retro Library Builder</strong><div>Preserve Once. Build Many.</div></div><div class="footer-links"><a href="https://github.com/cancruiser/RetroLibraryBuilder">GitHub</a><a href="https://discord.gg/zCDA8evmyE">Discord</a><a href="about.html">About</a></div></div><div class="footer-note">RLB does not provide or distribute commercial ROM collections. © <span data-year></span> Retro Library Builder.</div></div></footer>
+<script src="assets/site.js"></script>
+</body></html>
