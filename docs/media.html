@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Retro Library Builder Media Explorer browses canonical games, manages artwork and linked assets, finds missing artwork and works with artwork sources.">
+  <title>Media Explorer — Retro Library Builder</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav-wrap" aria-label="Primary navigation"><a class="brand" href="./"><span class="brand-mark">R</span><span>Retro Library Builder <small>Beta</small></span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">Menu</button><div class="nav-links"><a href="./">Home</a><a href="getting-started.html">Getting Started</a><a href="preservation.html">Preservation</a><a href="guides.html">Guides</a><a href="about.html">About</a></div></nav></header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="./">Home</a> / Media Explorer</div>
+      <span class="eyebrow"><span class="dot"></span> Managed media</span>
+      <h1>Browse one canonical game. Manage every linked asset.</h1>
+      <p class="lead">Media Explorer gives RLB a single place to browse artwork by platform and canonical title, identify missing art, manage preferred covers, and work with the media assets linked to the managed Library.</p>
+    </div>
+  </section>
+
+  <section class="section device-tour">
+    <div class="container">
+      <div class="app-panel screenshot-panel">
+        <span class="panel-title">MEDIA EXPLORER — ACTUAL RLB INTERFACE</span>
+        <figure class="app-screenshot">
+          <img src="assets/images/media-explorer.jpg" alt="Retro Library Builder Media Explorer showing platform browsing, media statistics, game artwork cards and missing artwork controls.">
+          <figcaption>Media Explorer shown on Atari 5200. The grid presents one preferred cover per canonical game; selecting a title opens management for its linked assets.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="container article-layout">
+      <article class="article media-article">
+
+        <div class="callout success"><strong>Library-first media:</strong> Media Explorer is organized around the canonical games and platforms already known to the managed Library rather than treating artwork as a disconnected folder of images.</div>
+
+        <h2 id="purpose">1. What Media Explorer is for</h2>
+        <p>Media Explorer is the workspace for browsing and managing the artwork and support media connected to RLB’s managed game library.</p>
+        <p>The screen presents a preferred cover for each canonical game while keeping the broader set of linked assets available for per-title management.</p>
+
+        <h2 id="snapshot">2. Start with the media snapshot</h2>
+        <p>The summary cards across the top provide quick context for the current media library.</p>
+        <div class="media-stat-grid">
+          <div><span>ASSETS</span><strong>Media Assets</strong><small>Managed artwork and support files currently known to RLB.</small></div>
+          <div><span>PLATFORMS</span><strong>Library Platforms</strong><small>Platforms in the managed Library that can have artwork associated with their canonical titles.</small></div>
+          <div><span>TITLES</span><strong>Selected Platform</strong><small>Canonical titles available in the platform currently being browsed.</small></div>
+          <div><span>LIBRARY</span><strong>Managed Size</strong><small>The overall managed Library size shown alongside the media view.</small></div>
+        </div>
+
+        <h2 id="platforms">3. Browse media by platform</h2>
+        <p>The left-hand <strong>Platforms</strong> pane is the main navigation for Media Explorer. It supports sorting and platform search, and each platform entry reports how many games and media items RLB currently knows about.</p>
+        <div class="platform-example">
+          <div><span>PLATFORM</span><strong>Atari 5200</strong><small>73 games • 434 media</small></div>
+          <div><span>SELECTED</span><strong>73 canonical titles</strong><small>The main artwork grid updates to the selected platform.</small></div>
+        </div>
+        <p>This keeps artwork management aligned with platform identity rather than relying on a flat filesystem view.</p>
+
+        <h2 id="grid">4. The game artwork grid shows one preferred cover per game</h2>
+        <p>The center of the workspace is the <strong>Game artwork</strong> grid. The interface describes it as <strong>one preferred cover per canonical game</strong>.</p>
+        <p>That means the grid is a browsing view, not the complete media record for a title. A game can have multiple linked assets even though only one preferred cover is shown here.</p>
+        <div class="cover-vs-assets">
+          <div class="cover-card"><span>VISIBLE IN GRID</span><strong>Preferred cover</strong><small>The single cover chosen to represent the canonical title while browsing.</small></div>
+          <b>≠</b>
+          <div class="asset-card"><span>LINKED TO TITLE</span><strong>All media assets</strong><small>Additional artwork and support media associated with the same canonical game.</small></div>
+        </div>
+
+        <h2 id="search">5. Search and filter the selected platform</h2>
+        <p>Media Explorer provides title search plus an additional filter control above the artwork grid. This lets the user narrow a platform without leaving the current context.</p>
+        <p>The artwork-type selector visible beside the missing-art controls can focus the action on a particular asset type, such as <strong>Box Art</strong>.</p>
+
+        <h2 id="missing">6. Missing artwork remains visible</h2>
+        <p>A game with no preferred cover is not silently hidden. Media Explorer can show an explicit <strong>ARTWORK MISSING</strong> card in the game grid.</p>
+        <div class="missing-art-card">
+          <div class="missing-symbol">▧</div>
+          <div><strong>Artwork missing</strong><small>The canonical title exists, but the requested preferred artwork has not been established.</small></div>
+        </div>
+        <p>This distinction matters because “the game exists” and “the game has complete media coverage” are two different states.</p>
+
+        <h2 id="show-missing">7. Show Missing Artwork narrows the problem</h2>
+        <p>The top-level <strong>Show Missing Artwork</strong> action lets the user focus the Media Explorer on titles whose preferred artwork is missing.</p>
+        <p>There is also a platform-specific control — for example, <strong>Show Missing for Atari 5200</strong> — so missing-art review can stay scoped to the platform already being browsed.</p>
+
+        <h2 id="find-missing">8. Find Missing Artwork searches for candidates</h2>
+        <p><strong>Find Missing Artwork</strong> is the active acquisition/recovery side of the media workflow. The platform-specific equivalent lets the user run that work for the selected platform.</p>
+        <div class="media-action-flow">
+          <div><span>1</span><strong>Show Missing</strong><small>Identify which canonical titles still lack the selected artwork type.</small></div>
+          <b>→</b>
+          <div><span>2</span><strong>Find Missing</strong><small>Ask RLB to look for artwork candidates using the available media sources.</small></div>
+          <b>→</b>
+          <div><span>3</span><strong>Manage title assets</strong><small>Select the game and review the media linked to that canonical title.</small></div>
+        </div>
+
+        <h2 id="sources">9. Artwork Sources are configurable</h2>
+        <p>The <strong>Add Artwork Source</strong> action shows that Media Explorer is not tied to only one media provider or one pre-baked data source. Artwork sources can be added to the media workflow.</p>
+        <p>The visible <strong>ScreenScraper</strong> action represents one media-source/integration path available from the workspace. The exact media that can be obtained depends on the configured source and the title being matched.</p>
+        <div class="callout"><strong>Source and match are separate concerns:</strong> having an artwork provider available does not by itself prove that a candidate belongs to the correct canonical game. Media still needs to remain associated with the right Library identity.</div>
+
+        <h2 id="assets">10. Click a title to manage all of its assets</h2>
+        <p>The Media Explorer subtitle explicitly says to <strong>click a title to manage all assets</strong>. The cover grid is therefore the entry point into a more detailed per-game media record.</p>
+        <p>A title card also reports its asset count, making it possible to see that a canonical game can have several media files behind the single preferred image shown in the grid.</p>
+
+        <h2 id="folders">11. Open Media Folder exposes the managed media location</h2>
+        <p>The <strong>Open Media Folder</strong> action provides direct access to the media storage location when filesystem-level inspection is needed.</p>
+        <p>That is useful for inspection and troubleshooting, but the Media Explorer remains the authoritative UI for understanding which media belongs to which canonical Library item.</p>
+
+        <h2 id="refresh">12. Refresh updates the workspace view</h2>
+        <p>The <strong>Refresh</strong> action reloads the current Media Explorer state after media work has changed what is available.</p>
+        <p>The workspace also reports when its view was last updated, helping distinguish the current UI snapshot from media work that may have completed later.</p>
+
+        <h2 id="relationship">13. Media connects Import, Review and the Library</h2>
+        <p>Media is not isolated from the rest of RLB. Media assets can enter through Import, conflicts can appear in Review, and Media Explorer manages the result against canonical Library titles.</p>
+        <div class="media-relationship-flow">
+          <div><span>IMPORT</span><strong>Discover media</strong><small>Source analysis identifies media and asset lanes.</small></div>
+          <b>→</b>
+          <div><span>REVIEW</span><strong>Resolve exceptions</strong><small>Media conflicts remain reviewable instead of being silently overwritten.</small></div>
+          <b>→</b>
+          <div><span>MEDIA</span><strong>Manage canonical assets</strong><small>Browse preferred covers and every linked media asset by canonical game.</small></div>
+        </div>
+
+        <h2 id="principles">Media principles</h2>
+        <div class="completion-checks">
+          <div><span>✓</span><strong>Organize media around canonical games and platforms</strong></div>
+          <div><span>✓</span><strong>Keep missing artwork visible rather than pretending coverage is complete</strong></div>
+          <div><span>✓</span><strong>Show one preferred cover without losing the rest of a title’s linked assets</strong></div>
+          <div><span>✓</span><strong>Allow configurable artwork sources instead of hard-wiring one provider</strong></div>
+          <div><span>✓</span><strong>Keep media conflicts reviewable through the broader Library workflow</strong></div>
+        </div>
+
+        <h2 id="next">What comes next?</h2>
+        <p>Media Explorer makes the most sense alongside the <strong>Library</strong> workspace, because the canonical titles and platform structure shown here come from the managed Library itself.</p>
+        <div class="actions">
+          <a class="btn primary" href="import.html">Review Import Studio →</a>
+          <a class="btn" href="review.html">Review Center</a>
+        </div>
+      </article>
+
+      <aside class="toc" aria-label="On this page">
+        <strong>On this page</strong>
+        <a href="#purpose">What Media Explorer is</a>
+        <a href="#snapshot">Media snapshot</a>
+        <a href="#platforms">Browse by platform</a>
+        <a href="#grid">Preferred cover grid</a>
+        <a href="#search">Search &amp; filter</a>
+        <a href="#missing">Missing artwork</a>
+        <a href="#show-missing">Show Missing</a>
+        <a href="#find-missing">Find Missing</a>
+        <a href="#sources">Artwork Sources</a>
+        <a href="#assets">Manage title assets</a>
+        <a href="#folders">Open Media Folder</a>
+        <a href="#relationship">Import / Review / Media</a>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><strong>Retro Library Builder</strong><div>Preserve Once. Build Many.</div></div><div class="footer-links"><a href="https://github.com/cancruiser/RetroLibraryBuilder">GitHub</a><a href="https://discord.gg/zCDA8evmyE">Discord</a><a href="about.html">About</a></div></div><div class="footer-note">RLB does not provide or distribute commercial ROM collections. © <span data-year></span> Retro Library Builder.</div></div></footer>
+<script src="assets/site.js"></script>
+</body></html>
