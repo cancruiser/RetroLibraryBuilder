@@ -3835,3 +3835,276 @@ a.guide-tile:hover {
     transform: rotate(90deg);
   }
 }
+
+/* Knowledge Explorer page */
+.knowledge-article {
+  max-width: 900px;
+}
+
+.knowledge-domain-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+  margin: 16px 0;
+}
+
+.knowledge-domain-grid > div {
+  min-height: 118px;
+  padding: 11px;
+  border: 1px solid #9fa9af;
+  border-radius: 5px;
+  background: linear-gradient(#edf0f1, #d8dcde);
+}
+
+.knowledge-domain-grid span,
+.connected-knowledge-flow span,
+.knowledge-source-split span {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--blue-deep);
+  font-size: .66rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+
+.knowledge-domain-grid strong,
+.knowledge-domain-grid small {
+  display: block;
+}
+
+.knowledge-domain-grid strong {
+  color: #273138;
+  margin-bottom: 4px;
+  font-size: .86rem;
+}
+
+.knowledge-domain-grid small {
+  color: #5b666e;
+  font-size: .75rem;
+  line-height: 1.4;
+}
+
+.knowledge-category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+  margin: 16px 0;
+}
+
+.knowledge-category-grid > div {
+  min-height: 105px;
+  padding: 11px;
+  border: 1px solid #9fa9af;
+  border-top: 3px solid #176b9f;
+  border-radius: 5px;
+  background: linear-gradient(#edf0f1, #d8dcde);
+}
+
+.knowledge-category-grid strong,
+.knowledge-category-grid small {
+  display: block;
+}
+
+.knowledge-category-grid strong {
+  color: #273138;
+  margin-bottom: 4px;
+}
+
+.knowledge-category-grid small {
+  color: #5b666e;
+  font-size: .76rem;
+  line-height: 1.4;
+}
+
+.device-card-anatomy {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+  margin: 16px 0;
+}
+
+.device-card-anatomy > div {
+  min-height: 120px;
+  padding: 11px;
+  border: 1px solid #9fa9af;
+  border-radius: 5px;
+  background: linear-gradient(#edf0f1, #d8dcde);
+}
+
+.device-card-anatomy span {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 3px 6px;
+  border: 1px solid #94a7b2;
+  border-radius: 3px;
+  background: #e5eef3;
+  color: var(--blue-deep);
+  font-size: .65rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+
+.device-card-anatomy strong,
+.device-card-anatomy small {
+  display: block;
+}
+
+.device-card-anatomy strong {
+  color: #273138;
+  margin-bottom: 4px;
+  font-size: .84rem;
+}
+
+.device-card-anatomy small {
+  color: #5b666e;
+  font-size: .75rem;
+  line-height: 1.4;
+}
+
+.connected-knowledge-flow {
+  display: grid;
+  grid-template-columns: 1fr 30px 1fr 30px 1fr;
+  gap: 8px;
+  align-items: center;
+  margin: 17px 0;
+}
+
+.connected-knowledge-flow > div {
+  min-height: 130px;
+  padding: 12px;
+  border: 1px solid #9fa9af;
+  border-radius: 5px;
+  background: linear-gradient(#edf0f1, #d8dcde);
+}
+
+.connected-knowledge-flow > div:nth-of-type(1) { border-top: 3px solid #176b9f; }
+.connected-knowledge-flow > div:nth-of-type(2) { border-top: 3px solid #7564a1; }
+.connected-knowledge-flow > div:nth-of-type(3) { border-top: 3px solid #3f9551; }
+
+.connected-knowledge-flow strong,
+.connected-knowledge-flow small {
+  display: block;
+}
+
+.connected-knowledge-flow strong {
+  color: #273138;
+  margin-bottom: 4px;
+  font-size: .84rem;
+}
+
+.connected-knowledge-flow small {
+  color: #5b666e;
+  font-size: .76rem;
+  line-height: 1.4;
+}
+
+.connected-knowledge-flow > b {
+  text-align: center;
+  color: #477083;
+  font-size: 1.15rem;
+}
+
+.maintenance-note-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.maintenance-note-grid > div {
+  min-height: 115px;
+  padding: 12px;
+  border: 1px solid #9fa9af;
+  border-top: 3px solid #bd7d21;
+  border-radius: 5px;
+  background: linear-gradient(#edf0f1, #d8dcde);
+}
+
+.maintenance-note-grid strong,
+.maintenance-note-grid small {
+  display: block;
+}
+
+.maintenance-note-grid strong {
+  color: #273138;
+  margin-bottom: 5px;
+  font-size: .84rem;
+}
+
+.maintenance-note-grid small {
+  color: #5b666e;
+  font-size: .77rem;
+  line-height: 1.42;
+}
+
+.knowledge-source-split {
+  display: grid;
+  grid-template-columns: 1fr 48px 1fr;
+  gap: 10px;
+  align-items: center;
+  margin: 17px 0;
+}
+
+.knowledge-source-split > div {
+  min-height: 130px;
+  padding: 13px;
+  border: 1px solid #9fa9af;
+  border-radius: 5px;
+  background: linear-gradient(#edf0f1, #d8dcde);
+}
+
+.knowledge-source-split > div:first-child { border-top: 3px solid #176b9f; }
+.knowledge-source-split > div:last-child { border-top: 3px solid #3f9551; }
+
+.knowledge-source-split strong,
+.knowledge-source-split small {
+  display: block;
+}
+
+.knowledge-source-split strong {
+  color: #273138;
+  margin-bottom: 4px;
+}
+
+.knowledge-source-split small {
+  color: #5b666e;
+  font-size: .78rem;
+  line-height: 1.42;
+}
+
+.knowledge-source-split > b {
+  text-align: center;
+  color: #557587;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 1000px) {
+  .knowledge-domain-grid,
+  .knowledge-category-grid,
+  .device-card-anatomy,
+  .maintenance-note-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .connected-knowledge-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .connected-knowledge-flow > b {
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 650px) {
+  .knowledge-domain-grid,
+  .knowledge-category-grid,
+  .device-card-anatomy,
+  .maintenance-note-grid,
+  .knowledge-source-split {
+    grid-template-columns: 1fr;
+  }
+
+  .knowledge-source-split > b {
+    transform: rotate(90deg);
+  }
+}
