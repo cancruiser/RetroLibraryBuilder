@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How to safely resume an interrupted Retro Library Builder preservation using persisted preservation state and source/destination revalidation.">
+  <title>Resume Interrupted Protection — Retro Library Builder</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="nav-wrap" aria-label="Primary navigation">
+    <a class="brand" href="./"><span class="brand-mark">R</span><span>Retro Library Builder <small>Beta</small></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">Menu</button>
+    <div class="nav-links">
+      <a href="./">Home</a>
+      <a href="getting-started.html">Getting Started</a>
+      <a href="workspaces.html">Workspaces</a>
+      <a href="preservation.html">Preservation</a>
+      <a href="knowledge.html">Knowledge</a>
+      <a href="guides.html" class="section-active">Guides</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="./">Home</a> / <a href="guides.html">Guides</a> / Resume interrupted protection</div>
+      <span class="eyebrow"><span class="dot"></span> Recovery workflow</span>
+      <h1>Resume the preservation. Do not start over blindly.</h1>
+      <p class="lead">When RLB has durable preservation state from an interrupted run, <strong>Resume Protection</strong> is the path back into that work. RLB revalidates the source and destination before reusing them and continues from persisted preservation state instead of assuming the previous run completed.</p>
+    </div>
+  </section>
+
+  <section class="section device-tour">
+    <div class="container">
+      <div class="app-panel screenshot-panel">
+        <span class="panel-title">RESUME PROTECTION — ACTUAL RLB INTERFACE</span>
+        <figure class="app-screenshot">
+          <img src="assets/images/resume-protection-device-inspector.jpg" alt="Retro Library Builder Device Inspector showing Resume Protection available and a paused-preservation notice stating that source and destination will be revalidated before reuse.">
+          <figcaption>Device Inspector can expose <strong>Resume Protection</strong> when persisted preservation state is available. The notice explicitly warns that the source and destination will be revalidated before reuse.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="container article-layout">
+      <article class="article resume-article">
+
+        <div class="callout warning"><strong>Resume is not proof of success.</strong> The presence of a Resume action means RLB has persisted work it can attempt to continue. It does not mean the earlier preservation completed or that the device is already safe to erase or repurpose.</div>
+
+        <h2 id="when">1. When should you use Resume Protection?</h2>
+        <p>Use Resume when a preservation was interrupted or paused and Device Inspector exposes a <strong>Resume Protection</strong> action for that persisted preservation state.</p>
+        <p>Typical interruptions can include closing RLB, losing access to a removable destination, disconnecting a source, or otherwise ending a long-running preservation before its required work and verification finished.</p>
+
+        <div class="resume-signal-grid">
+          <div><span>1</span><strong>Resume action is available</strong><small>Device Inspector has found persisted preservation state that can be revisited.</small></div>
+          <div><span>2</span><strong>Protection remains incomplete</strong><small>Protection Summary may still show incomplete or not-ready areas.</small></div>
+          <div><span>3</span><strong>Paused/interrupted notice is visible</strong><small>RLB explains that the previous source and destination must be validated again before reuse.</small></div>
+        </div>
+
+        <h2 id="before">2. Before clicking Resume, restore the same working context</h2>
+        <p>Resume is safest when the same physical source and preservation destination used by the interrupted run are available again.</p>
+        <div class="resume-check-grid">
+          <div><span>✓</span><div><strong>Reconnect the original source</strong><small>If the interrupted preservation depended on the source device, reconnect that same media rather than substituting a different card or image.</small></div></div>
+          <div><span>✓</span><div><strong>Reconnect the preservation destination</strong><small>Use the destination associated with the persisted preservation rather than pointing Resume at an unrelated location.</small></div></div>
+          <div><span>✓</span><div><strong>Leave completed preservation data intact</strong><small>Do not manually delete or reorganize partial preservation content before RLB has had a chance to revalidate it.</small></div></div>
+          <div><span>✓</span><div><strong>Keep the original media unchanged</strong><small>Do not erase, repurpose or modify the source simply because some preservation work already completed.</small></div></div>
+        </div>
+
+        <h2 id="open">3. Open Device Inspector and look for the persisted state</h2>
+        <p>Return to <strong>Device Inspector</strong>. When RLB recognizes a resumable preservation, the Actions pane can expose <strong>Resume Protection</strong> even though normal protection stages are not currently available.</p>
+        <p>The screenshot above shows exactly that state: <strong>Run Essential Protection</strong> is unavailable while <strong>Resume Protection</strong> is offered for the persisted work.</p>
+
+        <h2 id="revalidate">4. Resume begins with revalidation</h2>
+        <p>RLB should not blindly trust that a removable source or destination is still the same device simply because it appears at the same path or drive letter.</p>
+        <div class="resume-revalidate-flow">
+          <div><span>SOURCE</span><strong>Revalidate source</strong><small>Confirm that the source being presented is appropriate for the persisted preservation.</small></div>
+          <b>+</b>
+          <div><span>DESTINATION</span><strong>Revalidate destination</strong><small>Confirm that the preservation destination can safely be reused.</small></div>
+          <b>→</b>
+          <div><span>RESUME</span><strong>Continue persisted work</strong><small>Only after the required context is re-established should the interrupted preservation continue.</small></div>
+        </div>
+
+        <div class="callout success"><strong>Why this matters:</strong> removable storage can disappear, reconnect under a different path, or be replaced by another device. Resume must bind back to the intended preservation context rather than assume “same location” means “same content.”</div>
+
+        <h2 id="reuse">5. Resume should reuse established work</h2>
+        <p>The purpose of durable preservation state is to distinguish work that was already established from work that still needs to be completed.</p>
+        <p>Resume is therefore not intended as a blind full restart. Work that RLB can validate as already complete can be reused, while incomplete or unverified areas remain work to do.</p>
+
+        <div class="reuse-flow">
+          <div class="reuse-good"><span>ALREADY ESTABLISHED</span><strong>Reuse validated progress</strong><small>Completed durable work should not be discarded merely because a later part of the run was interrupted.</small></div>
+          <b>+</b>
+          <div class="reuse-open"><span>STILL REQUIRED</span><strong>Continue incomplete work</strong><small>Protection and verification that were not established must still complete before the preservation can be considered successful.</small></div>
+        </div>
+
+        <h2 id="background">6. Long-running resumed work remains a background operation</h2>
+        <p>Preservation can involve many thousands of files and may take hours. After Resume is accepted and its prerequisites are revalidated, the work should continue through RLB's long-running/background execution path.</p>
+        <p>Use the application's background-task/status views to follow actual progress rather than assuming the operation finished because you navigated away from Device Inspector.</p>
+
+        <h2 id="interrupt-again">7. If the run is interrupted again, do not clean up manually</h2>
+        <p>If another interruption occurs, preserve the source and destination in place. RLB's persisted preservation state is what allows completed work to be distinguished from unfinished work on the next attempt.</p>
+        <div class="guide-do-dont">
+          <div class="do"><span>✓</span><div><strong>Leave durable state intact</strong><small>Reconnect the required devices and let RLB reassess what can be reused.</small></div></div>
+          <div class="dont"><span>×</span><div><strong>Do not “fix” the preservation folder by hand</strong><small>Deleting partial results can remove the very work Resume was designed to reuse or verify.</small></div></div>
+        </div>
+
+        <h2 id="verify">8. A resumed run still has to reach a verified terminal result</h2>
+        <p>Resume changes how RLB continues the work; it does not lower the standard for completion.</p>
+        <p>Before treating the original device as preserved, confirm the actual persisted preservation/verification state. The same completion rules apply whether the work finished in one uninterrupted run or several resumed runs.</p>
+
+        <div class="completion-checks">
+          <div><span>✓</span><strong>Required content accounted for</strong></div>
+          <div><span>✓</span><strong>System / recovery protection established where required</strong></div>
+          <div><span>✓</span><strong>User-content protection established where required</strong></div>
+          <div><span>✓</span><strong>Verification completed</strong></div>
+          <div><span>✓</span><strong>No interrupted or unresolved state is being mistaken for success</strong></div>
+        </div>
+
+        <h2 id="not-resume">9. When Resume is not the right assumption</h2>
+        <p>Do not treat the presence of a historical report, an old folder, or a familiar drive letter as enough reason to force a resume. The Resume action is meaningful when RLB has the persisted preservation context needed to offer it.</p>
+        <p>If the source or destination cannot be revalidated, the safe outcome is to stop and resolve that mismatch rather than continue against uncertain media.</p>
+
+        <div class="callout warning"><strong>Do not bypass a failed revalidation.</strong> A Resume that refuses to continue is protecting the preservation from being attached to the wrong source or destination.</div>
+
+        <h2 id="resume-vs-new">10. Resume Protection vs Run Essential Protection</h2>
+        <div class="resume-vs-grid">
+          <div><span>RESUME</span><strong>Continue an existing preservation</strong><small>Uses persisted preservation state, revalidates its context and attempts to continue incomplete work.</small></div>
+          <div><span>NEW</span><strong>Run Essential Protection</strong><small>Starts the protection operation for a currently analyzed device when no interrupted preservation is being resumed.</small></div>
+        </div>
+        <p>When RLB presents a valid Resume path, prefer understanding and continuing that persisted work rather than starting an unrelated new preservation simply because the previous run was interrupted.</p>
+
+        <h2 id="summary">The safe Resume sequence</h2>
+        <div class="resume-sequence">
+          <div><span>1</span><strong>Reconnect</strong><small>Restore the original source and preservation destination.</small></div>
+          <div><span>2</span><strong>Open Device Inspector</strong><small>Confirm RLB exposes Resume Protection for the persisted work.</small></div>
+          <div><span>3</span><strong>Resume</strong><small>Allow RLB to revalidate source and destination.</small></div>
+          <div><span>4</span><strong>Continue</strong><small>Let established work be reused and incomplete work finish.</small></div>
+          <div><span>5</span><strong>Verify</strong><small>Confirm the terminal preservation state before trusting the result.</small></div>
+        </div>
+
+        <div class="actions">
+          <a class="btn primary" href="preservation.html">Review the preservation model →</a>
+          <a class="btn" href="protect-original-sd.html">Protect an original SD card</a>
+        </div>
+      </article>
+
+      <aside class="toc" aria-label="On this page">
+        <strong>On this page</strong>
+        <a href="#when">When to Resume</a>
+        <a href="#before">Before you Resume</a>
+        <a href="#open">Device Inspector</a>
+        <a href="#revalidate">Revalidation</a>
+        <a href="#reuse">Reuse established work</a>
+        <a href="#background">Background work</a>
+        <a href="#interrupt-again">Interrupted again</a>
+        <a href="#verify">Verify completion</a>
+        <a href="#not-resume">When not to Resume</a>
+        <a href="#resume-vs-new">Resume vs new protection</a>
+        <a href="#summary">Safe sequence</a>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><strong>Retro Library Builder</strong><div>Preserve Once. Build Many.</div></div><div class="footer-links"><a href="https://github.com/cancruiser/RetroLibraryBuilder">GitHub</a><a href="https://discord.gg/zCDA8evmyE">Discord</a><a href="about.html">About</a></div></div><div class="footer-note">RLB does not provide or distribute commercial ROM collections. © <span data-year></span> Retro Library Builder.</div></div></footer>
+<script src="assets/site.js"></script>
+</body></html>
