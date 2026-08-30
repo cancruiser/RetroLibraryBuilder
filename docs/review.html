@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Retro Library Builder Review Center groups import exceptions, lets users inspect individual items, compare incoming and Library versions, and record decisions.">
+  <title>Review Center — Retro Library Builder</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav-wrap" aria-label="Primary navigation"><a class="brand" href="./"><span class="brand-mark">R</span><span>Retro Library Builder <small>Beta</small></span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">Menu</button><div class="nav-links"><a href="./">Home</a><a href="getting-started.html">Getting Started</a><a href="preservation.html">Preservation</a><a href="guides.html">Guides</a><a href="about.html">About</a></div></nav></header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="./">Home</a> / Review Center</div>
+      <span class="eyebrow"><span class="dot"></span> Exception workflow</span>
+      <h1>Let safe work finish. Review only what needs a decision.</h1>
+      <p class="lead">Review Center collects import exceptions into grouped decisions so the normal safe import can remain complete while ambiguous or conflicting items wait for explicit review.</p>
+    </div>
+  </section>
+
+  <section class="section device-tour">
+    <div class="container">
+      <div class="app-panel screenshot-panel">
+        <span class="panel-title">REVIEW CENTER — ACTUAL RLB INTERFACE</span>
+        <figure class="app-screenshot">
+          <img src="assets/images/review-center-start.jpg" alt="Retro Library Builder Review Center showing filters, Decision Groups, Items and Decision Workspace panes.">
+          <figcaption>The Review Center starts from grouped import exceptions. Select a decision group, then an item, to compare the incoming and managed-Library versions before recording a decision.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="container article-layout">
+      <article class="article review-article">
+
+        <div class="callout success"><strong>Core idea:</strong> Review does not mean the whole import failed. RLB can complete safe import work while only the unresolved exceptions remain waiting for a decision.</div>
+
+        <h2 id="purpose">1. What Review Center is for</h2>
+        <p>Review Center is where RLB surfaces import decisions that should not be silently resolved. Instead of forcing the user to inspect every imported item, RLB groups only the exceptions that require attention.</p>
+        <p>Examples visible in the current Review Center include destination conflicts and cases where an incoming item differs from an existing managed-Library item.</p>
+
+        <h2 id="filters">2. Filter the review queue</h2>
+        <p>The top toolbar narrows the queue before you begin making decisions.</p>
+        <div class="review-filter-grid">
+          <div><span>SESSION</span><strong>Import session</strong><small>Review one import session or combine all available sessions.</small></div>
+          <div><span>STATE</span><strong>Decision status</strong><small>Focus on pending work or other decision states.</small></div>
+          <div><span>CONTENT</span><strong>Content type</strong><small>Narrow the queue to the kind of content you want to review.</small></div>
+          <div><span>SEARCH</span><strong>Search</strong><small>Find a platform, title, file or review reason directly.</small></div>
+        </div>
+        <p>The queue also reports how many <strong>decision groups</strong> and underlying <strong>items</strong> match the current filters.</p>
+
+        <h2 id="three-pane">3. Review follows a three-pane workflow</h2>
+        <div class="review-three-pane">
+          <div><span>1</span><strong>Decision Groups</strong><small>Select a platform and review reason. RLB groups similar exceptions together instead of presenting one flat list.</small></div>
+          <b>→</b>
+          <div><span>2</span><strong>Items</strong><small>Choose the game, asset or file within that decision group.</small></div>
+          <b>→</b>
+          <div><span>3</span><strong>Decision Workspace</strong><small>Compare the selected incoming item with the managed-Library version and record the decision.</small></div>
+        </div>
+
+        <h2 id="groups">4. Decision Groups reduce repetitive work</h2>
+        <p>The left pane groups items by meaningful context such as <strong>platform</strong>, <strong>content lane</strong> and <strong>review reason</strong>. Each group displays its item count so large problem areas are visible immediately.</p>
+        <div class="decision-group-example">
+          <div class="dg-title"><span>PLATFORM</span><strong>amstradcpc</strong></div>
+          <div class="dg-type">Media • Other</div>
+          <div class="dg-reason">Existing Library Destination Different Size</div>
+          <div class="dg-count"><strong>2,025</strong><small>items</small></div>
+        </div>
+        <p>A decision group is therefore not a single file. It is a bucket of items that reached Review for the same type of reason.</p>
+
+        <h2 id="reasons">5. Review reasons explain why RLB stopped</h2>
+        <p>The queue should tell you why an item needs attention rather than simply labeling it “bad.” In the example screen, review reasons include conditions such as:</p>
+        <div class="review-reasons">
+          <div><span>!</span><div><strong>Existing Library Destination Different Size</strong><small>An incoming item maps to an existing destination, but the size differs. RLB does not silently assume equivalence.</small></div></div>
+          <div><span>!</span><div><strong>Destination Content Conflict</strong><small>The destination already contains content that prevents RLB from establishing the incoming item without an explicit decision or defined rule.</small></div></div>
+        </div>
+
+        <h2 id="items">6. Select an item inside the group</h2>
+        <p>After selecting a Decision Group, the middle <strong>Items</strong> pane shows the individual games or assets that belong to that group. Selecting an item loads the detail needed by the Decision Workspace.</p>
+        <p>This separation keeps navigation manageable even when a single group contains hundreds or thousands of items.</p>
+
+        <h2 id="workspace">7. Compare before deciding</h2>
+        <p>The right-hand <strong>Decision Workspace</strong> is where RLB presents the selected item for comparison. The interface explicitly describes the task as comparing the <strong>incoming</strong> and <strong>Library</strong> versions before recording the decision.</p>
+        <div class="compare-flow">
+          <div class="compare-card incoming"><span>INCOMING</span><strong>Source item</strong><small>The item discovered by the analyzed import source.</small></div>
+          <div class="compare-vs">VS</div>
+          <div class="compare-card library"><span>LIBRARY</span><strong>Managed item</strong><small>The current version already present in the RLB managed Library.</small></div>
+        </div>
+        <div class="callout"><strong>Why comparison matters:</strong> same name, same path or a superficially similar item is not enough evidence to overwrite or equate content automatically.</div>
+
+        <h2 id="safe-import">8. Safe import work remains complete while Review waits</h2>
+        <p>This is one of the most important parts of the Review model. RLB does not require every exception to be solved before preserving the work that was already safe to import.</p>
+        <div class="safe-review-flow">
+          <div><span>✓</span><strong>Safe import content</strong><small>Approved content can complete normally.</small></div>
+          <b>+</b>
+          <div><span>!</span><strong>Review exceptions</strong><small>Only unresolved decisions wait in Review Center.</small></div>
+          <b>=</b>
+          <div><span>✓</span><strong>Import remains useful</strong><small>The completed safe work is not discarded just because exceptions remain.</small></div>
+        </div>
+
+        <h2 id="content-types">9. Review is not limited to ROMs</h2>
+        <p>The current queue shows different managed content lanes, including <strong>Game Content</strong>, <strong>Media</strong> and <strong>Configs</strong>. Review therefore protects the integrity of the broader Library, not just playable ROM files.</p>
+        <div class="review-content-grid">
+          <div><span>▣</span><strong>Game Content</strong><small>Playable content and game-library conflicts.</small></div>
+          <div><span>▰</span><strong>Media</strong><small>Disc, composite and other media/asset conflicts.</small></div>
+          <div><span>⚙</span><strong>Configs</strong><small>Configuration content that maps to an existing managed destination.</small></div>
+        </div>
+
+        <h2 id="sessions">10. Review history remains tied to import sessions</h2>
+        <p>The Review Center can filter across import sessions, and each decision group carries session context. That allows review work to remain traceable back to the import analysis that produced it.</p>
+        <p>This is important when multiple imports have been run over time or when the same platform appears in more than one source collection.</p>
+
+        <h2 id="principles">Review principles</h2>
+        <div class="completion-checks">
+          <div><span>✓</span><strong>Do not block safe import work just because exceptions exist</strong></div>
+          <div><span>✓</span><strong>Keep the reason for review visible</strong></div>
+          <div><span>✓</span><strong>Group repetitive exceptions so the queue remains manageable</strong></div>
+          <div><span>✓</span><strong>Compare incoming and managed-Library content before recording a decision</strong></div>
+          <div><span>✓</span><strong>Do not silently equate or overwrite conflicting content</strong></div>
+        </div>
+
+        <h2 id="next">What comes next?</h2>
+        <p>Review is tightly connected to Import and the managed Library. Media conflicts can also lead directly into understanding the <strong>Media</strong> workspace, which is the next RLB workspace documented on this site.</p>
+        <div class="actions">
+          <a class="btn primary" href="import.html">Review the Import workflow →</a>
+          <a class="btn" href="guides.html">Open practical guides</a>
+        </div>
+      </article>
+
+      <aside class="toc" aria-label="On this page">
+        <strong>On this page</strong>
+        <a href="#purpose">What Review Center is</a>
+        <a href="#filters">Filters</a>
+        <a href="#three-pane">Three-pane workflow</a>
+        <a href="#groups">Decision Groups</a>
+        <a href="#reasons">Review reasons</a>
+        <a href="#items">Items</a>
+        <a href="#workspace">Decision Workspace</a>
+        <a href="#safe-import">Safe import remains complete</a>
+        <a href="#content-types">Content types</a>
+        <a href="#sessions">Import sessions</a>
+        <a href="#principles">Review principles</a>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><strong>Retro Library Builder</strong><div>Preserve Once. Build Many.</div></div><div class="footer-links"><a href="https://github.com/cancruiser/RetroLibraryBuilder">GitHub</a><a href="https://discord.gg/zCDA8evmyE">Discord</a><a href="about.html">About</a></div></div><div class="footer-note">RLB does not provide or distribute commercial ROM collections. © <span data-year></span> Retro Library Builder.</div></div></footer>
+<script src="assets/site.js"></script>
+</body></html>
