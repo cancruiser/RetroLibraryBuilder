@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Retro Library Builder Import Studio analyzes sources, reviews discovered content, imports approved content and verifies the result.">
+  <title>Import Studio — Retro Library Builder</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav-wrap" aria-label="Primary navigation"><a class="brand" href="./"><span class="brand-mark">R</span><span>Retro Library Builder <small>Beta</small></span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">Menu</button><div class="nav-links"><a href="./">Home</a><a href="getting-started.html">Getting Started</a><a href="preservation.html">Preservation</a><a href="guides.html">Guides</a><a href="about.html">About</a></div></nav></header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="./">Home</a> / Import Studio</div>
+      <span class="eyebrow"><span class="dot"></span> Library workflow</span>
+      <h1>Analyze first. Import only what was approved.</h1>
+      <p class="lead">Import Studio is RLB’s controlled path for bringing games, BIOS, media, saves and configuration into managed Library lanes without changing the original source.</p>
+    </div>
+  </section>
+
+  <section class="section device-tour">
+    <div class="container">
+      <div class="app-panel screenshot-panel">
+        <span class="panel-title">IMPORT STUDIO — ACTUAL RLB INTERFACE</span>
+        <figure class="app-screenshot">
+          <img src="assets/images/import-studio-start.jpg" alt="Retro Library Builder Import Studio showing the five-stage import workflow, import mode, source actions and source analysis areas.">
+          <figcaption>The initial Import Studio state. No sources have been selected yet, so analysis, review and import actions remain unavailable.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="container article-layout">
+      <article class="article import-article">
+
+        <div class="callout success"><strong>Source-safe workflow:</strong> Import Studio analyzes selected sources without changing them. RLB’s import workflow copies approved content into managed destinations; originals are not renamed, moved or deleted.</div>
+
+        <h2 id="purpose">1. What Import Studio is for</h2>
+        <p>Import Studio is the entry point for bringing content into the RLB managed Library through an explicit analyze, review, import and verification process.</p>
+        <p>The screen describes the supported content lanes as <strong>games, media, BIOS, saves and configurations</strong>. The selected <strong>Import mode</strong> controls which approved lanes are imported after analysis.</p>
+
+        <div class="import-lanes">
+          <div><span>▣</span><strong>Games</strong><small>Playable content intended for managed Library organization and later reuse.</small></div>
+          <div><span>◫</span><strong>BIOS</strong><small>System firmware/support files tracked separately from game content.</small></div>
+          <div><span>▰</span><strong>Media</strong><small>Artwork and related media assets discovered for managed media lanes.</small></div>
+          <div><span>↓</span><strong>Saves</strong><small>User save content identified during source analysis.</small></div>
+          <div><span>⚙</span><strong>Configuration</strong><small>Configuration content that belongs in an approved managed lane.</small></div>
+        </div>
+
+        <h2 id="workflow">2. The five-stage workflow</h2>
+        <p>The left side of Import Studio shows the workflow explicitly:</p>
+        <div class="import-stage-grid">
+          <div class="import-stage"><span>1</span><strong>Select Sources</strong><small>Add the folders or archive collections RLB should inventory.</small></div>
+          <div class="import-stage"><span>2</span><strong>Analyze Sources</strong><small>Inventory the complete source and determine platforms, targets and exclusions.</small></div>
+          <div class="import-stage"><span>3</span><strong>Review Import</strong><small>Inspect exactly what RLB discovered before approving an import.</small></div>
+          <div class="import-stage"><span>4</span><strong>Import to Library</strong><small>Copy only the content approved by the reviewed analysis into managed Library lanes.</small></div>
+          <div class="import-stage"><span>5</span><strong>Verify &amp; Report</strong><small>Verify the resulting import and produce the completed import report.</small></div>
+        </div>
+        <p>Only one approved stage feeds the next. Later stages remain locked until the required earlier state exists.</p>
+
+        <h2 id="sources">3. Add the sources you want to analyze</h2>
+        <p>The <strong>Source Actions</strong> pane provides two starting points:</p>
+        <div class="source-action-grid">
+          <div class="source-action"><span>＋</span><strong>Add Source Folder</strong><small>Add a folder, removable drive or network location that RLB should inspect.</small></div>
+          <div class="source-action"><span>▦</span><strong>Add Archive Collection</strong><small>Add a collection represented by archive files such as ZIP-based sets.</small></div>
+        </div>
+        <p>Import Studio groups selected sources into <strong>Collections</strong> and shows the platform names detected during analysis.</p>
+
+        <h2 id="mode">4. Choose the Import mode</h2>
+        <p>The Import mode controls which approved content lanes will be imported. In the example screen, the selected mode is <strong>Complete Library</strong>.</p>
+        <p>Import mode does not change the source-analysis principle: RLB still inventories the complete source so the review can show what was discovered before approved content is copied.</p>
+
+        <h2 id="analyze">5. Analyze Sources before importing anything</h2>
+        <p>Once at least one source has been added, <strong>Analyze Sources</strong> becomes the next workflow step. Analysis inventories the source and produces the information required for Review Import.</p>
+        <div class="analysis-produces">
+          <span class="analysis-title">SOURCE ANALYSIS CAN PRODUCE</span>
+          <div><span>✓</span><strong>Source roots</strong></div>
+          <div><span>✓</span><strong>ROM and BIOS targets</strong></div>
+          <div><span>✓</span><strong>Media and asset lanes</strong></div>
+          <div><span>✓</span><strong>Save and config lanes</strong></div>
+          <div><span>✓</span><strong>Infrastructure exclusions</strong></div>
+          <div><span>✓</span><strong>Traversal diagnostics</strong></div>
+        </div>
+        <div class="callout"><strong>Why analyze first?</strong> RLB needs a complete picture of the selected sources before the user can meaningfully review what should enter the managed Library.</div>
+
+        <h2 id="review">6. Review Import is the approval boundary</h2>
+        <p>The screen states that <strong>Review Import presents exactly what was discovered before an approved import can begin</strong>.</p>
+        <p>This is an important separation. Analysis discovers and classifies; Review Import gives the user a chance to inspect the proposed result; only then can the approved import proceed.</p>
+        <div class="import-boundary">
+          <div><span>READ</span><strong>Analyze</strong><small>Inventory and classify the source.</small></div>
+          <b>→</b>
+          <div><span>REVIEW</span><strong>Review Import</strong><small>Inspect the proposed import targets and exclusions.</small></div>
+          <b>→</b>
+          <div><span>COPY</span><strong>Import to Library</strong><small>Copy the approved content into managed Library destinations.</small></div>
+        </div>
+
+        <h2 id="copy">7. Import to Library copies; it does not reorganize the source</h2>
+        <p>The Import Studio guidance is explicit: <strong>source files are copied only and are never renamed, moved or deleted</strong>.</p>
+        <div class="guide-do-dont">
+          <div class="do"><span>✓</span><div><strong>Managed destination</strong><small>RLB can establish approved Library content without changing the source that was analyzed.</small></div></div>
+          <div class="dont"><span>×</span><div><strong>No destructive cleanup</strong><small>Import is not permission to rename, move or delete the user’s original source content.</small></div></div>
+        </div>
+
+        <h2 id="verify">8. Verify &amp; Report closes the workflow</h2>
+        <p>After the approved import completes, the final stage is <strong>Verify &amp; Report</strong>. Verification and the completed import report provide the durable result consumed by the Library workflow.</p>
+        <p>The Import Studio itself notes that <strong>Verify &amp; Report consumes the completed import report</strong>, keeping the workflow connected from source selection through final verification.</p>
+
+        <h2 id="actions">9. Why so many actions are disabled at first</h2>
+        <p>In the initial screen, Analyze Sources, Review Import and other actions are disabled because there is no valid source state yet. This is intentional.</p>
+        <p>Import Studio is designed so that stages unlock in order rather than letting a user jump directly to an import without an analyzed and reviewed plan.</p>
+
+        <h2 id="reset">10. Reset Managed Library is different from clearing sources</h2>
+        <p>The Actions pane contains both source/session actions and a separate <strong>Reset Managed Library</strong> action. Those should not be confused.</p>
+        <p><strong>Clear Sources</strong> relates to the current source selection/session. <strong>Reset Managed Library</strong> is a separate Library-level action and should be treated accordingly.</p>
+        <div class="callout warning"><strong>Be deliberate with Library-level actions.</strong> Do not use Reset Managed Library as a substitute for clearing or restarting an import session.</div>
+
+        <h2 id="next">What comes after Import?</h2>
+        <p>Import is only one part of Library management. Content that needs human attention or classification can surface through <strong>Review</strong>, while media assets are managed through the <strong>Media</strong> workspace. The Library workspace shows the resulting managed collection.</p>
+        <div class="actions">
+          <a class="btn primary" href="guides.html">Open guides →</a>
+          <a class="btn" href="about.html">About RLB</a>
+        </div>
+      </article>
+
+      <aside class="toc" aria-label="On this page">
+        <strong>On this page</strong>
+        <a href="#purpose">What Import Studio is</a>
+        <a href="#workflow">Five-stage workflow</a>
+        <a href="#sources">Add sources</a>
+        <a href="#mode">Import mode</a>
+        <a href="#analyze">Analyze Sources</a>
+        <a href="#review">Review Import</a>
+        <a href="#copy">Import to Library</a>
+        <a href="#verify">Verify &amp; Report</a>
+        <a href="#actions">Disabled actions</a>
+        <a href="#reset">Reset Managed Library</a>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><strong>Retro Library Builder</strong><div>Preserve Once. Build Many.</div></div><div class="footer-links"><a href="https://github.com/cancruiser/RetroLibraryBuilder">GitHub</a><a href="https://discord.gg/zCDA8evmyE">Discord</a><a href="about.html">About</a></div></div><div class="footer-note">RLB does not provide or distribute commercial ROM collections. © <span data-year></span> Retro Library Builder.</div></div></footer>
+<script src="assets/site.js"></script>
+</body></html>
