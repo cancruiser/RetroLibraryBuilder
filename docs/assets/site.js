@@ -2,30 +2,34 @@
   const toggle = document.querySelector('.nav-toggle');
   const links = document.querySelector('.nav-links');
 
-  if (links && !links.querySelector('a[href="builds.html"]')) {
-    const builds = document.createElement('a');
-    builds.href = 'builds.html';
-    builds.textContent = 'Builds';
-    const current = window.location.pathname.split('/').pop();
-    if (current === 'builds.html' || /^(batocera|recalbox|retropie|lakka)-build\.html$/.test(current)) {
-      builds.setAttribute('aria-current', 'page');
-    }
-    const about = links.querySelector('a[href="about.html"]');
-    if (about) links.insertBefore(builds, about);
-    else links.appendChild(builds);
-  }
+  if (links) {
+    const current = window.location.pathname.split('/').pop() || 'index.html';
+    const usePages = new Set([
+      'use-rlb.html','getting-started.html','guides.html','protect-original-sd.html',
+      'resume-protection.html','reconcile-retained-content.html','r36-max-walkthrough.html'
+    ]);
+    const understandPages = new Set([
+      'understand-rlb.html','workspaces.html','preservation.html','knowledge.html',
+      'knowledge-sources.html','knowledge-explorer.html','capabilities.html','home-dashboard.html',
+      'device-readiness.html','deployment.html','bios-manager.html','library-health.html',
+      'import.html','review.html','library.html','media.html'
+    ]);
 
-  if (links && !links.querySelector('a[href="capabilities.html"]')) {
-    const capabilities = document.createElement('a');
-    capabilities.href = 'capabilities.html';
-    capabilities.textContent = 'Capabilities';
-    const current = window.location.pathname.split('/').pop();
-    if (current === 'capabilities.html' || current === 'home-dashboard.html') {
-      capabilities.setAttribute('aria-current', 'page');
-    }
-    const about = links.querySelector('a[href="about.html"]');
-    if (about) links.insertBefore(capabilities, about);
-    else links.appendChild(capabilities);
+    links.innerHTML = '';
+
+    const addLink = (href, text, active) => {
+      const a = document.createElement('a');
+      a.href = href;
+      a.textContent = text;
+      if (active) a.setAttribute('aria-current', 'page');
+      links.appendChild(a);
+    };
+
+    addLink('./', 'Home', current === '' || current === 'index.html');
+    addLink('use-rlb.html', 'Use RLB', usePages.has(current));
+    addLink('understand-rlb.html', 'Understand RLB', understandPages.has(current));
+    addLink('builds.html', 'Builds', current === 'builds.html' || /^(batocera|recalbox|retropie|lakka)-build\.html$/.test(current));
+    addLink('about.html', 'About', current === 'about.html');
   }
 
   if (toggle && links) {
@@ -38,5 +42,6 @@
       toggle.setAttribute('aria-expanded', 'false');
     }));
   }
+
   document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
 })();
