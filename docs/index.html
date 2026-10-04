@@ -4,142 +4,51 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Retro Library Builder helps you understand, preserve and prepare retro-gaming devices and their content using evidence-based device intelligence and verified preservation.">
-  <title>Retro Library Builder — Understand. Preserve. Rebuild.</title>
+  <title>Retro Library Builder — Preserve Once. Build Many.</title>
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
-  <nav class="nav-wrap" aria-label="Primary navigation">
-    <a class="brand" href="./"><span class="brand-mark">R</span><span>Retro Library Builder <small>Beta</small></span></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">Menu</button>
-    <div class="nav-links">
-      <a href="./" aria-current="page">Home</a>
-      <a href="getting-started.html">Getting Started</a>
-      <a href="workspaces.html">Workspaces</a>
-      <a href="preservation.html">Preservation</a>
-      <a href="knowledge.html">Knowledge</a>
-      <a href="guides.html">Guides</a>
-      <a href="about.html">About</a>
-    </div>
-  </nav>
-</header>
+<header class="site-header"><nav class="nav-wrap" aria-label="Primary navigation"><a class="brand" href="./"><span class="brand-mark">R</span><span>Retro Library Builder <small>Beta</small></span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">Menu</button><div class="nav-links"></div></nav></header>
 
 <main id="main">
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <span class="eyebrow"><span class="dot"></span> Active Beta</span>
-        <h1>Preserve Once. <strong class="accent">Build Many.</strong></h1>
-        <p class="lead"><strong class="lead-strong">Know what you have. Protect what matters.</strong> Retro Library Builder helps owners of retro handhelds and SBC gaming systems identify their devices, preserve important content, build reusable verified libraries, and prepare for safer replacement media.</p>
-        <div class="actions">
-          <a class="btn primary" href="getting-started.html">Start with RLB →</a>
-          <a class="btn" href="builds.html">View accepted builds</a>
-          <a class="btn" href="preservation.html">How preservation works</a>
-        </div>
-        <div class="beta-strip"><strong>Beta:</strong> RLB is under active development. Preservation correctness, verification and safe device handling are the current priorities.</div>
-      </div>
-      <div class="hero-panel" aria-label="Example device intelligence card">
-        <div class="device-card">
-          <div class="device-top"><div class="device-title">Device intelligence</div><div class="confidence">Evidence based</div></div>
-          <div class="meter" aria-hidden="true"><span></span></div>
-          <div class="evidence-row"><div class="evidence-icon">◈</div><div><strong>Identify the hardware</strong><span>Use device-specific evidence instead of labels alone.</span></div></div>
-          <div class="evidence-row"><div class="evidence-icon">✓</div><div><strong>Verify content</strong><span>Prove content identity where it matters.</span></div></div>
-          <div class="evidence-row"><div class="evidence-icon">▣</div><div><strong>Preserve what is unique</strong><span>Separate reusable Library content from device-specific retained content.</span></div></div>
-          <div class="evidence-row"><div class="evidence-icon">↗</div><div><strong>Prepare to rebuild</strong><span>Carry device knowledge forward into replacement media and deployment.</span></div></div>
-        </div>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow"><span class="dot"></span> Active Beta</span>
+      <h1>Preserve Once. <strong class="accent">Build Many.</strong></h1>
+      <p class="lead"><strong class="lead-strong">Know what you have. Protect what matters.</strong> RLB helps owners of retro handhelds and SBC gaming systems identify devices, protect original media, manage reusable content and build replacement media safely.</p>
+      <div class="actions"><a class="btn primary" href="use-rlb.html">I want to use RLB →</a><a class="btn" href="understand-rlb.html">I want to understand RLB</a></div>
+      <div class="beta-strip"><strong>Beta:</strong> RLB is under active development. Preservation correctness, verification and safe device handling remain the priorities.</div>
+    </div>
+    <div class="hero-panel" aria-label="RLB path chooser">
+      <div class="device-card">
+        <div class="device-top"><div class="device-title">Choose your path</div><div class="confidence">Same RLB</div></div>
+        <div class="evidence-row"><div class="evidence-icon">→</div><div><strong>Use RLB</strong><span>Start with the job you want to accomplish and follow a plain-language workflow.</span></div></div>
+        <div class="evidence-row"><div class="evidence-icon">◎</div><div><strong>Understand RLB</strong><span>Explore workspaces, capabilities, preservation, knowledge, readiness and deployment in detail.</span></div></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section tight">
-    <div class="container">
-      <div class="app-panel">
-        <div class="panel-title">PHYSICAL ACCEPTANCE</div>
-        <div class="section-head">
-          <h2>4 SBC platforms physically accepted</h2>
-          <p>RLB's current Raspberry Pi 3B+ deployment track has completed end-to-end physical acceptance for four major retro-gaming firmware families. Each accepted track is frozen against regression while handheld support moves forward.</p>
-        </div>
-        <div class="grid four">
-          <article class="card feature-card"><div class="card-icon">✓</div><h3>Batocera</h3><p>Accepted / Frozen. Firmware preparation, first boot, deployment, verification and frontend finalization physically confirmed.</p><a class="more" href="batocera-build.html">View build status →</a></article>
-          <article class="card feature-card"><div class="card-icon">✓</div><h3>Recalbox</h3><p>Deployment accepted / frozen through A4R8.4R2, including artwork repair and stable terminal completion state.</p><a class="more" href="recalbox-build.html">View build status →</a></article>
-          <article class="card feature-card"><div class="card-icon">✓</div><h3>RetroPie</h3><p>Accepted / Frozen at A4R9.7R10 with native content deployment, verification, controller restore and frontend finalization.</p><a class="more" href="retropie-build.html">View build status →</a></article>
-          <article class="card feature-card"><div class="card-icon">✓</div><h3>Lakka</h3><p>Accepted / Frozen at A4R10.6R2 with verified deployment, playlist generation, thumbnail reuse and complete finalization.</p><a class="more" href="lakka-build.html">View build status →</a></article>
-        </div>
-        <div class="actions">
-          <a class="btn primary" href="builds.html">Open all build pages →</a>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="section tight"><div class="container"><div class="app-panel"><div class="panel-title">TWO WAYS INTO RLB</div><div class="section-head"><h2>Use it first, or understand it first.</h2><p>Both branches describe the same application. One is organized around user goals; the other is organized around how RLB works.</p></div><div class="grid two">
+<article class="card feature-card"><div class="card-icon">→</div><h3>Use RLB</h3><p>Plain-language, task-oriented help for protecting an original SD card, adding content, building replacement media, repairing artwork and resuming interrupted work.</p><a class="more" href="use-rlb.html">Start with what you want to do →</a></article>
+<article class="card feature-card"><div class="card-icon">◎</div><h3>Understand RLB</h3><p>The technical/reference branch: capabilities, workspaces, preservation, Knowledge, BIOS, Library Health, Device Readiness, Deployment and accepted builds.</p><a class="more" href="understand-rlb.html">Explore how RLB works →</a></article>
+</div></div></div></section>
 
-  <section class="section">
-    <div class="container">
-      <div class="app-panel">
-        <div class="panel-title">RLB CORE</div>
-        <div class="section-head">
-          <h2>More than an SD-card copier</h2>
-          <p>Retro handhelds can hide important device-specific files, boot assets, configuration, saves, media and content across multiple partitions. RLB is designed to understand the device before deciding what protection is required.</p>
-        </div>
-        <div class="grid four">
-          <article class="card"><div class="card-icon">◎</div><h3>Understand</h3><p>Inspect storage, boot evidence, firmware characteristics, device signatures and content organization.</p></article>
-          <article class="card"><div class="card-icon">◇</div><h3>Preserve</h3><p>Establish verified protection instead of assuming a same-named or same-sized file is good enough.</p></article>
-          <article class="card"><div class="card-icon">▦</div><h3>Build</h3><p>Use verified reusable Library content and known device information when preparing replacement media.</p></article>
-          <article class="card"><div class="card-icon">✦</div><h3>Know</h3><p>Accumulate reusable knowledge about devices, boards, firmware, DTBs and related hardware.</p></article>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="section"><div class="container"><div class="app-panel"><div class="panel-title">SIMPLE WORKFLOW</div><div class="section-head"><h2>Connect → Identify → Protect → Build</h2><p>RLB may perform a lot of technical work underneath, but most users only need this mental model.</p></div><div class="workflow"><div class="step"><div><strong>Connect</strong><span>Insert original media or choose the content source you want to work with.</span></div></div><div class="step"><div><strong>Identify</strong><span>RLB gathers evidence about the device, firmware, storage and content.</span></div></div><div class="step"><div><strong>Protect</strong><span>Original content is accounted for and verified before destructive work is allowed.</span></div></div><div class="step"><div><strong>Build</strong><span>When the target is safe, RLB prepares replacement media using the correct firmware-specific process.</span></div></div></div></div></div></section>
 
-  <section class="section tight">
-    <div class="container">
-      <div class="app-panel">
-        <div class="panel-title">WORKFLOW</div>
-        <div class="section-head">
-          <h2>A typical RLB workflow</h2>
-          <p>The goal is simple: understand the original device first, protect its important content, then use that knowledge when it is time to rebuild.</p>
-        </div>
-        <div class="workflow">
-        <div class="step"><div><strong>Connect or insert the original media</strong><span>Start with the device media you want RLB to understand and protect.</span></div></div>
-        <div class="step"><div><strong>Inspect the device</strong><span>Device Inspector gathers evidence about identity, layout and content.</span></div></div>
-        <div class="step"><div><strong>Review the evidence</strong><span>Check what RLB believes the device is and why it reached that conclusion.</span></div></div>
-        <div class="step"><div><strong>Analyze protection requirements</strong><span>Analysis determines the work required before changes or copies are made.</span></div></div>
-        <div class="step"><div><strong>Run preservation</strong><span>RLB establishes verified representations and retains content that must remain specific to the preservation.</span></div></div>
-        <div class="step"><div><strong>Use the knowledge later</strong><span>Preserved evidence and reusable Library content can support future replacement-media and deployment workflows.</span></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="section tight"><div class="container"><div class="app-panel"><div class="panel-title">PHYSICAL ACCEPTANCE</div><div class="section-head"><h2>4 SBC platforms physically accepted</h2><p>RLB's Raspberry Pi 3B+ deployment track has completed end-to-end physical acceptance for four major retro-gaming firmware families.</p></div><div class="grid four">
+<article class="card feature-card"><div class="card-icon">✓</div><h3>Batocera</h3><p>Accepted / Frozen.</p><a class="more" href="batocera-build.html">View build status →</a></article>
+<article class="card feature-card"><div class="card-icon">✓</div><h3>Recalbox</h3><p>Deployment accepted / frozen through A4R8.4R2.</p><a class="more" href="recalbox-build.html">View build status →</a></article>
+<article class="card feature-card"><div class="card-icon">✓</div><h3>RetroPie</h3><p>Accepted / Frozen at A4R9.7R10.</p><a class="more" href="retropie-build.html">View build status →</a></article>
+<article class="card feature-card"><div class="card-icon">✓</div><h3>Lakka</h3><p>Accepted / Frozen at A4R10.6R2.</p><a class="more" href="lakka-build.html">View build status →</a></article>
+</div><div class="actions"><a class="btn primary" href="builds.html">Open accepted builds →</a><a class="btn" href="capabilities.html">Current capabilities</a></div></div></div></section>
 
-  <section class="section">
-    <div class="container">
-      <div class="app-panel">
-        <div class="panel-title">WORKSPACES</div>
-        <div class="grid three">
-          <article class="card feature-card"><div class="card-icon">⌾</div><h3>Device Inspector</h3><p>Build an evidence-based picture of a device using storage topology, boot information, fingerprints and other available signals.</p><a class="more" href="getting-started.html#device-inspector">Learn about inspection →</a></article>
-          <article class="card feature-card"><div class="card-icon">✓</div><h3>Verified Preservation</h3><p>Understand Library representation, retained content, cryptographic verification and the difference between Analyze and Apply.</p><a class="more" href="preservation.html">Explore preservation →</a></article>
-          <article class="card feature-card"><div class="card-icon">◎</div><h3>Knowledge</h3><p>Browse what RLB knows, where that knowledge came from, and how evidence becomes a readiness decision.</p><a class="more" href="knowledge.html">Explore knowledge →</a></article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section tight">
-    <div class="container">
-      <div class="cta">
-        <div><h2>Protecting an original handheld SD card?</h2><p>Start with the first-device guide and learn what RLB is doing at each stage.</p></div>
-        <a class="btn primary" href="guides.html">Open the guides →</a>
-      </div>
-    </div>
-  </section>
+<section class="section"><div class="container"><div class="app-panel"><div class="panel-title">WHY RLB</div><div class="section-head"><h2>More than an SD-card copier</h2><p>Retro devices can hide important boot assets, configuration, BIOS, saves, artwork and hardware-specific files across several partitions. RLB tries to understand the device before deciding what should be preserved or rebuilt.</p></div><div class="grid four"><article class="card"><div class="card-icon">◎</div><h3>Understand</h3><p>Inspect hardware, storage, firmware and evidence instead of trusting labels alone.</p></article><article class="card"><div class="card-icon">◇</div><h3>Preserve</h3><p>Establish verified protection rather than assuming copying means safe.</p></article><article class="card"><div class="card-icon">▦</div><h3>Manage</h3><p>Reuse verified Library content while keeping device-specific content visible.</p></article><article class="card"><div class="card-icon">↗</div><h3>Build</h3><p>Prepare replacement media from known device and firmware information.</p></article></div></div></div></section>
 </main>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid"><div><strong>Retro Library Builder</strong><div>Preserve Once. Build Many.</div></div><div class="footer-links"><a href="https://github.com/cancruiser/RetroLibraryBuilder">GitHub</a><a href="https://discord.gg/zCDA8evmyE">Discord</a><a href="about.html">About</a></div></div>
-    <div class="footer-note">RLB does not provide or distribute commercial ROM collections. Users are responsible for ensuring their use and preservation of software and media complies with applicable laws and licences. © <span data-year></span> Retro Library Builder.</div>
-  </div>
-</footer>
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><strong>Retro Library Builder</strong><div>Preserve Once. Build Many.</div></div><div class="footer-links"><a href="https://github.com/cancruiser/RetroLibraryBuilder">GitHub</a><a href="https://discord.gg/zCDA8evmyE">Discord</a><a href="about.html">About</a></div></div><div class="footer-note">RLB does not provide or distribute commercial ROM collections. Users are responsible for ensuring their use and preservation of software and media complies with applicable laws and licences. © <span data-year></span> Retro Library Builder.</div></div></footer>
 <script src="assets/site.js"></script>
 </body>
 </html>
