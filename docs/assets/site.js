@@ -15,6 +15,19 @@
     else links.appendChild(builds);
   }
 
+  if (links && !links.querySelector('a[href="capabilities.html"]')) {
+    const capabilities = document.createElement('a');
+    capabilities.href = 'capabilities.html';
+    capabilities.textContent = 'Capabilities';
+    const current = window.location.pathname.split('/').pop();
+    if (current === 'capabilities.html' || current === 'home-dashboard.html') {
+      capabilities.setAttribute('aria-current', 'page');
+    }
+    const about = links.querySelector('a[href="about.html"]');
+    if (about) links.insertBefore(capabilities, about);
+    else links.appendChild(capabilities);
+  }
+
   if (toggle && links) {
     toggle.addEventListener('click', () => {
       const open = links.classList.toggle('open');
