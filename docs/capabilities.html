@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Current implemented and physically accepted Retro Library Builder Beta capabilities."><title>Current Capabilities — Retro Library Builder</title><link rel="stylesheet" href="assets/styles.css"></head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav-wrap" aria-label="Primary navigation"><a class="brand" href="./"><span class="brand-mark">R</span><span>Retro Library Builder <small>Beta</small></span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">Menu</button><div class="nav-links"><a href="./">Home</a><a href="getting-started.html">Getting Started</a><a href="workspaces.html">Workspaces</a><a href="preservation.html">Preservation</a><a href="knowledge.html">Knowledge</a><a href="guides.html">Guides</a><a href="about.html">About</a></div></nav></header>
+<main id="main">
+<section class="page-hero"><div class="container"><div class="breadcrumb"><a href="./">Home</a> / Current Capabilities</div><span class="eyebrow"><span class="dot"></span> Beta capability map</span><h1>What RLB can do today.</h1><p class="lead">This page tracks capabilities that are implemented, documented or physically accepted. It deliberately separates working Beta behaviour from work that is still being expanded.</p></div></section>
+<section class="section"><div class="container">
+<div class="app-panel"><div class="panel-title">STATUS &amp; ORCHESTRATION</div><div class="grid three">
+<article class="card feature-card"><div class="card-icon">⌂</div><h3>Home Dashboard</h3><p>Preserved ecosystems, Library snapshot, recommendations, recent activity, storage and background-task status are brought together in one operational view.</p><a class="more" href="home-dashboard.html">Explore the dashboard →</a></article>
+<article class="card feature-card"><div class="card-icon">↻</div><h3>Background Operations</h3><p>Long-running preservation, analysis and related jobs run through durable task state so progress and resumable work are not tied only to the current screen.</p><a class="more" href="home-dashboard.html#background">Background-task behaviour →</a></article>
+<article class="card feature-card"><div class="card-icon">✓</div><h3>Truthful workflow state</h3><p>Analyze, Preview, Apply, verification, resume and deployment completion are kept as distinct states instead of reporting success before the required proof exists.</p><a class="more" href="preservation.html">Preservation states →</a></article>
+</div></div>
+
+<div class="app-panel" style="margin-top:18px"><div class="panel-title">LIBRARY &amp; IMPORT</div><div class="grid four">
+<article class="card feature-card"><div class="card-icon">↓</div><h3>Import Studio</h3><p>Source-safe staged workflow for source selection, analysis, review, approved copying and verification. Original source files are not renamed, moved or deleted.</p><a class="more" href="import.html">Explore Import Studio →</a></article>
+<article class="card feature-card"><div class="card-icon">✓</div><h3>Review Center</h3><p>Exception and conflict review with grouped decisions and incoming-vs-Library comparison before unresolved content is committed.</p><a class="more" href="review.html">Explore Review Center →</a></article>
+<article class="card feature-card"><div class="card-icon">▦</div><h3>Library Explorer</h3><p>Browse managed games, systems, ROM variants, BIOS, saves, configuration and Library health without treating the original source as disposable.</p><a class="more" href="library.html">Explore Library →</a></article>
+<article class="card feature-card"><div class="card-icon">▰</div><h3>Media Explorer</h3><p>Review linked artwork and media, preferred assets and missing-artwork coverage while keeping media distinct from game identity.</p><a class="more" href="media.html">Explore Media →</a></article>
+</div></div>
+
+<div class="app-panel" style="margin-top:18px"><div class="panel-title">DEVICE INTELLIGENCE &amp; PRESERVATION</div><div class="grid four">
+<article class="card feature-card"><div class="card-icon">◎</div><h3>Device Inspector</h3><p>Read-only inspection builds an evidence-based device picture from storage, boot, firmware, fingerprints and other available signals.</p><a class="more" href="getting-started.html#device-inspector">Explore Device Inspector →</a></article>
+<article class="card feature-card"><div class="card-icon">◇</div><h3>Verified Preservation</h3><p>RLB distinguishes reusable Library representation from device-specific retained content and verifies content identity where proof is required.</p><a class="more" href="preservation.html">Explore Preservation →</a></article>
+<article class="card feature-card"><div class="card-icon">↻</div><h3>Resume &amp; Reconcile</h3><p>Interrupted preservation can reuse established work, while retained content can later be reconciled without requiring the original device to be rescanned.</p><a class="more" href="guides.html">Open preservation guides →</a></article>
+<article class="card feature-card"><div class="card-icon">⚒</div><h3>Device Readiness</h3><p>Identity, confidence, target knowledge and blocking risks are evaluated before RLB allows a deployment target to proceed.</p><a class="more" href="device-readiness.html">Explore readiness →</a></article>
+</div></div>
+
+<div class="app-panel" style="margin-top:18px"><div class="panel-title">KNOWLEDGE</div><div class="grid three">
+<article class="card feature-card"><div class="card-icon">✦</div><h3>Knowledge Explorer</h3><p>Browse accumulated device, platform, firmware, DTB, hardware and compatibility intelligence used by RLB decisions.</p><a class="more" href="knowledge.html">Explore Knowledge →</a></article>
+<article class="card feature-card"><div class="card-icon">◈</div><h3>Evidence &amp; sources</h3><p>Knowledge is traceable to source material and kept separate from optional downloadable assets so facts and resources are not treated as the same thing.</p><a class="more" href="knowledge-sources.html">View knowledge sources →</a></article>
+<article class="card feature-card"><div class="card-icon">◎</div><h3>Knowledge diagnostics</h3><p>Knowledge validation, provider diagnostics and accumulated observations appear in application activity and recommendations rather than remaining hidden backend state.</p><a class="more" href="knowledge-explorer.html">Knowledge details →</a></article>
+</div></div>
+
+<div class="app-panel" style="margin-top:18px"><div class="panel-title">DEPLOYMENT</div><div class="section-head"><h2>Four SBC deployment tracks are physically accepted</h2><p>RLB has completed end-to-end Raspberry Pi 3B+ physical acceptance for Batocera, Recalbox, RetroPie and Lakka. These tracks include firmware preparation, native content routing, verification and firmware-specific frontend completion.</p></div><div class="grid four">
+<article class="card feature-card"><div class="card-icon">✓</div><h3>Batocera</h3><p>Accepted / Frozen.</p><a class="more" href="batocera-build.html">Build status →</a></article>
+<article class="card feature-card"><div class="card-icon">✓</div><h3>Recalbox</h3><p>Deployment accepted / frozen through A4R8.4R2.</p><a class="more" href="recalbox-build.html">Build status →</a></article>
+<article class="card feature-card"><div class="card-icon">✓</div><h3>RetroPie</h3><p>Accepted / Frozen at A4R9.7R10.</p><a class="more" href="retropie-build.html">Build status →</a></article>
+<article class="card feature-card"><div class="card-icon">✓</div><h3>Lakka</h3><p>Accepted / Frozen at A4R10.6R2.</p><a class="more" href="lakka-build.html">Build status →</a></article>
+</div><div class="actions"><a class="btn primary" href="deployment.html">Deployment workflow →</a><a class="btn" href="builds.html">All accepted builds</a></div></div>
+
+<div class="app-panel" style="margin-top:18px"><div class="panel-title">STILL EXPANDING</div><div class="grid three">
+<article class="card"><h3>Handheld deployment</h3><p>Handheld support is the next major deployment scope. It should not be inferred from the accepted Raspberry Pi SBC tracks.</p></article>
+<article class="card"><h3>Recalbox source/import coverage</h3><p>Recalbox deployment acceptance and Recalbox source/import acceptance are separate. The site does not treat deployment acceptance as proof that every source/import path is complete.</p></article>
+<article class="card"><h3>Advanced import identity</h3><p>Beta documentation describes the active source-safe import workflow. Deeper canonical identification and archive-path parity remain areas that must be validated before broader claims are made.</p></article>
+</div></div>
+
+<div class="beta-strip" style="margin-top:18px"><strong>Documentation rule:</strong> A feature is described as accepted only when the tested behaviour supports that claim. Architecture ideas and future work are not presented as completed product features.</div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><strong>Retro Library Builder</strong><div>Preserve Once. Build Many.</div></div><div class="footer-links"><a href="https://github.com/cancruiser/RetroLibraryBuilder">GitHub</a><a href="https://discord.gg/zCDA8evmyE">Discord</a><a href="about.html">About</a></div></div><div class="footer-note">RLB does not provide or distribute commercial ROM collections. © <span data-year></span> Retro Library Builder.</div></div></footer><script src="assets/site.js"></script></body></html>
