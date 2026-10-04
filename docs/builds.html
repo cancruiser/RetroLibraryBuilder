@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Current Retro Library Builder build and physical acceptance status for supported SBC firmware targets.">
+  <title>RLB Builds — Current Acceptance Status</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav-wrap" aria-label="Primary navigation">
+<a class="brand" href="./"><span class="brand-mark">R</span><span>Retro Library Builder <small>Beta</small></span></a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">Menu</button>
+<div class="nav-links"><a href="./">Home</a><a href="getting-started.html">Getting Started</a><a href="workspaces.html">Workspaces</a><a href="preservation.html">Preservation</a><a href="knowledge.html">Knowledge</a><a href="guides.html">Guides</a><a href="builds.html" aria-current="page">Builds</a><a href="about.html">About</a></div>
+</nav></header>
+<main id="main">
+<section class="hero"><div class="container hero-grid"><div>
+<span class="eyebrow"><span class="dot"></span> Current build status</span>
+<h1>Accepted SBC builds. <strong class="accent">Physically tested.</strong></h1>
+<p class="lead"><strong class="lead-strong">Support is accepted only after real-device validation.</strong> These pages document the current SBC firmware tracks that have passed physical deployment testing on Raspberry Pi 3B+ hardware. Accepted tracks are frozen unless later work reveals a regression.</p>
+<div class="beta-strip"><strong>Scope:</strong> Batocera, Recalbox, RetroPie and Lakka are the accepted SBC baseline. Handheld deployment work follows this phase.</div>
+</div><div class="hero-panel"><div class="device-card"><div class="device-top"><div class="device-title">Acceptance model</div><div class="confidence">Physical pass required</div></div>
+<div class="evidence-row"><div class="evidence-icon">1</div><div><strong>Acquire and write firmware</strong><span>Prepare the target media using firmware-specific rules.</span></div></div>
+<div class="evidence-row"><div class="evidence-icon">2</div><div><strong>Provision the device</strong><span>Handle first-boot, storage expansion, network and identity where supported.</span></div></div>
+<div class="evidence-row"><div class="evidence-icon">3</div><div><strong>Deploy full content</strong><span>ROMs, BIOS, artwork/media and relevant user/configuration data.</span></div></div>
+<div class="evidence-row"><div class="evidence-icon">4</div><div><strong>Verify and finalize</strong><span>Device-side verification plus frontend refresh/finalization.</span></div></div>
+</div></div></div></section>
+<section class="section"><div class="container"><div class="app-panel"><div class="panel-title">ACCEPTED SBC BASELINE</div><div class="grid two">
+<article class="card feature-card"><div class="card-icon">✓</div><h3>Batocera — Accepted / Frozen</h3><p>Firmware write, userdata expansion, first-boot Wi-Fi, provisioning, identity, content deployment, device-side SHA-256 verification, EmulationStation refresh and LocalArt have passed physical testing.</p><a class="more" href="batocera-build.html">View Batocera acceptance →</a></article>
+<article class="card feature-card"><div class="card-icon">✓</div><h3>Recalbox — Accepted / Frozen</h3><p>Accepted through A4R8.4R2. Native deployment, verification, frontend handling and artwork repair reached stable terminal completion without replaying completed copy or verification work.</p><a class="more" href="recalbox-build.html">View Recalbox acceptance →</a></article>
+<article class="card feature-card"><div class="card-icon">✓</div><h3>RetroPie — Accepted / Frozen</h3><p>Accepted through A4R9.7R10. Fresh deployment, Wi-Fi, controller profile restore, native ROM placement, SHA-256 verification, gamelist/artwork finalization and stable completion passed physically.</p><a class="more" href="retropie-build.html">View RetroPie acceptance →</a></article>
+<article class="card feature-card"><div class="card-icon">✓</div><h3>Lakka — Accepted / Frozen</h3><p>Accepted through A4R10.6R2. Verified checkpoint restore, RetroArch playlist generation, thumbnail reuse, frontend finalization and overall 100% completion passed physical validation.</p><a class="more" href="lakka-build.html">View Lakka acceptance →</a></article>
+</div></div></div></section>
+<section class="section tight"><div class="container"><div class="cta"><div><h2>Next development phase: handhelds</h2><p>The accepted SBC tracks remain frozen while RLB moves into handheld-specific deployment and import coverage.</p></div><a class="btn" href="device-readiness.html">Device readiness →</a></div></div></section>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><strong>Retro Library Builder</strong><div>Preserve Once. Build Many.</div></div><div class="footer-links"><a href="https://github.com/cancruiser/RetroLibraryBuilder">GitHub</a><a href="https://discord.gg/zCDA8evmyE">Discord</a><a href="about.html">About</a></div></div><div class="footer-note">RLB does not provide or distribute commercial ROM collections. Users are responsible for ensuring their use and preservation of software and media complies with applicable laws and licences. © <span data-year></span> Retro Library Builder.</div></div></footer>
+<script src="assets/site.js"></script>
+</body></html>
