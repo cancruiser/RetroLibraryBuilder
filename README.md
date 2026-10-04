@@ -13,14 +13,18 @@
 RLB currently includes documented Beta workflows for:
 
 - **Home Dashboard** — preserved ecosystems, Library snapshot, recommendations, recent activity, storage and background-task status.
-- **Import Studio** — source-safe Select → Analyze → Review → Import → Verify workflow.
+- **Import Studio** — source-safe discovery → Analyze → Review → Import → Verify workflow.
+- **Physical-device import expansion** — a selected local drive root can be correlated to readable sibling volumes on the same physical media; inaccessible partitions are warned, not silently counted.
+- **Network import discovery** — bounded read-only discovery from RLB-known firmware profiles, prior proven network context and Windows remembered/connected SMB resources; no subnet sweep.
 - **Review Center** — grouped exception/conflict decisions and incoming-vs-Library comparison.
 - **Library Explorer** — managed games, systems, ROM variants, BIOS, saves, configuration and Library health.
 - **Media Explorer** — preferred artwork/media, linked assets and missing-media review.
+- **BIOS Manager** — BIOS, Kickstarts, boot ROMs, IPLs and support firmware with managed identity/verification knowledge and deployment integration.
+- **Library Health** — missing artwork, multi-variant titles, unmatched media, verification work and repair routing.
 - **Device Inspector** — evidence-based device identity, storage/boot/firmware inspection and preservation state.
 - **Verified Preservation** — reusable Library representation, device-specific retained content, cryptographic verification, resume and reconciliation.
 - **Device Readiness** — identity, confidence, target knowledge and blocking-risk gates before deployment.
-- **Knowledge Explorer** — device, platform, firmware, DTB, hardware and compatibility intelligence with source attribution.
+- **Knowledge Explorer / Sources** — device, platform, firmware, DTB, hardware and compatibility intelligence with source attribution.
 - **Background Operations** — durable long-running task state so preservation and analysis are not tied only to the current screen.
 - **Deployment** — staged firmware preparation, provisioning, native content routing, verification and frontend finalization for accepted targets.
 
@@ -45,6 +49,16 @@ Deployment workflow:
 
 **https://cancruiser.github.io/RetroLibraryBuilder/deployment.html**
 
+## Current post-acceptance source/import work
+
+The project has continued beyond those frozen physical-deployment baselines:
+
+- **A4R13** expanded local removable-media import so readable sibling volumes on the same proven physical device can be analyzed together.
+- **A4R14–A4R14R2** added and hardened read-only network-source discovery for Import Studio.
+- **A4R15** added Lakka SBC portability parity for native user-data shares such as `Savefiles`, `Savestates`, `Configfiles`, `Joypads`, `Remappings`, `Playlists` and `Services`, retaining native share identity for safe same-firmware replay.
+
+These are separate claims from the frozen physical-deployment acceptance levels above. RLB does not assume that deployment acceptance automatically proves every source/import or cross-firmware portability path.
+
 ## Why RLB exists
 
 Original retro-device media can contain far more than ROM files: device-specific boot assets, board/display configuration, firmware, BIOS, artwork, saves, frontend metadata, user configuration and files unique to one hardware revision. Devices sold under the same product name may also use different boards, displays, DTBs or firmware requirements.
@@ -67,10 +81,6 @@ RLB is designed to answer four practical questions:
 - Analyze, Review/Preview, Apply, Verify and Complete are distinct workflow states.
 - RLB respects the target firmware/frontend instead of arbitrarily choosing emulators for the user.
 
-## Device Inspector
-
-Device Inspector builds an evidence-based picture from available signals such as storage topology, boot files, firmware characteristics, DTB fingerprints, content organization and accumulated device knowledge. A label or generic operating-system file is not treated as sufficient proof of device identity.
-
 ## Preservation
 
 Preservation distinguishes between:
@@ -80,24 +90,20 @@ Preservation distinguishes between:
 
 RLB also supports durable preservation state, interrupted-work resume and later retained-content reconciliation.
 
-## Knowledge
-
-Knowledge Explorer keeps device/platform intelligence separate from optional downloadable assets. RLB can accumulate hardware variants, firmware compatibility, DTBs, boot relationships, known issues, recommendations and source attribution for reuse in later decisions.
-
 ## Deployment
 
 Deployment begins only after the required device/target knowledge is available. For accepted SBC tracks, RLB can prepare firmware, provision first boot, deploy ROM/BIOS/media/user content into firmware-native locations, verify deployed content and perform firmware-specific frontend finalization.
 
-**Deployment acceptance is target-specific.** Accepted Raspberry Pi SBC workflows do not imply that handheld deployment is already accepted, and Recalbox deployment acceptance is separate from Recalbox source/import acceptance.
+**Deployment acceptance is target-specific.** Accepted Raspberry Pi SBC workflows do not imply that handheld deployment is already accepted.
 
 ## Beta boundaries still being expanded
 
-RLB is still under active development. Areas that remain broader Beta work include:
+RLB remains under active development. Broader Beta work includes:
 
 - handheld deployment acceptance;
 - additional firmware/device coverage;
-- complete source/import parity across all firmware layouts;
-- deeper canonical ROM identification and archive-path parity before broader claims are made;
+- complete source/import parity across firmware layouts;
+- deeper canonical ROM identification and equivalent results across every archive/source form before broader claims are made;
 - continuing performance, UX and production-readiness hardening.
 
 ## Documentation
@@ -109,8 +115,11 @@ Live documentation:
 Key pages:
 
 - [Current Capabilities](https://cancruiser.github.io/RetroLibraryBuilder/capabilities.html)
-- [Getting Started](https://cancruiser.github.io/RetroLibraryBuilder/getting-started.html)
 - [Workspaces](https://cancruiser.github.io/RetroLibraryBuilder/workspaces.html)
+- [Home Dashboard](https://cancruiser.github.io/RetroLibraryBuilder/home-dashboard.html)
+- [Import Studio](https://cancruiser.github.io/RetroLibraryBuilder/import.html)
+- [BIOS Manager](https://cancruiser.github.io/RetroLibraryBuilder/bios-manager.html)
+- [Library Health](https://cancruiser.github.io/RetroLibraryBuilder/library-health.html)
 - [Preservation](https://cancruiser.github.io/RetroLibraryBuilder/preservation.html)
 - [Knowledge](https://cancruiser.github.io/RetroLibraryBuilder/knowledge.html)
 - [Deployment](https://cancruiser.github.io/RetroLibraryBuilder/deployment.html)
