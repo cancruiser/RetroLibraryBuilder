@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Retro Library Builder deployment workflow and physically accepted SBC platform status for Batocera, Recalbox, RetroPie and Lakka.">
+  <title>Deployment — Retro Library Builder</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="nav-wrap" aria-label="Primary navigation">
+    <a class="brand" href="./"><span class="brand-mark">R</span><span>Retro Library Builder <small>Beta</small></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">Menu</button>
+    <div class="nav-links">
+      <a href="./">Home</a>
+      <a href="getting-started.html">Getting Started</a>
+      <a href="workspaces.html">Workspaces</a>
+      <a href="preservation.html">Preservation</a>
+      <a href="knowledge.html">Knowledge</a>
+      <a href="guides.html">Guides</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="./">Home</a> / Deployment</div>
+      <span class="eyebrow"><span class="dot"></span> Physically validated SBC deployment</span>
+      <h1>Build replacement media from verified content and known device targets.</h1>
+      <p class="lead">RLB Deployment turns an approved target into a staged build: prepare firmware, provision the device, deploy the selected content into the firmware's native layout, verify what was written and finish the frontend so the result is usable.</p>
+      <div class="actions">
+        <a class="btn primary" href="builds.html">View accepted builds →</a>
+        <a class="btn" href="device-readiness.html">Review Device Readiness</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="app-panel">
+        <div class="panel-title">CURRENT ACCEPTANCE</div>
+        <div class="section-head">
+          <h2>Four SBC platforms have completed physical deployment acceptance</h2>
+          <p>These are not theoretical target definitions. Each accepted track was exercised on Raspberry Pi 3B+ hardware and carried through the deployment stages needed to produce a working frontend result.</p>
+        </div>
+        <div class="grid four">
+          <article class="card"><div class="card-icon">✓</div><h3>Batocera</h3><p>Accepted and frozen. Firmware, first boot, Wi-Fi, ROM/media deployment, verification, EmulationStation refresh and LocalArt were physically validated.</p><a class="more" href="batocera-build.html">Build details →</a></article>
+          <article class="card"><div class="card-icon">✓</div><h3>Recalbox</h3><p>A4R8.4R2 deployment acceptance. Native content deployment and artwork repair/finalization reached stable completion without replaying finished copy work.</p><a class="more" href="recalbox-build.html">Build details →</a></article>
+          <article class="card"><div class="card-icon">✓</div><h3>RetroPie</h3><p>A4R9.7R10 deployment acceptance. Automatic Wi-Fi, controller-profile restore, native ROM layout, device-side verification and final frontend completion were physically confirmed.</p><a class="more" href="retropie-build.html">Build details →</a></article>
+          <article class="card"><div class="card-icon">✓</div><h3>Lakka</h3><p>A4R10.6R2 deployment acceptance. Verified checkpoint restore, RetroArch playlist generation, cached thumbnails and final completion were physically confirmed.</p><a class="more" href="lakka-build.html">Build details →</a></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="container">
+      <div class="app-panel">
+        <div class="panel-title">WORKFLOW</div>
+        <div class="section-head">
+          <h2>What Deployment does</h2>
+          <p>The exact mechanics vary by firmware, but the accepted SBC tracks follow the same safety model.</p>
+        </div>
+        <div class="workflow">
+          <div class="step"><div><strong>Choose a validated target</strong><span>Deployment begins from known hardware and firmware knowledge rather than a name-only guess.</span></div></div>
+          <div class="step"><div><strong>Acquire and write firmware</strong><span>Prepare replacement media using the firmware appropriate to the selected target.</span></div></div>
+          <div class="step"><div><strong>Complete first-boot provisioning</strong><span>Apply supported network, identity, storage-expansion and controller settings needed by that firmware.</span></div></div>
+          <div class="step"><div><strong>Deploy the complete selected system content</strong><span>ROMs, BIOS, artwork/media and supported user data are routed into the firmware's native locations.</span></div></div>
+          <div class="step"><div><strong>Verify deployed content</strong><span>RLB retains proof of completed work so successful copy and verification stages do not need to be repeated unnecessarily.</span></div></div>
+          <div class="step"><div><strong>Finalize the frontend</strong><span>Refresh or rebuild frontend data, enable local artwork where appropriate, and complete the firmware-specific handoff.</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="app-panel">
+        <div class="panel-title">SAFETY MODEL</div>
+        <div class="grid three">
+          <article class="card"><div class="card-icon">◎</div><h3>Readiness first</h3><p>A detected device is not automatically deployable. Device Readiness remains the gate between evidence and a writable target.</p><a class="more" href="device-readiness.html">Device Readiness →</a></article>
+          <article class="card"><div class="card-icon">◇</div><h3>Preservation before rewrite</h3><p>When existing media is being rewritten, RLB's preservation model protects unique content before destructive work is allowed.</p><a class="more" href="preservation.html">Preservation model →</a></article>
+          <article class="card"><div class="card-icon">▦</div><h3>Native firmware layouts</h3><p>Deployment respects firmware-specific ROM, BIOS, media, configuration and frontend conventions instead of flattening every target into one generic layout.</p><a class="more" href="builds.html">Accepted platforms →</a></article>
+        </div>
+        <div class="beta-strip"><strong>Beta:</strong> Accepted SBC deployment paths are frozen against regression, but handheld deployment remains active development and is not represented as accepted here.</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><strong>Retro Library Builder</strong><div>Preserve Once. Build Many.</div></div><div class="footer-links"><a href="https://github.com/cancruiser/RetroLibraryBuilder">GitHub</a><a href="https://discord.gg/zCDA8evmyE">Discord</a><a href="about.html">About</a></div></div><div class="footer-note">RLB does not provide or distribute commercial ROM collections. Users are responsible for ensuring their use and preservation of software and media complies with applicable laws and licences. © <span data-year></span> Retro Library Builder.</div></div></footer>
+<script src="assets/site.js"></script>
+</body></html>
