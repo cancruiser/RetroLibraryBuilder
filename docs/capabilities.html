@@ -6,17 +6,23 @@
 <main id="main">
 <section class="page-hero"><div class="container"><div class="breadcrumb"><a href="./">Home</a> / Current Capabilities</div><span class="eyebrow"><span class="dot"></span> Beta capability map</span><h1>What RLB can do today.</h1><p class="lead">This page tracks capabilities that are implemented, documented or physically accepted. It deliberately separates working Beta behaviour from work that is still being expanded.</p></div></section>
 <section class="section"><div class="container">
+
 <div class="app-panel"><div class="panel-title">STATUS &amp; ORCHESTRATION</div><div class="grid three">
 <article class="card feature-card"><div class="card-icon">⌂</div><h3>Home Dashboard</h3><p>Preserved ecosystems, Library snapshot, recommendations, recent activity, storage and background-task status are brought together in one operational view.</p><a class="more" href="home-dashboard.html">Explore the dashboard →</a></article>
-<article class="card feature-card"><div class="card-icon">↻</div><h3>Background Operations</h3><p>Long-running preservation, analysis and related jobs run through durable task state so progress and resumable work are not tied only to the current screen.</p><a class="more" href="home-dashboard.html#background">Background-task behaviour →</a></article>
-<article class="card feature-card"><div class="card-icon">✓</div><h3>Truthful workflow state</h3><p>Analyze, Preview, Apply, verification, resume and deployment completion are kept as distinct states instead of reporting success before the required proof exists.</p><a class="more" href="preservation.html">Preservation states →</a></article>
+<article class="card feature-card"><div class="card-icon">↻</div><h3>Background Operations</h3><p>Long-running preservation, analysis and related jobs use durable task state so progress and resumable work are not tied only to the current screen.</p><a class="more" href="home-dashboard.html#background">Background-task behaviour →</a></article>
+<article class="card feature-card"><div class="card-icon">✓</div><h3>Truthful workflow state</h3><p>Analyze, Preview/Review, Apply, verification, resume and deployment completion are kept as distinct states instead of reporting success before the required proof exists.</p><a class="more" href="preservation.html">Preservation states →</a></article>
 </div></div>
 
 <div class="app-panel" style="margin-top:18px"><div class="panel-title">LIBRARY &amp; IMPORT</div><div class="grid four">
-<article class="card feature-card"><div class="card-icon">↓</div><h3>Import Studio</h3><p>Source-safe staged workflow for source selection, analysis, review, approved copying and verification. Original source files are not renamed, moved or deleted.</p><a class="more" href="import.html">Explore Import Studio →</a></article>
+<article class="card feature-card"><div class="card-icon">↓</div><h3>Import Studio</h3><p>Source-safe staged workflow for discovery, analysis, review, approved copying and verification. Originals are not renamed, moved or deleted.</p><a class="more" href="import.html">Explore Import Studio →</a></article>
 <article class="card feature-card"><div class="card-icon">✓</div><h3>Review Center</h3><p>Exception and conflict review with grouped decisions and incoming-vs-Library comparison before unresolved content is committed.</p><a class="more" href="review.html">Explore Review Center →</a></article>
 <article class="card feature-card"><div class="card-icon">▦</div><h3>Library Explorer</h3><p>Browse managed games, systems, ROM variants, BIOS, saves, configuration and Library health without treating the original source as disposable.</p><a class="more" href="library.html">Explore Library →</a></article>
 <article class="card feature-card"><div class="card-icon">▰</div><h3>Media Explorer</h3><p>Review linked artwork and media, preferred assets and missing-artwork coverage while keeping media distinct from game identity.</p><a class="more" href="media.html">Explore Media →</a></article>
+</div>
+<div class="grid three" style="margin-top:14px">
+<article class="card feature-card"><div class="card-icon">◫</div><h3>BIOS Manager</h3><p>Manage BIOS, Kickstarts, boot ROMs, IPLs and system support firmware separately from games, with identity/verification knowledge and deployment integration.</p><a class="more" href="bios-manager.html">Explore BIOS Manager →</a></article>
+<article class="card feature-card"><div class="card-icon">♥</div><h3>Library Health</h3><p>Surface missing artwork, multi-variant titles, unmatched media, verification work and Library inventory, then route repairs to the owning workspace.</p><a class="more" href="library-health.html">Explore Library Health →</a></article>
+<article class="card feature-card"><div class="card-icon">⌘</div><h3>Expanded source discovery</h3><p>Import can expand a selected local drive root to readable sibling volumes on the same physical device and discover known SMB sources without subnet sweeping.</p><a class="more" href="import.html#physical">Source coverage →</a></article>
 </div></div>
 
 <div class="app-panel" style="margin-top:18px"><div class="panel-title">DEVICE INTELLIGENCE &amp; PRESERVATION</div><div class="grid four">
@@ -29,20 +35,26 @@
 <div class="app-panel" style="margin-top:18px"><div class="panel-title">KNOWLEDGE</div><div class="grid three">
 <article class="card feature-card"><div class="card-icon">✦</div><h3>Knowledge Explorer</h3><p>Browse accumulated device, platform, firmware, DTB, hardware and compatibility intelligence used by RLB decisions.</p><a class="more" href="knowledge.html">Explore Knowledge →</a></article>
 <article class="card feature-card"><div class="card-icon">◈</div><h3>Evidence &amp; sources</h3><p>Knowledge is traceable to source material and kept separate from optional downloadable assets so facts and resources are not treated as the same thing.</p><a class="more" href="knowledge-sources.html">View knowledge sources →</a></article>
-<article class="card feature-card"><div class="card-icon">◎</div><h3>Knowledge diagnostics</h3><p>Knowledge validation, provider diagnostics and accumulated observations appear in application activity and recommendations rather than remaining hidden backend state.</p><a class="more" href="knowledge-explorer.html">Knowledge details →</a></article>
+<article class="card feature-card"><div class="card-icon">◎</div><h3>Knowledge diagnostics</h3><p>Validation, provider diagnostics and accumulated observations appear in application activity and recommendations rather than remaining hidden backend state.</p><a class="more" href="knowledge-explorer.html">Knowledge details →</a></article>
 </div></div>
 
-<div class="app-panel" style="margin-top:18px"><div class="panel-title">DEPLOYMENT</div><div class="section-head"><h2>Four SBC deployment tracks are physically accepted</h2><p>RLB has completed end-to-end Raspberry Pi 3B+ physical acceptance for Batocera, Recalbox, RetroPie and Lakka. These tracks include firmware preparation, native content routing, verification and firmware-specific frontend completion.</p></div><div class="grid four">
+<div class="app-panel" style="margin-top:18px"><div class="panel-title">DEPLOYMENT</div><div class="section-head"><h2>Four SBC deployment tracks are physically accepted</h2><p>RLB has completed end-to-end Raspberry Pi 3B+ physical acceptance for Batocera, Recalbox, RetroPie and Lakka. Accepted tracks include firmware preparation, native content routing, verification and firmware-specific frontend completion.</p></div><div class="grid four">
 <article class="card feature-card"><div class="card-icon">✓</div><h3>Batocera</h3><p>Accepted / Frozen.</p><a class="more" href="batocera-build.html">Build status →</a></article>
 <article class="card feature-card"><div class="card-icon">✓</div><h3>Recalbox</h3><p>Deployment accepted / frozen through A4R8.4R2.</p><a class="more" href="recalbox-build.html">Build status →</a></article>
 <article class="card feature-card"><div class="card-icon">✓</div><h3>RetroPie</h3><p>Accepted / Frozen at A4R9.7R10.</p><a class="more" href="retropie-build.html">Build status →</a></article>
 <article class="card feature-card"><div class="card-icon">✓</div><h3>Lakka</h3><p>Accepted / Frozen at A4R10.6R2.</p><a class="more" href="lakka-build.html">Build status →</a></article>
 </div><div class="actions"><a class="btn primary" href="deployment.html">Deployment workflow →</a><a class="btn" href="builds.html">All accepted builds</a></div></div>
 
+<div class="app-panel" style="margin-top:18px"><div class="panel-title">POST-ACCEPTANCE SOURCE / PORTABILITY WORK</div><div class="grid three">
+<article class="card"><h3>Physical-device import expansion</h3><p>A4R13 adds read-only correlation of a selected local drive root to readable sibling volumes on the same physical media. Inaccessible partitions are warned, not silently counted.</p></article>
+<article class="card"><h3>Network import discovery</h3><p>A4R14–A4R14R2 add bounded read-only discovery of known network sources from RLB deployment profiles, prior continuation state and Windows remembered/connected SMB resources.</p></article>
+<article class="card"><h3>Lakka portability parity</h3><p>A4R15 recognizes Lakka user-data shares including Savefiles, Savestates, Configfiles, Joypads, Remappings, Playlists and Services, retaining native share identity for safe replay.</p></article>
+</div><div class="callout warning" style="margin-top:14px"><strong>These newer source/import changes do not rewrite the frozen physical-deployment acceptance labels.</strong> The site keeps deployment acceptance, source/import coverage and cross-firmware portability as separate claims.</div></div>
+
 <div class="app-panel" style="margin-top:18px"><div class="panel-title">STILL EXPANDING</div><div class="grid three">
-<article class="card"><h3>Handheld deployment</h3><p>Handheld support is the next major deployment scope. It should not be inferred from the accepted Raspberry Pi SBC tracks.</p></article>
-<article class="card"><h3>Recalbox source/import coverage</h3><p>Recalbox deployment acceptance and Recalbox source/import acceptance are separate. The site does not treat deployment acceptance as proof that every source/import path is complete.</p></article>
-<article class="card"><h3>Advanced import identity</h3><p>Beta documentation describes the active source-safe import workflow. Deeper canonical identification and archive-path parity remain areas that must be validated before broader claims are made.</p></article>
+<article class="card"><h3>Handheld deployment</h3><p>Handheld support remains a separate deployment-acceptance scope and is not inferred from the Raspberry Pi SBC passes.</p></article>
+<article class="card"><h3>Firmware/source parity</h3><p>Physical media, network sources and Lakka user-data handling have expanded, but full source/import acceptance remains firmware- and layout-specific rather than being assumed from Deployment acceptance.</p></article>
+<article class="card"><h3>Advanced canonical import identity</h3><p>The active staged import workflow is source-safe, but deeper canonical identification and equivalent results across every archive/source form must be validated before broader claims are made.</p></article>
 </div></div>
 
 <div class="beta-strip" style="margin-top:18px"><strong>Documentation rule:</strong> A feature is described as accepted only when the tested behaviour supports that claim. Architecture ideas and future work are not presented as completed product features.</div>
