@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="État actuel des versions et de la validation physique de Retro Library Builder pour les cibles de micrologiciel SBC prises en charge.">
+  <title>Versions RLB — État actuel de validation</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Aller au contenu</a>
+<header class="site-header"><nav class="nav-wrap" aria-label="Navigation principale"><a class="brand" href="./"><span class="brand-mark">R</span><span>Retro Library Builder <small>Bêta</small></span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Ouvrir la navigation">Menu</button><div class="nav-links"></div></nav></header>
+<main id="main">
+<section class="hero"><div class="container hero-grid"><div>
+<span class="eyebrow"><span class="dot"></span> État actuel des versions</span>
+<h1>Versions SBC acceptées. <strong class="accent">Testées physiquement.</strong></h1>
+<p class="lead"><strong class="lead-strong">La prise en charge n’est acceptée qu’après validation sur un appareil réel.</strong> Ces pages documentent les parcours de micrologiciel SBC actuels qui ont réussi les tests physiques de déploiement sur du matériel Raspberry Pi 3B+. Les parcours acceptés sont gelés à moins qu’un travail ultérieur ne révèle une régression.</p>
+<div class="beta-strip"><strong>Portée :</strong> Batocera, Recalbox, RetroPie et Lakka constituent la base SBC acceptée. Le travail de déploiement sur consoles portables suit cette phase.</div>
+</div><div class="hero-panel"><div class="device-card"><div class="device-top"><div class="device-title">Modèle d’acceptation</div><div class="confidence">Validation physique requise</div></div>
+<div class="evidence-row"><div class="evidence-icon">1</div><div><strong>Acquérir et écrire le micrologiciel</strong><span>Préparer le support cible selon les règles propres au micrologiciel.</span></div></div>
+<div class="evidence-row"><div class="evidence-icon">2</div><div><strong>Provisionner l’appareil</strong><span>Gérer le premier démarrage, l’extension du stockage, le réseau et l’identité lorsqu’ils sont pris en charge.</span></div></div>
+<div class="evidence-row"><div class="evidence-icon">3</div><div><strong>Déployer tout le contenu</strong><span>ROM, BIOS, illustrations/médias et données utilisateur/configuration pertinentes.</span></div></div>
+<div class="evidence-row"><div class="evidence-icon">4</div><div><strong>Vérifier et finaliser</strong><span>Vérification côté appareil, puis actualisation/finalisation de l’interface.</span></div></div>
+</div></div></div></section>
+<section class="section"><div class="container"><div class="app-panel"><div class="panel-title">BASE SBC ACCEPTÉE</div><div class="grid two">
+<article class="card feature-card"><div class="card-icon">✓</div><h3>Batocera — Accepté / Gelé</h3><p>L’écriture du micrologiciel, l’extension de userdata, le Wi-Fi au premier démarrage, le provisionnement, l’identité, le déploiement du contenu, la vérification SHA-256 côté appareil, l’actualisation d’EmulationStation et LocalArt ont réussi les tests physiques.</p><a class="more" href="../batocera-build.html">Voir l’acceptation Batocera →</a></article>
+<article class="card feature-card"><div class="card-icon">✓</div><h3>Recalbox — Accepté / Gelé</h3><p>Accepté jusqu’à A4R8.4R2. Le déploiement natif, la vérification, la gestion de l’interface et la réparation des illustrations ont atteint un état terminal stable sans répéter les copies ou vérifications déjà terminées.</p><a class="more" href="../recalbox-build.html">Voir l’acceptation Recalbox →</a></article>
+<article class="card feature-card"><div class="card-icon">✓</div><h3>RetroPie — Accepté / Gelé</h3><p>Accepté jusqu’à A4R9.7R10. Le déploiement neuf, le Wi-Fi, la restauration du profil de contrôleur, le placement natif des ROM, la vérification SHA-256, la finalisation des gamelists/illustrations et l’achèvement stable ont réussi physiquement.</p><a class="more" href="../retropie-build.html">Voir l’acceptation RetroPie →</a></article>
+<article class="card feature-card"><div class="card-icon">✓</div><h3>Lakka — Accepté / Gelé</h3><p>Accepté jusqu’à A4R10.6R2. La restauration d’un point de contrôle vérifié, la génération de listes de lecture RetroArch, la réutilisation des miniatures, la finalisation de l’interface et l’achèvement global à 100 % ont réussi la validation physique.</p><a class="more" href="../lakka-build.html">Voir l’acceptation Lakka →</a></article>
+</div></div></div></section>
+<section class="section tight"><div class="container"><div class="cta"><div><h2>Prochaine phase de développement : consoles portables</h2><p>Les parcours SBC acceptés demeurent gelés pendant que RLB passe au déploiement et à la couverture d’importation propres aux consoles portables.</p></div><a class="btn" href="../device-readiness.html">Préparation de l’appareil →</a></div></div></section>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><strong>Retro Library Builder</strong><div>Préserver une fois. Construire plusieurs fois.</div></div><div class="footer-links"><a href="https://github.com/cancruiser/RetroLibraryBuilder">GitHub</a><a href="https://discord.gg/zCDA8evmyE">Discord</a><a href="about.html">À propos</a></div></div><div class="footer-note">RLB ne fournit ni ne distribue de collections commerciales de ROM. © <span data-year></span> Retro Library Builder.</div></div></footer>
+<script src="../assets/site.js"></script>
+</body></html>
