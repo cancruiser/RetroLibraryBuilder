@@ -23,6 +23,19 @@
   ]);
   const translatedPages = new Set(['index.html','use-rlb.html','understand-rlb.html','builds.html','about.html']);
 
+  // Until a detailed page has its reviewed translation, localized pages fall back
+  // to the matching English page instead of producing a broken link.
+  if (locale !== 'en') {
+    document.querySelectorAll('main a[href], footer a[href]').forEach(a => {
+      const href = a.getAttribute('href');
+      if (!href || href.startsWith('#') || href.startsWith('../') || href.startsWith('/') || /^[a-z]+:/i.test(href)) return;
+      const clean = href.split('#')[0].split('?')[0];
+      if (/^[^/]+\.html$/.test(clean) && !translatedPages.has(clean)) {
+        a.setAttribute('href', `../${href}`);
+      }
+    });
+  }
+
   if (links) {
     links.innerHTML = '';
 
