@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Acerca de Retro Library Builder: por qué existe, qué hace, prioridades actuales de la Beta, estado del código fuente y enlaces de comunidad."><title>Acerca de — Retro Library Builder</title><link rel="stylesheet" href="../assets/styles.css"></head>
+<body>
+<a class="skip-link" href="#main">Ir al contenido</a>
+<header class="site-header"><nav class="nav-wrap" aria-label="Navegación principal"><a class="brand" href="./"><span class="brand-mark">R</span><span>Retro Library Builder <small>Beta</small></span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Abrir navegación">Menú</button><div class="nav-links"></div></nav></header>
+
+<main id="main">
+<section class="page-hero about-hero"><div class="container"><div class="breadcrumb"><a href="./">Inicio</a> / Acerca de</div><span class="eyebrow"><span class="dot"></span> Acerca del proyecto</span><h1>Preserva una vez. Construye muchas.</h1><p class="lead">Retro Library Builder se basa en una idea sencilla: entender el dispositivo que realmente tienes, proteger lo que permite recuperarlo y reutilizar conocimiento y contenido verificados en lugar de empezar de cero cada vez.</p></div></section>
+
+<section class="section about-intro"><div class="container"><div class="about-principles">
+<div class="about-principle"><span>01</span><strong>Entender primero</strong><small>La identidad del dispositivo debe provenir de pruebas, no de suposiciones basadas en etiquetas, nombres de carpetas o archivos genéricos del sistema operativo.</small></div>
+<div class="about-principle"><span>02</span><strong>Proteger lo que importa</strong><small>La preservación debe contabilizar el contenido y las pruebas del dispositivo necesarios para la recuperación, no limitarse a producir otra copia sin verificar.</small></div>
+<div class="about-principle"><span>03</span><strong>Reutilizar trabajo verificado</strong><small>El contenido y el conocimiento del dispositivo ya establecidos deben poder reutilizarse en preservaciones y construcciones posteriores.</small></div>
+<div class="about-principle"><span>04</span><strong>Mantener visible la incertidumbre</strong><small>Las pruebas desconocidas, ambiguas o contradictorias deben permanecer visibles en lugar de convertirse en falsa confianza.</small></div>
+</div></div></section>
+
+<section class="section tight"><div class="container article-layout"><article class="article about-article">
+<h2 id="why">Por qué existe RLB</h2>
+<p>Las consolas portátiles retro y los sistemas de juego SBC suelen tratarse como si fueran simplemente “una tarjeta SD llena de ROM”. En la práctica, el medio original puede contener archivos de arranque específicos del dispositivo, configuración de firmware, DTB, BIOS, ilustraciones, metadatos, partidas guardadas, configuración del frontend y otros contenidos difíciles de reconstruir después.</p>
+<p>Varios productos también pueden compartir un nombre mientras usan placas, pantallas, configuraciones de arranque o requisitos de firmware diferentes. RLB existe para que las decisiones de preservación y reconstrucción se tomen a partir de pruebas en lugar de suposiciones.</p>
+
+<div class="about-problem-flow"><div><span class="flow-label">SIN RLB</span><strong>“Parece el mismo dispositivo.”</strong><small>Etiquetas genéricas, archivos copiados y relaciones de firmware inciertas.</small></div><b>→</b><div><span class="flow-label">CON RLB</span><strong>“¿Qué pruebas tenemos realmente?”</strong><small>Identidad del dispositivo, estado de preservación, representación verificada del contenido y conocimiento acumulado.</small></div></div>
+
+<h2 id="what">Qué es RLB</h2>
+<p>RLB es una aplicación de escritorio para Windows centrada en <strong>inteligencia de dispositivos, preservación, contenido administrado de la Biblioteca, conocimiento reutilizable y despliegue basado en pruebas</strong>.</p>
+<div class="about-cap-grid">
+<div class="about-cap"><span>◎</span><strong>Inspector de dispositivos</strong><small>Examina medios de origen, pruebas del dispositivo, estado de preservación y preparación.</small></div>
+<div class="about-cap"><span>◆</span><strong>Preservación</strong><small>Establece protección verificada para contenido reutilizable y específico del dispositivo.</small></div>
+<div class="about-cap"><span>▦</span><strong>Biblioteca administrada</strong><small>Mantiene juegos, BIOS, medios, partidas guardadas y contenido relacionado independientemente de un único dispositivo.</small></div>
+<div class="about-cap"><span>◉</span><strong>Conocimiento</strong><small>Recopila inteligencia de dispositivos, firmware, DTB, hardware y compatibilidad con atribución de fuentes.</small></div>
+<div class="about-cap"><span>↻</span><strong>Tareas en segundo plano</strong><small>Mantiene visible el trabajo de larga duración mientras conserva un estado de ejecución duradero.</small></div>
+<div class="about-cap"><span>↗</span><strong>Despliegue</strong><small>Usa identidad preservada y contenido verificado para construir destinos de firmware validados con enrutamiento nativo, verificación y finalización del frontend.</small></div>
+</div>
+
+<h2 id="not">Qué no es RLB</h2>
+<div class="not-grid">
+<div class="not-card"><span>×</span><div><strong>No es un servicio de descarga de ROM</strong><small>RLB no proporciona colecciones comerciales de ROM.</small></div></div>
+<div class="not-card"><span>×</span><div><strong>No es solo un generador de imágenes de SD</strong><small>RLB intenta comprender identidad, estado de protección y representaciones reutilizables en lugar de detenerse en una copia ciega.</small></div></div>
+<div class="not-card"><span>×</span><div><strong>No es un selector de emuladores</strong><small>RLB respeta el firmware y el entorno frontend del dispositivo de destino en lugar de reemplazar arbitrariamente ese ecosistema.</small></div></div>
+<div class="not-card"><span>×</span><div><strong>No es un generador de certeza</strong><small>Las pruebas incompletas o contradictorias permanecen visibles en lugar de convertirse en una coincidencia segura pero sin respaldo.</small></div></div>
+</div>
+
+<h2 id="philosophy">La filosofía de preservación</h2>
+<p><strong>Preserva una vez. Construye muchas.</strong> describe la relación entre preservación y despliegue: protege cuidadosamente el original, establece contenido reutilizable de la Biblioteca y conocimiento del dispositivo, y usa esa base verificada cuando se necesiten medios de reemplazo.</p>
+<div class="philosophy-path"><div><span>1</span><strong>Preservar</strong><small>Proteger el dispositivo original y capturar las pruebas necesarias para comprenderlo.</small></div><div><span>2</span><strong>Verificar</strong><small>Demostrar relaciones importantes de contenido en lugar de confiar en el nombre o el tamaño del archivo.</small></div><div><span>3</span><strong>Aprender</strong><small>Conservar conocimiento de dispositivo, firmware y hardware.</small></div><div><span>4</span><strong>Construir</strong><small>Usar esa base verificada al preparar medios de reemplazo.</small></div></div>
+
+<h2 id="beta">Enfoque actual de la Beta</h2>
+<p>RLB está en desarrollo activo, pero el Despliegue ya no es solo un concepto futuro: cuatro rutas de firmware Raspberry Pi 3B+ han completado la aceptación física, mientras la cobertura de fuentes/importación y la portabilidad siguen ampliándose de forma independiente.</p>
+<div class="beta-priority-grid">
+<div><span class="priority-num">1</span><strong>Exactitud</strong><small>La contabilidad de protección, las pruebas del dispositivo y el enrutamiento del contenido deben ser correctos antes de que importe la comodidad.</small></div>
+<div><span class="priority-num">2</span><strong>Fiabilidad</strong><small>El trabajo de larga duración debe dejar un estado duradero y comprensible incluso si se interrumpe.</small></div>
+<div><span class="priority-num">3</span><strong>Cobertura</strong><small>Los medios físicos, fuentes de red, BIOS, guardados, configuraciones y diseños específicos de firmware deben manejarse explícitamente.</small></div>
+<div><span class="priority-num">4</span><strong>Experiencia de usuario</strong><small>Los estados Analizar, Revisar/Vista previa, Aplicar, Verificar, Reanudar y Despliegue deben seguir siendo claros y veraces.</small></div>
+<div><span class="priority-num">5</span><strong>Preparación para producción</strong><small>Las rutas aceptadas permanecen congeladas contra regresiones mientras se añaden con cautela nuevos dispositivos, diseños de fuentes y rutas de portabilidad.</small></div>
+</div>
+<div class="callout warning"><strong>Beta significa que las afirmaciones siguen teniendo un alcance limitado.</strong> La aceptación física del Despliegue, la cobertura de fuentes/importación y la portabilidad entre firmwares se documentan por separado. Una aprobación en un área no se usa como prueba de que todos los flujos adyacentes están completos.</div>
+<div class="actions"><a class="btn primary" href="../capabilities.html">Capacidades actuales →</a><a class="btn" href="builds.html">Versiones aceptadas</a></div>
+
+<h2 id="knowledge">Por qué importa el conocimiento del dispositivo</h2>
+<p>Muchas consolas portátiles retro son clones, revisiones o familias con nombres poco precisos en lugar de un único diseño de hardware fijo. El nombre del producto por sí solo puede no identificar la placa, el panel, el DTB o el firmware necesarios. Knowledge Explorer hace reutilizable cada investigación al conservar relaciones entre dispositivos, pruebas de firmware, archivos de arranque, huellas, información de compatibilidad y atribución de fuentes.</p>
+
+<h2 id="source">Estado del código fuente</h2>
+<p>El repositorio público de GitHub es el <strong>hogar del proyecto, la documentación y las publicaciones</strong> de Retro Library Builder. El código fuente actual de la aplicación <strong>no está publicado</strong> en ese repositorio. La disponibilidad futura del código fuente y el modelo de licencia aún no se han decidido.</p>
+<div class="source-status"><div><span>PÚBLICO</span><strong>Sitio del proyecto, documentación, presencia de incidencias/publicaciones</strong></div><div><span>PRIVADO</span><strong>Código fuente actual de la aplicación</strong></div><div><span>SIN DECIDIR</span><strong>Disponibilidad futura del código fuente y modelo de licencia</strong></div></div>
+
+<h2 id="community">Enlaces del proyecto</h2>
+<div class="project-links"><a class="project-link" href="https://github.com/cancruiser/RetroLibraryBuilder"><span>GitHub</span><strong>Página principal del proyecto RetroLibraryBuilder</strong><small>Información pública del proyecto, documentación y presencia de publicaciones.</small><b>Abrir GitHub →</b></a><a class="project-link" href="https://discord.gg/zCDA8evmyE"><span>Discord</span><strong>Comunidad RLB</strong><small>Conversación, comentarios y experiencia real de la Beta.</small><b>Abrir Discord →</b></a></div>
+
+<h2 id="legal">Aviso sobre ROM y contenido</h2>
+<p>Retro Library Builder no proporciona ni distribuye colecciones comerciales de ROM. Los usuarios son responsables de asegurar que el uso, preservación y almacenamiento de software y medios cumpla con las leyes y licencias aplicables.</p>
+<div class="actions"><a class="btn primary" href="use-rlb.html">Empezar con RLB →</a><a class="btn" href="../guides.html">Abrir guías prácticas</a></div>
+</article>
+<aside class="toc" aria-label="En esta página"><strong>En esta página</strong><a href="#why">Por qué existe RLB</a><a href="#what">Qué es RLB</a><a href="#not">Qué no es RLB</a><a href="#philosophy">Filosofía de preservación</a><a href="#beta">Enfoque actual de la Beta</a><a href="#knowledge">Conocimiento del dispositivo</a><a href="#source">Estado del código fuente</a><a href="#community">Enlaces del proyecto</a><a href="#legal">Aviso</a></aside>
+</div></section>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><strong>Retro Library Builder</strong><div>Preserva una vez. Construye muchas.</div></div><div class="footer-links"><a href="https://github.com/cancruiser/RetroLibraryBuilder">GitHub</a><a href="https://discord.gg/zCDA8evmyE">Discord</a><a href="about.html">Acerca de</a></div></div><div class="footer-note">RLB no proporciona ni distribuye colecciones comerciales de ROM. © <span data-year></span> Retro Library Builder.</div></div></footer><script src="../assets/site.js"></script></body></html>
