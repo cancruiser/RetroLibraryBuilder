@@ -21,7 +21,10 @@
     'device-readiness.html','deployment.html','bios-manager.html','library-health.html',
     'import.html','review.html','library.html','media.html'
   ]);
-  const translatedPages = new Set(['index.html','use-rlb.html','understand-rlb.html','builds.html','about.html']);
+  const translatedPages = new Set([
+    'index.html','use-rlb.html','understand-rlb.html','builds.html','about.html',
+    'getting-started.html','guides.html','protect-original-sd.html','resume-protection.html'
+  ]);
 
   // Until a detailed page has its reviewed translation, localized pages fall back
   // to the matching English page instead of producing a broken link.
