@@ -24,7 +24,7 @@
   const translatedPages = new Set([
     'index.html','use-rlb.html','understand-rlb.html','builds.html','about.html',
     'getting-started.html','guides.html','protect-original-sd.html','resume-protection.html',
-    'deployment.html'
+    'reconcile-retained-content.html','r36-max-walkthrough.html','deployment.html'
   ]);
 
   // Until a detailed page has its reviewed translation, localized pages fall back
