@@ -16,10 +16,12 @@
     'resume-protection.html','reconcile-retained-content.html','r36-max-walkthrough.html'
   ]);
   const understandPages = new Set([
-    'understand-rlb.html','system-coverage.html','file-formats.html','workspaces.html','preservation.html','knowledge.html',
-    'knowledge-sources.html','knowledge-explorer.html','capabilities.html','home-dashboard.html',
-    'device-readiness.html','deployment.html','bios-manager.html','library-health.html',
-    'import.html','review.html','library.html','media.html'
+    'understand-rlb.html','system-coverage.html','file-formats.html','content-preservation.html',
+    'identity-hashing-duplicates.html','sources-storage.html','recovery-recreation.html',
+    'workspaces.html','preservation.html','knowledge.html','knowledge-sources.html',
+    'knowledge-explorer.html','capabilities.html','home-dashboard.html','device-readiness.html',
+    'deployment.html','bios-manager.html','library-health.html','import.html','review.html',
+    'library.html','media.html'
   ]);
   const translatedPages = new Set([
     'index.html','use-rlb.html','understand-rlb.html','builds.html','about.html',
