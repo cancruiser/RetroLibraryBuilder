@@ -16,7 +16,7 @@
     'resume-protection.html','reconcile-retained-content.html','r36-max-walkthrough.html'
   ]);
   const understandPages = new Set([
-    'understand-rlb.html','system-coverage.html','workspaces.html','preservation.html','knowledge.html',
+    'understand-rlb.html','system-coverage.html','file-formats.html','workspaces.html','preservation.html','knowledge.html',
     'knowledge-sources.html','knowledge-explorer.html','capabilities.html','home-dashboard.html',
     'device-readiness.html','deployment.html','bios-manager.html','library-health.html',
     'import.html','review.html','library.html','media.html'
