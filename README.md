@@ -37,9 +37,9 @@ See the live capability map:
 RLB's current Raspberry Pi 3B+ deployment track has completed end-to-end physical acceptance for:
 
 - **Batocera** — Accepted / Frozen
-- **Recalbox** — Deployment accepted / frozen through **A4R8.4R2**
-- **RetroPie** — Accepted / Frozen at **A4R9.7R10**
-- **Lakka** — Accepted / Frozen at **A4R10.6R2**
+- **Recalbox** — Accepted / Frozen
+- **RetroPie** — Accepted / Frozen
+- **Lakka** — Accepted / Frozen
 
 Accepted build details:
 
@@ -49,15 +49,15 @@ Deployment workflow:
 
 **https://cancruiser.github.io/RetroLibraryBuilder/deployment.html**
 
-## Current post-acceptance source/import work
+## Current source/import expansion
 
-The project has continued beyond those frozen physical-deployment baselines:
+The project continues to expand source and portability coverage while preserving the frozen physical-deployment baseline:
 
-- **A4R13** expanded local removable-media import so readable sibling volumes on the same proven physical device can be analyzed together.
-- **A4R14–A4R14R2** added and hardened read-only network-source discovery for Import Studio.
-- **A4R15** added Lakka SBC portability parity for native user-data shares such as `Savefiles`, `Savestates`, `Configfiles`, `Joypads`, `Remappings`, `Playlists` and `Services`, retaining native share identity for safe same-firmware replay.
+- **Physical-device import expansion** — readable sibling volumes on the same proven physical device can be analyzed together.
+- **Network import discovery** — bounded read-only discovery of known network sources is available to Import Studio.
+- **Lakka user-data portability parity** — native user-data shares such as `Savefiles`, `Savestates`, `Configfiles`, `Joypads`, `Remappings`, `Playlists` and `Services` retain their native share identity for safe same-firmware replay.
 
-These are separate claims from the frozen physical-deployment acceptance levels above. RLB does not assume that deployment acceptance automatically proves every source/import or cross-firmware portability path.
+These are separate claims from physical-deployment acceptance. RLB does not assume that deployment acceptance automatically proves every source/import or cross-firmware portability path.
 
 ## Why RLB exists
 
@@ -132,7 +132,7 @@ RLB is currently developed as a Windows desktop application using .NET.
 
 ## Issues and feedback
 
-RLB is still in Beta, so real-world testing and accurate problem reports are valuable. When reporting an issue, include the build/version, device, operation, expected result, actual result and screenshots or relevant error information where possible.
+RLB is still in Beta, so real-world testing and accurate problem reports are valuable. When reporting an issue, include the application version, device, operation, expected result, actual result and screenshots or relevant error information where possible.
 
 ## Community
 
