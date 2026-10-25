@@ -52,7 +52,23 @@
 
         <div class="callout success"><strong>Managed Library, not source folders:</strong> Library Explorer shows the content RLB manages after import and verification workflows. It is not simply a file browser pointed at the original source.</div>
 
-        <h2 id="purpose">1. What Library Explorer is for</h2>
+        <h2 id="architecture">How RLB builds one smart Library</h2>
+<p>RLB's Library is not a duplicate of every source folder. It is a unified, database-backed view of identified content across drives and devices. Import and verification establish which content belongs in the Library; discovery alone does not make each physical file a new game.</p>
+<div class="library-relationship-flow">
+<div><span>1 · DISCOVER</span><strong>Find source content</strong><small>Read ROMs on PC drives, external drives, network collections and SD cards.</small></div><b>→</b>
+<div><span>2 · IDENTIFY</span><strong>Recognize distinct content</strong><small>Compare available hashes and game identity evidence; group identical physical copies while retaining meaningful ROM variants.</small></div><b>→</b>
+<div><span>3 · ESTABLISH</span><strong>Reference or preserve</strong><small>Reference durable drive/network files in place; copy needed new SD-card ROMs to PC storage first.</small></div><b>→</b>
+<div><span>4 · REUSE</span><strong>Build from one Library</strong><small>Use established Library records to prepare collections for supported devices and frontends.</small></div>
+</div>
+<h3>Not every physical copy becomes another Library entry</h3>
+<p>If one identical ROM exists on two hard drives and an SD card, RLB can consolidate the duplicate physical copies under the same recognized ROM identity. It need not store three new copies. Distinct regions, revisions and other ROM variants may remain separately represented under a common canonical game title. A <strong>canonical game</strong> is not the same count as a <strong>unique ROM variant</strong>, and neither is simply a count of files discovered.</p>
+<h3>Permanent storage is referenced; SD media is preserved</h3>
+<p><strong>PC drives, external drives and available network storage:</strong> RLB keeps the original ROMs in place and maintains logical file references rather than copying an entire multi-terabyte collection into a second directory. These are Library/database references, not necessarily Windows shortcuts or filesystem symbolic links.</p>
+<p><strong>SD cards and removable device media:</strong> A ROM that is needed for the Library but exists only on a reusable card must first be copied to durable PC-accessible storage. Where an identical ROM is already established on durable storage, another preservation copy is unnecessary. The SD card should never be the only durable reference for accepted Library content.</p>
+<div class="callout success"><strong>Originals stay untouched.</strong> RLB's source-safe approach does not rename, move or delete the original files. Identification and duplicate consolidation organize the logical Library; they do not erase your physical duplicates.</div>
+<p>RLB also manages supporting content such as BIOS, artwork, saves and configuration in distinct Library lanes. The exact outcome of an import is still governed by analysis, approval, verification and any unresolved exceptions.</p>
+
+<h2 id="purpose">1. What Library Explorer is for</h2>
         <p>Library Explorer is the main browsing view for the RLB managed Library. It brings together systems, canonical games and linked managed content in one place while still exposing platform-level folders when filesystem inspection is needed.</p>
         <p>The workspace is designed to browse the <strong>real managed Library</strong> with safely paged artwork rather than loading the entire collection into the UI at once.</p>
 
@@ -132,7 +148,7 @@
         <h2 id="relationship">12. Import, Review, Library and Media form one workflow</h2>
         <p>These workspaces are different views of the same managed-content lifecycle rather than separate utilities.</p>
         <div class="library-relationship-flow">
-          <div><span>IMPORT</span><strong>Discover and approve</strong><small>Analyze sources and copy approved content into managed Library lanes.</small></div>
+          <div><span>IMPORT</span><strong>Discover and approve</strong><small>Analyze sources, reference approved content on durable storage, and preserve needed SD-card content into managed storage.</small></div>
           <b>→</b>
           <div><span>REVIEW</span><strong>Resolve exceptions</strong><small>Keep conflicting or ambiguous destination conditions visible for explicit decisions.</small></div>
           <b>→</b>
@@ -160,7 +176,7 @@
 
       <aside class="toc" aria-label="On this page">
         <strong>On this page</strong>
-        <a href="#purpose">What Library Explorer is</a>
+        <a href="#architecture">Smart Library architecture</a><a href="#purpose">What Library Explorer is</a>
         <a href="#snapshot">Library snapshot</a>
         <a href="#health">Library health</a>
         <a href="#platforms">Browse by platform</a>
