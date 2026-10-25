@@ -21,7 +21,7 @@
     'workspaces.html','preservation.html','knowledge.html','knowledge-sources.html',
     'knowledge-explorer.html','capabilities.html','home-dashboard.html','device-readiness.html',
     'deployment.html','bios-manager.html','library-health.html','import.html','review.html',
-    'library.html','media.html'
+    'library.html','media.html','recent-progress.html'
   ]);
   const translatedPages = new Set([
     'index.html','use-rlb.html','understand-rlb.html','builds.html','about.html',
