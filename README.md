@@ -12,7 +12,7 @@
 
 RLB currently includes documented Beta workflows for:
 
-- **Guided RLB** — the visual, task-first launch experience with six illustrated entry points: set up a retro gaming device, add games to an SD card, back up a device or SD card, restore a device, manage my RLB Library, and Advanced RLB. Guided workflows retain safety and review gates; wider Beta acceptance testing is ongoing. [Explore Guided RLB](https://cancruiser.github.io/RetroLibraryBuilder/use-rlb.html#guided).
+- **Guided RLB** — the visual, task-first launch experience with six illustrated entry points: set up a retro gaming device, add games to an SD card, back up a device or SD card, restore a device or SD card, manage my RLB Library, and Advanced RLB. Guided workflows retain safety and review gates; wider Beta acceptance testing is ongoing. [Explore Guided RLB](https://cancruiser.github.io/RetroLibraryBuilder/use-rlb.html#guided).
 
 - **Home Dashboard** — preserved ecosystems, Library snapshot, recommendations, recent activity, storage and background-task status.
 - **Import Studio** — source-safe discovery → Analyze → Review → Import → Verify workflow.
@@ -25,6 +25,7 @@ RLB currently includes documented Beta workflows for:
 - **Library Health** — missing artwork, multi-variant titles, unmatched media, verification work and repair routing.
 - **Device Inspector** — evidence-based device identity, storage/boot/firmware inspection and preservation state.
 - **Verified Preservation** — reusable Library representation, device-specific retained content, cryptographic verification, resume and reconciliation.
+- **Device Inspector — advisory identification** — Device identification is advisory, not a prerequisite for preservation. RLB presents detected evidence and suggested matches; users can confirm, correct, select or manually enter a device model, or preserve unidentified media. User-supplied identity is recorded separately from detected evidence and does not establish firmware compatibility. Preservation and resume revalidate the currently selected physical media; firmware compatibility and write-safety checks remain independent.
 - **Device Readiness** — identity, confidence, target knowledge and blocking-risk gates before deployment.
 - **Knowledge Explorer / Sources** — device, platform, firmware, DTB, hardware and compatibility intelligence with source attribution.
 - **Background Operations** — durable long-running task state so preservation and analysis are not tied only to the current screen.
