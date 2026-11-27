@@ -12,6 +12,8 @@
 
 RLB currently includes documented Beta workflows for:
 
+- **Guided RLB** — the visual, task-first launch experience with six illustrated entry points: set up a retro gaming device, add games to an SD card, back up a device or SD card, restore a device, manage my RLB Library, and Advanced RLB. Guided workflows retain safety and review gates; wider Beta acceptance testing is ongoing. [Explore Guided RLB](https://cancruiser.github.io/RetroLibraryBuilder/use-rlb.html#guided).
+
 - **Home Dashboard** — preserved ecosystems, Library snapshot, recommendations, recent activity, storage and background-task status.
 - **Import Studio** — source-safe discovery → Analyze → Review → Import → Verify workflow.
 - **Physical-device import expansion** — a selected local drive root can be correlated to readable sibling volumes on the same physical media; inaccessible partitions are warned, not silently counted.
